@@ -1,0 +1,246 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Logica\\Logica.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Datos\\Datos.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Datos\\Datos.csproj",
+        "projectName": "Datos",
+        "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Datos\\Datos.csproj",
+        "packagesPath": "C:\\Users\\JUAN CARLOS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Datos\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\JUAN CARLOS\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Entity\\Entity.csproj": {
+                "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Entity\\Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Entity\\Entity.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Entity\\Entity.csproj",
+        "projectName": "Entity",
+        "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Entity\\Entity.csproj",
+        "packagesPath": "C:\\Users\\JUAN CARLOS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Entity\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\JUAN CARLOS\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Infraestructura\\Infraestructura.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Infraestructura\\Infraestructura.csproj",
+        "projectName": "Infraestructura",
+        "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Infraestructura\\Infraestructura.csproj",
+        "packagesPath": "C:\\Users\\JUAN CARLOS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Infraestructura\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\JUAN CARLOS\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Entity\\Entity.csproj": {
+                "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Entity\\Entity.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Logica\\Logica.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Logica\\Logica.csproj",
+        "projectName": "Logica",
+        "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Logica\\Logica.csproj",
+        "packagesPath": "C:\\Users\\JUAN CARLOS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Logica\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\JUAN CARLOS\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Datos\\Datos.csproj": {
+                "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Datos\\Datos.csproj"
+              },
+              "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Entity\\Entity.csproj": {
+                "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Entity\\Entity.csproj"
+              },
+              "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Infraestructura\\Infraestructura.csproj": {
+                "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Infraestructura\\Infraestructura.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

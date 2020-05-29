@@ -1,0 +1,16 @@
+A:\Escritorio\Proyecto Programacion web\Logistica-del-sinu-master\Entity\bin\Debug\netstandard2.1\Entity.deps.json
+A:\Escritorio\Proyecto Programacion web\Logistica-del-sinu-master\Entity\bin\Debug\netstandard2.1\Entity.dll
+A:\Escritorio\Proyecto Programacion web\Logistica-del-sinu-master\Entity\bin\Debug\netstandard2.1\Entity.pdb
+A:\Escritorio\Proyecto Programacion web\Logistica-del-sinu-master\Entity\obj\Debug\netstandard2.1\Entity.csprojAssemblyReference.cache
+A:\Escritorio\Proyecto Programacion web\Logistica-del-sinu-master\Entity\obj\Debug\netstandard2.1\Entity.AssemblyInfoInputs.cache
+A:\Escritorio\Proyecto Programacion web\Logistica-del-sinu-master\Entity\obj\Debug\netstandard2.1\Entity.AssemblyInfo.cs
+A:\Escritorio\Proyecto Programacion web\Logistica-del-sinu-master\Entity\obj\Debug\netstandard2.1\Entity.dll
+A:\Escritorio\Proyecto Programacion web\Logistica-del-sinu-master\Entity\obj\Debug\netstandard2.1\Entity.pdb
+C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Entity\bin\Debug\netstandard2.1\Entity.deps.json
+C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Entity\bin\Debug\netstandard2.1\Entity.dll
+C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Entity\bin\Debug\netstandard2.1\Entity.pdb
+C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Entity\obj\Debug\netstandard2.1\Entity.csprojAssemblyReference.cache
+C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Entity\obj\Debug\netstandard2.1\Entity.AssemblyInfoInputs.cache
+C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Entity\obj\Debug\netstandard2.1\Entity.AssemblyInfo.cs
+C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Entity\obj\Debug\netstandard2.1\Entity.dll
+C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Entity\obj\Debug\netstandard2.1\Entity.pdb

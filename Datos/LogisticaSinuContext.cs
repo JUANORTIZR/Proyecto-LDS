@@ -13,6 +13,7 @@ namespace Datos {
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Restaurante> Restaurantes { get; set; }
         public DbSet<Transporte> Transportes { get; set; }
+        public DbSet<User> Users { get; set; }
 
     }
 }

@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Infraestructura\\Infraestructura.csproj": {}
+    "A:\\Escritorio\\logistica del sinu 1.0\\Proyecto-LDS\\Infraestructura\\Infraestructura.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Entity\\Entity.csproj": {
+    "A:\\Escritorio\\logistica del sinu 1.0\\Proyecto-LDS\\Entity\\Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Entity\\Entity.csproj",
+        "projectUniqueName": "A:\\Escritorio\\logistica del sinu 1.0\\Proyecto-LDS\\Entity\\Entity.csproj",
         "projectName": "Entity",
-        "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Entity\\Entity.csproj",
-        "packagesPath": "C:\\Users\\JUAN CARLOS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Entity\\obj\\",
+        "projectPath": "A:\\Escritorio\\logistica del sinu 1.0\\Proyecto-LDS\\Entity\\Entity.csproj",
+        "packagesPath": "C:\\Users\\ANYE\\.nuget\\packages\\",
+        "outputPath": "A:\\Escritorio\\logistica del sinu 1.0\\Proyecto-LDS\\Entity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\JUAN CARLOS\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\ANYE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -60,29 +62,31 @@
         }
       }
     },
-    "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Infraestructura\\Infraestructura.csproj": {
+    "A:\\Escritorio\\logistica del sinu 1.0\\Proyecto-LDS\\Infraestructura\\Infraestructura.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Infraestructura\\Infraestructura.csproj",
+        "projectUniqueName": "A:\\Escritorio\\logistica del sinu 1.0\\Proyecto-LDS\\Infraestructura\\Infraestructura.csproj",
         "projectName": "Infraestructura",
-        "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Infraestructura\\Infraestructura.csproj",
-        "packagesPath": "C:\\Users\\JUAN CARLOS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Infraestructura\\obj\\",
+        "projectPath": "A:\\Escritorio\\logistica del sinu 1.0\\Proyecto-LDS\\Infraestructura\\Infraestructura.csproj",
+        "packagesPath": "C:\\Users\\ANYE\\.nuget\\packages\\",
+        "outputPath": "A:\\Escritorio\\logistica del sinu 1.0\\Proyecto-LDS\\Infraestructura\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\JUAN CARLOS\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\ANYE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Entity\\Entity.csproj": {
-                "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Entity\\Entity.csproj"
+              "A:\\Escritorio\\logistica del sinu 1.0\\Proyecto-LDS\\Entity\\Entity.csproj": {
+                "projectPath": "A:\\Escritorio\\logistica del sinu 1.0\\Proyecto-LDS\\Entity\\Entity.csproj"
               }
             }
           }

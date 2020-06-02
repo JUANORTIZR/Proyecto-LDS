@@ -10,7 +10,7 @@
           <div class="col-md-5">
             <div class="form-group">
               <label class="bmd-label-floating">Identificacion</label>
-              <input type="text" class="form-control" formControlName="identificacion"
+              <input id="txtIdentificacion" type="text" class="form-control" formControlName="identificacion"
               [ngClass]="{ 'is-invalid': control.identificacion.errors && control.identificacion.touched}"
               placeholder="Escriba aquí su identificación">
               <div *ngIf="control.identificacion.errors && control.identificacion.touched" class="invalid-feedback">
@@ -21,7 +21,7 @@
           <div class="col-md-3">
             <div class="form-group">
               <label class="bmd-label-floating">Primer nombre</label>
-              <input type="text" class="form-control" formControlName="primerNombre"
+              <input id="txtPNombre" type="text" class="form-control" formControlName="primerNombre"
               [ngClass]="{ 'is-invalid': control.primerNombre.errors && control.primerNombre.touched}"
               placeholder="Primer nombre">
               <div *ngIf="control.primerNombre.errors && control.primerNombre.touched" class="invalid-feedback">
@@ -32,7 +32,7 @@
           <div class="col-md-4">
             <div class="form-group">
               <label class="bmd-label-floating">Segundo Nombre</label>
-              <input type="text" class="form-control" formControlName="segundoNombre" placeholder="Segundo nombre">
+              <input id="txtSNombre" type="text" class="form-control" formControlName="segundoNombre" placeholder="Segundo nombre">
             </div>
           </div>
         </div>
@@ -40,7 +40,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label class="bmd-label-floating">Primer apelllido</label>
-              <input type="text" class="form-control"formControlName="primerApellido"
+              <input id="txtPApellido" type="text" class="form-control"formControlName="primerApellido"
               [ngClass]="{ 'is-invalid': control.primerApellido.errors && control.primerApellido.touched}"
               placeholder="Primer apellido">
             <div *ngIf="control.primerApellido.errors && control.primerApellido.touched" class="invalid-feedback">
@@ -51,7 +51,7 @@
           <div class="col-md-6">
             <div class="form-group">
               <label class="bmd-label-floating">Segundo Apellido</label>
-              <input type="text" class="form-control" formControlName="segundoAPellido"
+              <input id="txtSApellido" type="text" class="form-control" formControlName="segundoAPellido"
               [ngClass]="{ 'is-invalid': control.segundoAPellido.errors && control.segundoAPellido.touched}"
               placeholder="Segundo apellido">
             <div *ngIf="control.segundoAPellido.errors && control.segundoAPellido.touched" class="invalid-feedback">
@@ -64,7 +64,7 @@
           <div class="col-md-12">
             <div class="form-group">
               <label class="bmd-label-floating">Telefono</label>
-              <input type="text" class="form-control" formControlName="telefono"
+              <input id="txtTelefono" type="text" class="form-control" formControlName="telefono"
               [ngClass]="{ 'is-invalid': control.telefono.errors && control.telefono.touched}"
               placeholder="Escriba aquí su numero de celular">
             <div *ngIf="control.telefono.errors && control.telefono.touched" class="invalid-feedback">
@@ -79,7 +79,7 @@
           <div class="col-md-4">
             <div class="form-group">
               <label class="bmd-label-floating">Correo electronico</label>
-              <input type="email" class="form-control" formControlName="correoElectronico"
+              <input id="txtEmail" type="email" class="form-control" formControlName="correoElectronico"
               [ngClass]="{ 'is-invalid': control.correoElectronico.errors && control.correoElectronico.touched}"
               aria-describedby="emailHelp" placeholder="Escriba aquí su correo electronico">
             <div *ngIf="control.correoElectronico.errors && control.correoElectronico.touched" class="invalid-feedback">
@@ -91,7 +91,7 @@
           <div class="col-md-4">
             <div class="form-group">
               <label class="bmd-label-floating">Contraseña</label>
-              <input type="text" class="form-control" formControlName="clave"
+              <input id="txtPassword" type="text" class="form-control" formControlName="clave"
               [ngClass]="{ 'is-invalid': control.clave.errors && control.clave.touched}"
               placeholder="Escriba aqui su contraseña">
             <div *ngIf="control.clave.errors && control.clave.touched" class="invalid-feedback">
@@ -103,7 +103,7 @@
           <div class="col-md-4">
             <div class="form-group">
               <label class="bmd-label-floating">Confirmar Contraseña</label>
-              <input type="text" class="form-control"  formControlName="confirmacionClave"
+              <input id="txtCPassword" type="text" class="form-control"  formControlName="confirmacionClave"
               [ngClass]="{ 'is-invalid': control.confirmacionClave.errors && control.confirmacionClave.touched}"
               placeholder="Confirme la contraseña">
             <div *ngIf="control.confirmacionClave.errors && control.confirmacionClave.touched" class="invalid-feedback">

@@ -33,6 +33,8 @@ import { TrasporteActualizarComponent } from './LogisticaDelSinu/Transpote/trasp
 import { TransporteRegistroComponent } from './LogisticaDelSinu/Transpote/transporte-registro/transporte-registro.component';
 import { TransporteConsultaComponent } from './LogisticaDelSinu/Transpote/transporte-consulta/transporte-consulta.component';
 import { TransporteService } from './services/transporte.service';
+import { JwtInterceptor } from './services/jwt.interceptor';
+import { AuthGuard } from './services/auth.guard';
 
 @NgModule({
   declarations: [
@@ -69,14 +71,14 @@ import { TransporteService } from './services/transporte.service';
     FormsModule,
     NgbModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
+      { path: '', component: HomeComponent, pathMatch: 'full'},
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
     ]),
     AppRoutingModule
   ],
   entryComponents:[AlertModalComponent],
-  providers: [UsuarioService,HotelService,RestaurantesService,TransporteService],
+  providers: [UsuarioService,HotelService,RestaurantesService,TransporteService,{provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

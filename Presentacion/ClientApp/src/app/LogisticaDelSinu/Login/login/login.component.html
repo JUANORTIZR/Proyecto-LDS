@@ -1,38 +1,42 @@
-<div id="home" class="container-fluid">
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div id="home" class="container-fluid">
 
-    <!--  ************************* Header Starts Here ************************** -->
-                                                                         
-                                                                                                                                          
-      <!-- ######## Header End ####### --> 
-     <div class="container">
-         <div class="row">
-             <div class="col-sm-4 login-box">
-                 <div class="title-box">
-                     <h2>Inicio de sesión</h2>
-                     <p>Por favor, introduzca sus datos de inicio de sesión !</p>
-                 </div>
-                 <div class="row">
-                     <input id="txtEmail" type="text" placeholder="Introduzca correo electronico" class="form-control inpt-sm">
-                 </div>
-                 <div class="row">
-                     <input id="txtpassword" type="text" placeholder="Introduzca la contraseña" class="form-control inpt-sm">
-                 </div>
-                 <div class="row chk-lab">
-                    <div class="col-sm-6">
-                        <input type="checkbox"> <label>Recuérdame</label>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 login-box">
+                    <div class="title-box">
+                        <h2>Inicio de sesión</h2>
+                        <p>Por favor, introduzca sus datos de inicio de sesión !</p>
                     </div>
-                    <div class="col-sm-6 colkd">
-                        <a>Contraseña olvidada ?</a>
+                    <div class="row">
+                        <input id="txtEmail" formControlName="usuario" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" type="text" placeholder="Introduzca correo electronico"
+                            class="form-control inpt-sm">
+                            <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                                <div *ngIf="f.username.errors.required">Username is required</div>
+                            </div>
                     </div>
-                 </div>
-                 <div class=" submot-row">
-                     <div class="btn btn-sm btn-success"><i class="fas fa-paper-plane"></i> Iniciar sesión</div>
-                 </div>
-             </div>
-         </div>
-     </div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
-    
+                    <div class="row">
+                        <input id="txtpassword" type="text" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors}" placeholder="Introduzca la contraseña"
+                            class="form-control inpt-sm">
+                            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                <div *ngIf="f.password.errors.required">Password is required</div>
+                            </div>
+                    </div>
+                    <div class="row chk-lab">
+                        <div class="col-sm-6">
+                            <input type="checkbox"> <label>Recuérdame</label>
+                        </div>
+                        <div class="col-sm-6 colkd">
+                            <a>Contraseña olvidada ?</a>
+                        </div>
+                    </div>
+                    <button [disabled]="loading" class="btn btn-primary">
+                        <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                        Login
+                    </button>
+                </div>
+            </div>
+        </div>
+
     </div>
-  
+</form>

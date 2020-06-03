@@ -15,7 +15,7 @@
           </a>
         </li>
 
-        <li>
+        <li *ngIf="currentUser">
           <a href="#SubUsuario" [routerLinkActive]="['link-active']" (click)="show=!show" data-toggle="collapse"
             aria-expanded="false" class="nav-link"><i class="material-icons">person</i>
             <p> Gestion Usuario <span *ngIf="!show" class="material-icons">keyboard_arrow_down </span> <span
@@ -38,8 +38,8 @@
 
           </ul>
         </li>
-        <li class="nav-item">
-          <a href="#SubHoteles" [routerLinkActive]="['link-active']" (click)="show2=!show2" data-toggle="collapse"
+        <li class="nav-item" *ngIf="currentUser">
+          <a href="#SubHoteles" [routerLinkActive]="['link-active']"  (click)="show2=!show2" data-toggle="collapse"
             aria-expanded="false" class="nav-link ">
             <i class="material-icons">business</i>
             <p>Gestion Hoteles <span *ngIf="show2==false" class="material-icons">keyboard_arrow_down </span> <span
@@ -63,7 +63,7 @@
           </ul>
         </li>
 
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="currentUser">
           <a href="#SubRestaurantes" [routerLinkActive]="['link-active']" (click)="show3=!show3" data-toggle="collapse"
             aria-expanded="false" class="nav-link ">
             <i class="material-icons">local_dining</i>
@@ -88,7 +88,7 @@
           </ul>
         </li>
 
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="currentUser">
           <a href="#SubTransporte" [routerLinkActive]="['link-active']" (click)="show4=!show4" data-toggle="collapse"
             aria-expanded="false" class="nav-link ">
             <i class="material-icons">departure_board</i>
@@ -110,37 +110,6 @@
               </a>
             </li>
           </ul>
-        </li>
-
-        <li class="nav-item ">
-          <a class="nav-link" href="./typography.html">
-            <i class="material-icons">library_books</i>
-            <p>Typography</p>
-          </a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="./icons.html">
-            <i class="material-icons">bubble_chart</i>
-            <p>Icons</p>
-          </a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="./map.html">
-            <i class="material-icons">location_ons</i>
-            <p>Maps</p>
-          </a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="./notifications.html">
-            <i class="material-icons">notifications</i>
-            <p>Notifications</p>
-          </a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="./rtl.html">
-            <i class="material-icons">language</i>
-            <p>RTL Support</p>
-          </a>
         </li>
       </ul>
     </div>
@@ -164,14 +133,19 @@
           <form class="navbar-form">
           </form>
           <ul class="navbar-nav"> 
-            <li class="nav-item">
+            <li class="nav-item" *ngIf="!currentUser">
               <a  id="login" class="d-md-block text-center nav-link" href="#" [routerLink]="['/Login']">
                 Iniciar sesión
               </a>
             </li>
-            <li class="nav-item"> 
+            <li class="nav-item" *ngIf="!currentUser"> 
               <a class="d-md-block text-center nav-link" id="registroBtn" href="#" [routerLink]="['/UsuarioRegistro']">
                 ¡REGíSTRATE YA!        
+              </a>   
+            </li>
+            <li class="nav-item" *ngIf="currentUser"> 
+              <a class="d-md-block text-center nav-link" id="registroBtn" href="#" (click)="logout()">
+                cerrar sesión       
               </a>   
             </li>
           </ul>

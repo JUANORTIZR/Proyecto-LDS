@@ -6936,39 +6936,37 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ANYE\\.nuget\\packages\\": {}
+    "C:\\Users\\JUAN CARLOS\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "A:\\Escritorio\\logistica del sinu 1.0\\Proyecto-LDS\\Logica\\Logica.csproj",
+      "projectUniqueName": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Logica\\Logica.csproj",
       "projectName": "Logica",
-      "projectPath": "A:\\Escritorio\\logistica del sinu 1.0\\Proyecto-LDS\\Logica\\Logica.csproj",
-      "packagesPath": "C:\\Users\\ANYE\\.nuget\\packages\\",
-      "outputPath": "A:\\Escritorio\\logistica del sinu 1.0\\Proyecto-LDS\\Logica\\obj\\",
+      "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Logica\\Logica.csproj",
+      "packagesPath": "C:\\Users\\JUAN CARLOS\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Logica\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ANYE\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\JUAN CARLOS\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netstandard2.1": {
           "projectReferences": {
-            "A:\\Escritorio\\logistica del sinu 1.0\\Proyecto-LDS\\Datos\\Datos.csproj": {
-              "projectPath": "A:\\Escritorio\\logistica del sinu 1.0\\Proyecto-LDS\\Datos\\Datos.csproj"
+            "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Datos\\Datos.csproj": {
+              "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Datos\\Datos.csproj"
             },
-            "A:\\Escritorio\\logistica del sinu 1.0\\Proyecto-LDS\\Entity\\Entity.csproj": {
-              "projectPath": "A:\\Escritorio\\logistica del sinu 1.0\\Proyecto-LDS\\Entity\\Entity.csproj"
+            "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Entity\\Entity.csproj": {
+              "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Entity\\Entity.csproj"
             },
-            "A:\\Escritorio\\logistica del sinu 1.0\\Proyecto-LDS\\Infraestructura\\Infraestructura.csproj": {
-              "projectPath": "A:\\Escritorio\\logistica del sinu 1.0\\Proyecto-LDS\\Infraestructura\\Infraestructura.csproj"
+            "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Infraestructura\\Infraestructura.csproj": {
+              "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Infraestructura\\Infraestructura.csproj"
             }
           }
         }

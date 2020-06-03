@@ -1,0 +1,7 @@
+C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Entity\bin\Release\netstandard2.1\Entity.deps.json
+C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Entity\bin\Release\netstandard2.1\Entity.dll
+C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Entity\bin\Release\netstandard2.1\Entity.pdb
+C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Entity\obj\Release\netstandard2.1\Entity.AssemblyInfoInputs.cache
+C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Entity\obj\Release\netstandard2.1\Entity.AssemblyInfo.cs
+C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Entity\obj\Release\netstandard2.1\Entity.dll
+C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Entity\obj\Release\netstandard2.1\Entity.pdb

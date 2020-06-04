@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 A:\Escritorio\logistica del sinu 1.0\Proyecto-LDS\Datos\bin\Release\netstandard2.1\Datos.deps.json
 A:\Escritorio\logistica del sinu 1.0\Proyecto-LDS\Datos\bin\Release\netstandard2.1\Datos.dll
 A:\Escritorio\logistica del sinu 1.0\Proyecto-LDS\Datos\bin\Release\netstandard2.1\Datos.pdb
@@ -9,3 +10,16 @@ A:\Escritorio\logistica del sinu 1.0\Proyecto-LDS\Datos\obj\Release\netstandard2
 A:\Escritorio\logistica del sinu 1.0\Proyecto-LDS\Datos\obj\Release\netstandard2.1\Datos.csproj.CopyComplete
 A:\Escritorio\logistica del sinu 1.0\Proyecto-LDS\Datos\obj\Release\netstandard2.1\Datos.dll
 A:\Escritorio\logistica del sinu 1.0\Proyecto-LDS\Datos\obj\Release\netstandard2.1\Datos.pdb
+=======
+C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Datos\bin\Release\netstandard2.1\Datos.deps.json
+C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Datos\bin\Release\netstandard2.1\Datos.dll
+C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Datos\bin\Release\netstandard2.1\Datos.pdb
+C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Datos\bin\Release\netstandard2.1\Entity.dll
+C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Datos\bin\Release\netstandard2.1\Entity.pdb
+C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Datos\obj\Release\netstandard2.1\Datos.csprojAssemblyReference.cache
+C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Datos\obj\Release\netstandard2.1\Datos.AssemblyInfoInputs.cache
+C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Datos\obj\Release\netstandard2.1\Datos.AssemblyInfo.cs
+C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Datos\obj\Release\netstandard2.1\Datos.csproj.CopyComplete
+C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Datos\obj\Release\netstandard2.1\Datos.dll
+C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Datos\obj\Release\netstandard2.1\Datos.pdb
+>>>>>>> 183bc23ce9ed4106244f12041ded65255494ba0c

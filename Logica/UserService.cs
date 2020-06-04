@@ -16,7 +16,7 @@ namespace Logica {
         public User ValidarUser (string usuario, string password) {
             try {
                 return _Context.Users.Where (u => u.Usuario == usuario && u.Password == password && (u.Estado == "Activo" || u.Estado == "Modificado")).FirstOrDefault ();
-            } catch (Exception e) {
+            } catch (Exception) {
                 return null;
             }
         }

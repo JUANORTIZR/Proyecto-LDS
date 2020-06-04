@@ -35,6 +35,10 @@ import { TransporteConsultaComponent } from './LogisticaDelSinu/Transpote/transp
 import { TransporteService } from './services/transporte.service';
 import { JwtInterceptor } from './services/jwt.interceptor';
 import { AuthGuard } from './services/auth.guard';
+import { UtilidadConsultaComponent } from './LogisticaDelSinu/utilidad-consulta/utilidad-consulta.component';
+import { FiltroUtilidadPipe } from './pipe/filtro-utilidad.pipe';
+import { UtilidadService } from './services/utilidad.service';
+import { UtilidadRegistroComponent } from './LogisticaDelSinu/utilidad-registro/utilidad-registro.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +66,9 @@ import { AuthGuard } from './services/auth.guard';
     TrasporteActualizarComponent,
     TransporteConsultaComponent,
     TransporteRegistroComponent,
+    UtilidadConsultaComponent,
+    FiltroUtilidadPipe,
+    UtilidadRegistroComponent,
     
   ],
   imports: [
@@ -78,7 +85,7 @@ import { AuthGuard } from './services/auth.guard';
     AppRoutingModule
   ],
   entryComponents:[AlertModalComponent],
-  providers: [UsuarioService,HotelService,RestaurantesService,TransporteService,{provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}],
+  providers: [UsuarioService,HotelService,RestaurantesService,TransporteService,UtilidadService,{provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

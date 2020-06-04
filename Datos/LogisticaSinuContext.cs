@@ -14,6 +14,7 @@ namespace Datos {
         public DbSet<Restaurante> Restaurantes { get; set; }
         public DbSet<Transporte> Transportes { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Utilidad> Utilidades { get; set; }
 
     }
 }

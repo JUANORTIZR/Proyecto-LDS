@@ -1,0 +1,15 @@
+#btn-registro:hover{
+    background-color: rgb(159, 20, 22);
+}
+
+#btn-registro{
+  background-color: rgb(159, 20, 22);
+  color: aliceblue;
+}
+#btn-cancelar{
+    background-color: rgb(159, 20, 22);
+    color: aliceblue;
+}
+#btn-cancelar:hover{
+    background-color: rgb(159, 20, 22);
+}

@@ -26,11 +26,7 @@
 #titulo-registro{
     color: rgb(0, 107, 160);
 }*/
-#txtIdentificacion,#txtCPassword,#txtPassword,#txtEmail,#txtTelefono,
-#txtSApellido,#txtPApellido,#txtSNombre,#txtPNombre
-{
-    border:none;
-}
+
 
 #btn-registro:hover{
     background-color: rgb(159, 20, 22);

@@ -120,6 +120,37 @@ namespace Datos.Migrations
                     b.ToTable("Transportes");
                 });
 
+            modelBuilder.Entity("Entity.User", b =>
+                {
+                    b.Property<string>("Usuario")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Correo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Estado")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PrimerApellido")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PrimerNombre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Telefono")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Token")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Usuario");
+
+                    b.ToTable("Users");
+                });
+
             modelBuilder.Entity("Entity.Usuario", b =>
                 {
                     b.Property<string>("Identificacion")
@@ -149,6 +180,25 @@ namespace Datos.Migrations
                     b.HasKey("Identificacion");
 
                     b.ToTable("Usuarios");
+                });
+
+            modelBuilder.Entity("Entity.Utilidad", b =>
+                {
+                    b.Property<string>("IdPago")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<decimal>("Costo")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("Precio")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("UtilidadTotal")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("IdPago");
+
+                    b.ToTable("Utilidades");
                 });
 #pragma warning restore 612, 618
         }

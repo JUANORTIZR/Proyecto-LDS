@@ -1,0 +1,67 @@
+<div class="row">
+    <div class="col-md-7 container">
+        <div class="card">
+            <div class="card-header card-header-primary">
+                <h4 class="card-title">Calcular Utilidades</h4>
+                <p class="card-category">Ingrese los valores</p>
+            </div>
+            <div class="card-body">
+                <form id="contenedor" [formGroup]="formGroup">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="bmd-label-floating">Id Pago</label>
+                                <input type="text" class="form-control" formControlName="idPago"
+                                    [ngClass]="{ 'is-invalid': control.idPago.errors && control.idPago.touched}"
+                                    placeholder="ingrese el valor">
+                                <div *ngIf="control.idPago.errors && control.idPago.touched" class="invalid-feedback">
+                                    <div *ngIf="control.idPago.errors.required">Se require el valor
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="bmd-label-floating">Precio</label>
+                                <input type="number" class="form-control" formControlName="precio"
+                                    [ngClass]="{ 'is-invalid': control.precio.errors && control.precio.touched}"
+                                    placeholder="ingrese el valor">
+                                <div *ngIf="control.precio.errors && control.precio.touched" class="invalid-feedback">
+                                    <div *ngIf="control.precio.errors.required">Se require el valor
+                                    </div>
+                                    <div *ngIf="control.precio.errors.min">El valor no es valido</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="bmd-label-floating">Costo</label>
+                                <input type="number" class="form-control" formControlName="costo"
+                                    [ngClass]="{ 'is-invalid': control.costo.errors && control.costo.touched}"
+                                    placeholder="Ingrese el valor">
+                                <div *ngIf="control.costo.errors && control.costo.touched" class="invalid-feedback">
+                                    <div *ngIf="control.costo.errors.required">Se require el valor
+                                    </div>
+                                    <div *ngIf="control.costo.errors.min">El valor no es valido</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="bmd-label-floating">Total utilidades:</label>
+                                {{utilidad.utilidadTotal}}
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <button type="button" id="btn-registro" class="btn  pull-right" (click)="onSubmit()"
+                        [disabled]="formGroup.invalid">Calcular Utilidades</button>
+                    <button type="reset" id="btn-cancelar" class="btn  pull-right">Cancelar</button>
+                    <div class="clearfix"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

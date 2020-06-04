@@ -14,6 +14,8 @@ import { LoginComponent } from './LogisticaDelSinu/Login/login/login.component';
 import { TrasporteActualizarComponent } from './LogisticaDelSinu/Transpote/trasporte-actualizar/trasporte-actualizar.component';
 import { TransporteRegistroComponent } from './LogisticaDelSinu/Transpote/transporte-registro/transporte-registro.component';
 import { TransporteConsultaComponent } from './LogisticaDelSinu/Transpote/transporte-consulta/transporte-consulta.component';
+import { UtilidadConsultaComponent } from './LogisticaDelSinu/utilidad-consulta/utilidad-consulta.component';
+import { UtilidadRegistroComponent } from './LogisticaDelSinu/utilidad-registro/utilidad-registro.component';
 
 
 const routes: Routes = [
@@ -68,6 +70,14 @@ const routes: Routes = [
   {
     path: 'Login',
     component: LoginComponent
+  },
+  {
+    path: 'RegistroUtilidad',
+    component: UtilidadRegistroComponent
+  },
+  {
+    path: 'UtilidadConsulta',
+    component: UtilidadConsultaComponent
   }
 
 ];

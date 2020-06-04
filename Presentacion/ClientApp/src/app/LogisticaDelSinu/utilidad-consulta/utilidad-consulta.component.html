@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-6">
+        <input [(ngModel)]="searchText" type="text" class="form-control" placeholder="Buscar utilidad">
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header card-header-primary">
+                <h4 class="card-title ">Utilidades</h4>
+                <p class="card-category"> Utilidades Calculadas y Registradas</p>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead class=" text-primary">
+                            <th scope="row">#</th>
+                            <th>IdPago</th>
+                            <th>Costo</th>
+                            <th>Precio</th>
+                            <th>Total</th>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor='let utilidad of utilidades|filtroUtilidad:searchText; index as i'>
+                                <th scope="row">{{i+1}}</th>
+                                <td>{{utilidad.idPago}}</td>
+                                <td>{{utilidad.costo}} </td>
+                                <td>{{utilidad.precio}} </td>
+                                <td>{{utilidad.utilidadTotal}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -86,6 +86,12 @@
 
           </ul>
         </li>
+        <li>
+          <a class="nav-link" [routerLink]="['/SolicitudServicio']">
+            <i class="material-icons">content_paste</i>
+            <p>Solicitud de servicio</p>
+          </a>
+        </li>
 
         <li class="nav-item" *ngIf="currentUser">
           <a href="#SubTransporte" [routerLinkActive]="['link-active']" (click)="show4=!show4" data-toggle="collapse"

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Logica\\Logica.csproj": {}
+    "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Logica\\Logica.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Datos\\Datos.csproj": {
+    "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Datos\\Datos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Datos\\Datos.csproj",
+        "projectUniqueName": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Datos\\Datos.csproj",
         "projectName": "Datos",
-        "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Datos\\Datos.csproj",
+        "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Datos\\Datos.csproj",
         "packagesPath": "C:\\Users\\JUAN CARLOS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Datos\\obj\\",
+        "outputPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Datos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\JUAN CARLOS\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -25,8 +25,8 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Entity\\Entity.csproj": {
-                "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Entity\\Entity.csproj"
+              "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Entity\\Entity.csproj": {
+                "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Entity\\Entity.csproj"
               }
             }
           }
@@ -72,14 +72,14 @@
         }
       }
     },
-    "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Entity\\Entity.csproj": {
+    "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Entity\\Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Entity\\Entity.csproj",
+        "projectUniqueName": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Entity\\Entity.csproj",
         "projectName": "Entity",
-        "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Entity\\Entity.csproj",
+        "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Entity\\Entity.csproj",
         "packagesPath": "C:\\Users\\JUAN CARLOS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Entity\\obj\\",
+        "outputPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Entity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\JUAN CARLOS\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -128,14 +128,14 @@
         }
       }
     },
-    "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Infraestructura\\Infraestructura.csproj": {
+    "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Infraestructura\\Infraestructura.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Infraestructura\\Infraestructura.csproj",
+        "projectUniqueName": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Infraestructura\\Infraestructura.csproj",
         "projectName": "Infraestructura",
-        "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Infraestructura\\Infraestructura.csproj",
+        "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Infraestructura\\Infraestructura.csproj",
         "packagesPath": "C:\\Users\\JUAN CARLOS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Infraestructura\\obj\\",
+        "outputPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Infraestructura\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\JUAN CARLOS\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -149,8 +149,8 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Entity\\Entity.csproj": {
-                "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Entity\\Entity.csproj"
+              "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Entity\\Entity.csproj": {
+                "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Entity\\Entity.csproj"
               }
             }
           }
@@ -182,14 +182,14 @@
         }
       }
     },
-    "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Logica\\Logica.csproj": {
+    "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Logica\\Logica.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Logica\\Logica.csproj",
+        "projectUniqueName": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Logica\\Logica.csproj",
         "projectName": "Logica",
-        "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Logica\\Logica.csproj",
+        "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Logica\\Logica.csproj",
         "packagesPath": "C:\\Users\\JUAN CARLOS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Logica\\obj\\",
+        "outputPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Logica\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\JUAN CARLOS\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -203,14 +203,14 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Datos\\Datos.csproj": {
-                "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Datos\\Datos.csproj"
+              "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Datos\\Datos.csproj": {
+                "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Datos\\Datos.csproj"
               },
-              "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Entity\\Entity.csproj": {
-                "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Entity\\Entity.csproj"
+              "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Entity\\Entity.csproj": {
+                "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Entity\\Entity.csproj"
               },
-              "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Infraestructura\\Infraestructura.csproj": {
-                "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Infraestructura\\Infraestructura.csproj"
+              "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Infraestructura\\Infraestructura.csproj": {
+                "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Infraestructura\\Infraestructura.csproj"
               }
             }
           }

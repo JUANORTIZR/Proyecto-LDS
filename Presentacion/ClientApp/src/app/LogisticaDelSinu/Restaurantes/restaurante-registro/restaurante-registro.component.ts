@@ -19,7 +19,7 @@ export class RestauranteRegistroComponent implements OnInit {
     this.buildForm();
   }
   private buildForm() {
-    this.restaurante=new Restaurante();
+    this.restaurante = new Restaurante();
     this.restaurante.nit = "";
     this.restaurante.nombre = "";
     this.restaurante.pais = "";

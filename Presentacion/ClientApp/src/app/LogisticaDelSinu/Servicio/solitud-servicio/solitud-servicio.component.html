@@ -1,0 +1,131 @@
+<div class="col-md-8 container">
+    <div class="card">
+        <div class="card-header card-header-primary">
+            <h4 class="card-title">Solicitud de servicio</h4>
+            <p class="card-category">Rellene los campos</p>
+        </div>
+        
+
+        <div class="card-body">
+
+
+            <form id="contenedor" [formGroup]="formGroup">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="bmd-label-floating">Id</label>
+                            <input type="text" class="form-control" formControlName="idServicio"
+                                [ngClass]="{ 'is-invalid': control.idServicio.errors && control.idServicio.touched}"
+                                placeholder="Escriba aquí el id del servicio">
+                            <div *ngIf="control.idServicio.errors && control.idServicio.touched"
+                                class="invalid-feedback">
+                                <div *ngIf="control.idServicio.errors.required">Se require el id del servicio</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="bmd-label-floating">Fecha</label>
+                            <input type="date" class="form-control" formControlName="fechaEvento"
+                                [ngClass]="{ 'is-invalid': control.fechaEvento.errors && control.fechaEvento.touched}"
+                                placeholder="Escriba aqui la fecha del servicio en formato Dia/Mes/Año">
+                            <div *ngIf="control.fechaEvento.errors && control.fechaEvento.touched"
+                                class="invalid-feedback">
+                                <div *ngIf="control.fechaEvento.errors.required">Se require la fecha del dia que se
+                                    realizara el evento</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-sm">
+                        <label for="inputState">Servicio a solicitar</label>
+                        <select (change)="cambiarTipoServicio($event)" formControlName="tipoServicio" id="inputState"
+                            class="form-control">
+                            <option selected>Seleccione</option>
+                            <option [ngValue]="servicioSele" *ngFor="let servicioSele of listaServicios">
+                                {{servicioSele}}</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm">
+                        <label for="exampleFormControlTextarea">Descripcion</label>
+                        <textarea formControlName="descripcion" class="form-control" id="exampleFormControlTextarea"
+                            rows="3"></textarea>
+                    </div>
+
+                </div>
+
+
+                <div class="row">
+                    <p class="text-center">Seleccione servicios adicionales que desee</p>
+                    <hr>
+                    <hr>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="bmd-label-floating">Refrigerios</label>
+                            <div class="host">
+                                <input type="checkbox" id="toggle-button-checkbox" (click)="cambiarRefrigerio()">
+                                <label class="toggle-button-switch" for="toggle-button-checkbox"></label>
+                                <div class="toggle-button-text">
+                                    <div class="toggle-button-text-on">SI</div>
+                                    <div class="toggle-button-text-off">NO</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <div class="form-group">
+                            <label class="bmd-label-floating">Ponentes</label>
+                            <div class="host">
+
+                                <input type="checkbox" id="toggle-button-checkbox2" (click)="cambiarPonentes()">
+                                <label class="toggle-button-switch" for="toggle-button-checkbox2"></label>
+                                <div class="toggle-button-text">
+                                    <div class="toggle-button-text-on">SI</div>
+                                    <div class="toggle-button-text-off">NO</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label class="bmd-label-floating">Logistica completa </label>
+                            <div class="host">
+                                <input type="checkbox" id="toggle-button-checkbox3" (click)="cambiarLogistica()">
+                                <label class="toggle-button-switch" for="toggle-button-checkbox3"></label>
+                                <div class="toggle-button-text">
+                                    <div class="toggle-button-text-on">SI</div>
+                                    <div class="toggle-button-text-off">NO</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-sm">
+                        <label for="exampleFormControlTextarea1">Observacion</label>
+                        <textarea formControlName="observacion" class="form-control" id="exampleFormControlTextarea1"
+                            rows="3"></textarea>
+                    </div>
+                </div>
+
+                <button type="button" id="btn-registro" class="btn  pull-right btn-primary" (click)="onSubmit()"
+                    [disabled]="formGroup.invalid">Registrar</button>
+                <button type="reset" id="btn-cancelar" class="btn  pull-right">Cancelar</button>
+                <div class="clearfix"></div>
+            </form>
+
+
+
+
+        </div>
+
+    </div>
+</div>

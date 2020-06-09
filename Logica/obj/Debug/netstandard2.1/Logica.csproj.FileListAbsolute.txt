@@ -58,3 +58,18 @@ A:\Escritorio\logistica del sinu 1.0\Proyecto-LDS\Logica\bin\Debug\netstandard2.
 A:\Escritorio\logistica del sinu 1.0\Proyecto-LDS\Logica\bin\Debug\netstandard2.1\Entity.pdb
 A:\Escritorio\logistica del sinu 1.0\Proyecto-LDS\Logica\bin\Debug\netstandard2.1\Infraestructura.pdb
 A:\Escritorio\logistica del sinu 1.0\Proyecto-LDS\Logica\obj\Debug\netstandard2.1\Logica.csproj.CopyComplete
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\Proyecto-LDS\Logica\bin\Debug\netstandard2.1\Logica.deps.json
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\Proyecto-LDS\Logica\bin\Debug\netstandard2.1\Logica.dll
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\Proyecto-LDS\Logica\bin\Debug\netstandard2.1\Logica.pdb
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\Proyecto-LDS\Logica\bin\Debug\netstandard2.1\Datos.dll
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\Proyecto-LDS\Logica\bin\Debug\netstandard2.1\Entity.dll
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\Proyecto-LDS\Logica\bin\Debug\netstandard2.1\Infraestructura.dll
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\Proyecto-LDS\Logica\bin\Debug\netstandard2.1\Datos.pdb
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\Proyecto-LDS\Logica\bin\Debug\netstandard2.1\Entity.pdb
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\Proyecto-LDS\Logica\bin\Debug\netstandard2.1\Infraestructura.pdb
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\Proyecto-LDS\Logica\obj\Debug\netstandard2.1\Logica.csprojAssemblyReference.cache
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\Proyecto-LDS\Logica\obj\Debug\netstandard2.1\Logica.AssemblyInfoInputs.cache
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\Proyecto-LDS\Logica\obj\Debug\netstandard2.1\Logica.AssemblyInfo.cs
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\Proyecto-LDS\Logica\obj\Debug\netstandard2.1\Logica.csproj.CopyComplete
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\Proyecto-LDS\Logica\obj\Debug\netstandard2.1\Logica.dll
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\Proyecto-LDS\Logica\obj\Debug\netstandard2.1\Logica.pdb

@@ -42,3 +42,14 @@ A:\Escritorio\logistica del sinu 1.0\Proyecto-LDS\Datos\obj\Debug\netstandard2.1
 A:\Escritorio\logistica del sinu 1.0\Proyecto-LDS\Datos\obj\Debug\netstandard2.1\Datos.csproj.CopyComplete
 A:\Escritorio\logistica del sinu 1.0\Proyecto-LDS\Datos\obj\Debug\netstandard2.1\Datos.dll
 A:\Escritorio\logistica del sinu 1.0\Proyecto-LDS\Datos\obj\Debug\netstandard2.1\Datos.pdb
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\Proyecto-LDS\Datos\bin\Debug\netstandard2.1\Datos.deps.json
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\Proyecto-LDS\datos\bin\Debug\netstandard2.1\Datos.dll
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\Proyecto-LDS\datos\bin\Debug\netstandard2.1\Datos.pdb
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\Proyecto-LDS\datos\bin\Debug\netstandard2.1\Entity.dll
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\Proyecto-LDS\datos\bin\Debug\netstandard2.1\Entity.pdb
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\Proyecto-LDS\datos\obj\Debug\netstandard2.1\Datos.csprojAssemblyReference.cache
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\Proyecto-LDS\datos\obj\Debug\netstandard2.1\Datos.AssemblyInfoInputs.cache
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\Proyecto-LDS\datos\obj\Debug\netstandard2.1\Datos.AssemblyInfo.cs
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\Proyecto-LDS\Datos\obj\Debug\netstandard2.1\Datos.csproj.CopyComplete
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\Proyecto-LDS\datos\obj\Debug\netstandard2.1\Datos.dll
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\Proyecto-LDS\datos\obj\Debug\netstandard2.1\Datos.pdb

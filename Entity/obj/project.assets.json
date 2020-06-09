@@ -115,11 +115,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Entity\\Entity.csproj",
+      "projectUniqueName": "c:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Entity\\Entity.csproj",
       "projectName": "Entity",
-      "projectPath": "c:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Entity\\Entity.csproj",
+      "projectPath": "c:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Entity\\Entity.csproj",
       "packagesPath": "C:\\Users\\JUAN CARLOS\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Entity\\obj\\",
+      "outputPath": "c:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Entity\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\JUAN CARLOS\\AppData\\Roaming\\NuGet\\NuGet.Config"

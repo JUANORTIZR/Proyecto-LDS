@@ -6903,11 +6903,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Datos\\Datos.csproj",
+      "projectUniqueName": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Datos\\Datos.csproj",
       "projectName": "Datos",
-      "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Datos\\Datos.csproj",
+      "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Datos\\Datos.csproj",
       "packagesPath": "C:\\Users\\JUAN CARLOS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Datos\\obj\\",
+      "outputPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Datos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\JUAN CARLOS\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -6921,8 +6921,8 @@
       "frameworks": {
         "netstandard2.1": {
           "projectReferences": {
-            "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Entity\\Entity.csproj": {
-              "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\Logistica del sinú\\Proyecto01\\Entity\\Entity.csproj"
+            "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Entity\\Entity.csproj": {
+              "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Entity\\Entity.csproj"
             }
           }
         }

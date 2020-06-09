@@ -39,6 +39,11 @@ import { UtilidadConsultaComponent } from './LogisticaDelSinu/utilidad-consulta/
 import { FiltroUtilidadPipe } from './pipe/filtro-utilidad.pipe';
 import { UtilidadService } from './services/utilidad.service';
 import { UtilidadRegistroComponent } from './LogisticaDelSinu/utilidad-registro/utilidad-registro.component';
+import { SolitudServicioComponent } from './LogisticaDelSinu/Servicio/solitud-servicio/solitud-servicio.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { ServicioService } from './services/servicio.service';
+
 
 @NgModule({
   declarations: [
@@ -69,6 +74,7 @@ import { UtilidadRegistroComponent } from './LogisticaDelSinu/utilidad-registro/
     UtilidadConsultaComponent,
     FiltroUtilidadPipe,
     UtilidadRegistroComponent,
+    SolitudServicioComponent,
     
   ],
   imports: [
@@ -77,6 +83,9 @@ import { UtilidadRegistroComponent } from './LogisticaDelSinu/utilidad-registro/
     HttpClientModule,
     FormsModule,
     NgbModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    BsDatepickerModule.forRoot(),
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full'},
       { path: 'counter', component: CounterComponent },
@@ -85,7 +94,7 @@ import { UtilidadRegistroComponent } from './LogisticaDelSinu/utilidad-registro/
     AppRoutingModule
   ],
   entryComponents:[AlertModalComponent],
-  providers: [UsuarioService,HotelService,RestaurantesService,TransporteService,UtilidadService,{provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}],
+  providers: [ServicioService,UsuarioService,HotelService,RestaurantesService,TransporteService,UtilidadService,{provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

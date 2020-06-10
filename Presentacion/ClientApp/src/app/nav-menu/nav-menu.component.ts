@@ -29,7 +29,8 @@ export class NavMenuComponent {
   ) {
 
     this.authenticationService.currentUser.subscribe(x => this.currentUser = x);
-
+    var usuario = (JSON.parse(localStorage.getItem('currentUser')));
+    
   }
   collapse() {
     this.isExpanded = false;

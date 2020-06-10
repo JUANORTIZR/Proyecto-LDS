@@ -6,6 +6,7 @@ import { Servicio } from '../../Models/servicio';
 import { ServicioService } from 'src/app/services/servicio.service';
 import { Usuario } from '../../Models/usuario';
 import { UsuarioService } from 'src/app/services/usuario.service';
+import { User } from 'src/app/seguridad/user';
 
 
 @Component({
@@ -25,7 +26,7 @@ export class SolitudServicioComponent implements OnInit {
   refrigerio:string;
   ponente:string;
   logistica:string;
-  idUsuarioActivo:string = "string";
+  usuario: User = (JSON.parse(localStorage.getItem('currentUser')));
   constructor(private servicioService: ServicioService, private usuarioService: UsuarioService, private formBuilder: FormBuilder, private modalService: NgbModal) {
     
    }
@@ -35,8 +36,6 @@ export class SolitudServicioComponent implements OnInit {
     this.cambiarLogistica();
     this.cambiarPonentes();
     this.cambiarRefrigerio();
-   
-
   }
 
   private buildForm() {
@@ -101,12 +100,18 @@ export class SolitudServicioComponent implements OnInit {
   }
 
   registrar() {
+    if(this.usuario==null){
+      const messageBox = this.modalService.open(AlertModalComponent)
+          messageBox.componentInstance.title = "Resultado Operación";
+          messageBox.componentInstance.message = 'Para poder hacer la solicitud de uno de nuestros servicios pro favor inicia sesión o registrate';
+          return;
+    }
     this.servicio = this.formGroup.value;
     this.servicio.fechaDeSolicitud = new Date();
     this.servicio.refrigerio = this.refrigerio;
     this.servicio.ponentes = this.ponente;
     this.servicio.logisticaCompleta = this.logistica;
-    this.servicio.idCliente = this.idUsuarioActivo;
+    this.servicio.idCliente = this.usuario.identificacion;
       this.servicioService.post(this.servicio).subscribe(s => {
         if (s != null) {
           const messageBox = this.modalService.open(AlertModalComponent)

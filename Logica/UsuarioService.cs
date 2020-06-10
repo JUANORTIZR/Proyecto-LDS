@@ -15,7 +15,7 @@ namespace Logica {
 
         }
 
-        public GuardarUsuarioResponse Guardar (Usuario usuario) {
+        public GuardarUsuarioResponse Guardar (User usuario) {
             try {
                 string mensajeEmail = string.Empty;
                 Email email = new Email ();
@@ -23,9 +23,9 @@ namespace Logica {
                 if (UsuarioBuscado != null) {
                     return new GuardarUsuarioResponse ("El usuario ya se encuentra registrado");
                 }
-                _Context.Usuarios.Add (usuario);
+                _Context.Users.Add (usuario);
                 _Context.SaveChanges();
-                mensajeEmail = email.EnviarEmail (usuario.CorreoElectronico, usuario.PrimerNombre);
+                mensajeEmail = email.EnviarEmail (usuario.Correo, usuario.PrimerNombre);
                 return new GuardarUsuarioResponse (usuario);
             } catch (Exception e) {
                 return new GuardarUsuarioResponse ($"Error de la Aplicacion: {e.Message}");

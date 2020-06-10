@@ -24,11 +24,13 @@ namespace Presentacion.Controllers {
             if (admin == null) {
                 _context.Users.Add (new Entity.User () {
                         Usuario = "admin",
+                        Identificacion = "123",
                         Password = "admin",
                         Estado = "Activo",
                         PrimerNombre = "Adminitrador",
                         PrimerApellido = "Administrador",
                         Telefono = "31800000000",
+                        Tipo = "admin",
                         Correo = "admin@gmail.com"
                 });
 

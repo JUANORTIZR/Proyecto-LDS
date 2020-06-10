@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Datos.Migrations
 {
     [DbContext(typeof(LogisticaSinuContext))]
-    [Migration("20200609205930_InitialCreate")]
+    [Migration("20200610015308_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -171,6 +171,9 @@ namespace Datos.Migrations
                     b.Property<string>("Estado")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Identificacion")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
 
@@ -180,7 +183,16 @@ namespace Datos.Migrations
                     b.Property<string>("PrimerNombre")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("SegundoApellido")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SegundoNombre")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Telefono")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Tipo")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Token")

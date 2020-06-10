@@ -9,10 +9,10 @@
                         <p>Por favor, introduzca sus datos de inicio de sesión !</p>
                     </div>
                     <div class="row">
-                        <input id="txtEmail" formControlName="usuario" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" type="text" placeholder="Introduzca correo electronico"
+                        <input id="txtEmail" formControlName="usuario" [ngClass]="{ 'is-invalid': submitted && f.usuario.errors }" type="text" placeholder="Introduzca correo electronico"
                             class="form-control inpt-sm">
-                            <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
-                                <div *ngIf="f.username.errors.required">Username is required</div>
+                            <div *ngIf="submitted && f.usuario.errors" class="invalid-feedback">
+                                <div *ngIf="f.usuario.errors.required">El usuario es requerido</div>
                             </div>
                     </div>
                     <div class="row">

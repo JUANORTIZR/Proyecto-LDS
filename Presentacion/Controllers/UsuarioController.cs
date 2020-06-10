@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Presentacion.Models;
+using Presentacion.Models.Loguin;
 
 namespace Presentacion.Controllers {
     [Route ("api/[controller]")]
@@ -19,8 +20,8 @@ namespace Presentacion.Controllers {
         }
 
         [HttpPost]
-        public ActionResult<UsuarioViewModel> Post (UsuarioInputModel UsuarioInput) {
-            Usuario usuario = MapearUsuario (UsuarioInput);
+        public ActionResult<LoginViewModel> Post (LoginInputModel UsuarioInput) {
+            User usuario = MapearUsuario (UsuarioInput);
             var response = _usuarioService.Guardar (usuario);
             if (response.Error) {
                 ModelState.AddModelError ("Guardar Usuario", response.Mensaje);
@@ -32,16 +33,19 @@ namespace Presentacion.Controllers {
             return Ok (response.Usuario);
         }
 
-        private Usuario MapearUsuario (UsuarioInputModel usuarioInput) {
-            var usuario = new Usuario {
+        private User MapearUsuario (LoginInputModel usuarioInput) {
+            var usuario = new User {
                 Identificacion = usuarioInput.Identificacion,
                 PrimerNombre = usuarioInput.PrimerNombre,
                 SegundoNombre = usuarioInput.SegundoNombre,
                 PrimerApellido = usuarioInput.PrimerApellido,
                 SegundoApellido = usuarioInput.SegundoApellido,
                 Telefono = usuarioInput.Telefono,
-                CorreoElectronico = usuarioInput.CorreoElectronico,
-                Clave = usuarioInput.Clave
+                Correo = usuarioInput.Correo,
+                Usuario = usuarioInput.Usuario,
+                Password = usuarioInput.Password,
+                Tipo = "Usuario",
+                Estado = "Activo"
             };
             return usuario;
         }

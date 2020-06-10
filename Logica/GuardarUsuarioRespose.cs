@@ -4,7 +4,7 @@ namespace Logica
 {
     public class GuardarUsuarioResponse
     {
-        public GuardarUsuarioResponse(Usuario usuario)
+        public GuardarUsuarioResponse(User usuario)
         {
             Error = false;
             Usuario = usuario;
@@ -16,6 +16,6 @@ namespace Logica
         }
         public bool Error { get; set; }
         public string Mensaje { get; set; }
-        public Usuario Usuario { get; set; }
+        public User Usuario { get; set; }
     }
 }

@@ -14,7 +14,7 @@
           </a>
         </li>
 
-        <li *ngIf="currentUser">
+        <li *ngIf="currentUser && currentUser.tipo=='admin'">
           <a href="#SubUsuario" [routerLinkActive]="['link-active']" (click)="show=!show" data-toggle="collapse"
             aria-expanded="false" class="nav-link"><i class="material-icons">person</i>
             <p> Gestion Usuario <span *ngIf="!show" class="material-icons">keyboard_arrow_down </span> <span
@@ -37,7 +37,7 @@
 
           </ul>
         </li>
-        <li class="nav-item" *ngIf="currentUser">
+        <li class="nav-item" *ngIf="currentUser && currentUser.tipo=='admin' ">
           <a href="#SubHoteles" [routerLinkActive]="['link-active']" (click)="show2=!show2" data-toggle="collapse"
             aria-expanded="false" class="nav-link ">
             <i class="material-icons">business</i>
@@ -62,7 +62,7 @@
           </ul>
         </li>
 
-        <li class="nav-item" *ngIf="currentUser">
+        <li class="nav-item" *ngIf="currentUser && currentUser.tipo=='admin'">
           <a href="#SubRestaurantes" [routerLinkActive]="['link-active']" (click)="show3=!show3" data-toggle="collapse"
             aria-expanded="false" class="nav-link ">
             <i class="material-icons">local_dining</i>
@@ -87,13 +87,13 @@
           </ul>
         </li>
         <li>
-          <a class="nav-link" [routerLink]="['/SolicitudServicio']">
+          <a class="nav-link" *ngIf="currentUser" [routerLink]="['/SolicitudServicio']">
             <i class="material-icons">content_paste</i>
             <p>Solicitud de servicio</p>
           </a>
         </li>
 
-        <li class="nav-item" *ngIf="currentUser">
+        <li class="nav-item" *ngIf="currentUser && currentUser.tipo=='admin'">
           <a href="#SubTransporte" [routerLinkActive]="['link-active']" (click)="show4=!show4" data-toggle="collapse"
             aria-expanded="false" class="nav-link ">
             <i class="material-icons">departure_board</i>
@@ -117,7 +117,7 @@
           </ul>
         </li>
 
-        <li class="nav-item" *ngIf="currentUser">
+        <li class="nav-item" *ngIf="currentUser && currentUser.tipo=='admin'">
           <a href="#SubUtilidades" [routerLinkActive]="['link-active']" (click)="show5=!show5" data-toggle="collapse"
             aria-expanded="false" class="nav-link ">
             <i class="material-icons">local_dining</i>

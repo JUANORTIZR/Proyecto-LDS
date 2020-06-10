@@ -87,9 +87,10 @@ import { ServicioService } from './services/servicio.service';
     BrowserAnimationsModule,
     BsDatepickerModule.forRoot(),
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full'},
+      { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'SolicitudServicio', component: SolitudServicioComponent, canActivate: [AuthGuard] },
     ]),
     AppRoutingModule
   ],

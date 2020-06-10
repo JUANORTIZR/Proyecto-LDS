@@ -74,29 +74,44 @@
             </div>
             </div>
           </div>
-        </div>
-        <div class="row">
+
           <div class="col-md-4">
             <div class="form-group">
               <label class="bmd-label-floating">Correo electronico</label>
-              <input id="txtEmail" type="email" class="form-control" formControlName="correoElectronico"
-              [ngClass]="{ 'is-invalid': control.correoElectronico.errors && control.correoElectronico.touched}"
+              <input id="txtEmail" type="email" class="form-control" formControlName="correo"
+              [ngClass]="{ 'is-invalid': control.correo.errors && control.correo.touched}"
               aria-describedby="emailHelp" placeholder="Escriba aquí su correo electronico">
-            <div *ngIf="control.correoElectronico.errors && control.correoElectronico.touched" class="invalid-feedback">
-              <div *ngIf="control.correoElectronico.errors.required">Se require el correo electronico</div>
-              <div *ngIf="control.correoElectronico.errors.email">El correo electronico especificado no es valido</div>
+            <div *ngIf="control.correo.errors && control.correo.touched" class="invalid-feedback">
+              <div *ngIf="control.correo.errors.required">Se require el correo electronico</div>
+              <div *ngIf="control.correo.errors.email">El correo electronico especificado no es valido</div>
             </div>
             </div>
           </div>
+
+        </div>
+        <div class="row">
+
+          <div class="col-md-4">
+            <div class="form-group">
+              <label class="bmd-label-floating">Nombre de usuario</label>
+              <input id="txtPApellido" type="text" class="form-control"formControlName="usuario"
+              [ngClass]="{ 'is-invalid': control.usuario.errors && control.usuario.touched}"
+              placeholder="Nombre de usuario para acceder al aplicado">
+            <div *ngIf="control.usuario.errors && control.usuario.touched" class="invalid-feedback">
+              <div *ngIf="control.usuario.errors.required">Se require el primer apellido</div>
+            </div>
+            </div>
+          </div>
+          
           <div class="col-md-4">
             <div class="form-group">
               <label class="bmd-label-floating">Contraseña</label>
-              <input id="txtPassword" type="text" class="form-control" formControlName="clave"
-              [ngClass]="{ 'is-invalid': control.clave.errors && control.clave.touched}"
+              <input id="txtPassword" type="text" class="form-control" formControlName="password"
+              [ngClass]="{ 'is-invalid': control.password.errors && control.password.touched}"
               placeholder="Escriba aqui su contraseña">
-            <div *ngIf="control.clave.errors && control.clave.touched" class="invalid-feedback">
-              <div *ngIf="control.clave.errors.required">Se require la contraseña</div>
-              <div *ngIf="control.clave.errors.minlength">Se requiere un minimo de 6 digitos</div>
+            <div *ngIf="control.password.errors && control.password.touched" class="invalid-feedback">
+              <div *ngIf="control.password.errors.required">Se require la contraseña</div>
+              <div *ngIf="control.password.errors.minlength">Se requiere un minimo de 6 digitos</div>
             </div>
             </div>
           </div>

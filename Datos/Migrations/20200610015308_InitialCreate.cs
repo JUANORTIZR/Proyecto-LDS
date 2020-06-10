@@ -89,12 +89,16 @@ namespace Datos.Migrations
                 columns: table => new
                 {
                     Usuario = table.Column<string>(nullable: false),
+                    Identificacion = table.Column<string>(nullable: true),
                     Password = table.Column<string>(nullable: true),
                     Estado = table.Column<string>(nullable: true),
                     PrimerNombre = table.Column<string>(nullable: true),
+                    SegundoNombre = table.Column<string>(nullable: true),
                     PrimerApellido = table.Column<string>(nullable: true),
+                    SegundoApellido = table.Column<string>(nullable: true),
                     Correo = table.Column<string>(nullable: true),
                     Telefono = table.Column<string>(nullable: true),
+                    Tipo = table.Column<string>(nullable: true),
                     Token = table.Column<string>(nullable: true)
                 },
                 constraints: table =>

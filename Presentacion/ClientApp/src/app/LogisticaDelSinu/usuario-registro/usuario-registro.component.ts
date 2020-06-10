@@ -6,6 +6,7 @@ import { stringify } from 'querystring';
 import { Subscription } from 'rxjs';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AlertModalComponent } from 'src/app/@base/alert-modal/alert-modal.component';
+import { User } from 'src/app/seguridad/user';
 
 @Component({
   selector: 'app-usuario-registro',
@@ -15,9 +16,9 @@ import { AlertModalComponent } from 'src/app/@base/alert-modal/alert-modal.compo
 export class UsuarioRegistroComponent implements OnInit {
 
   formGroup: FormGroup;
-  usuario: Usuario;
+  usuario: User;
   otro: Usuario;
-  constructor(private usuarioService: UsuarioService, private formBuilder: FormBuilder, private modalService: NgbModal) { }
+  constructor(private usuarioService: UsuarioService,  private formBuilder: FormBuilder, private modalService: NgbModal) { }
 
   ngOnInit(): void {
 
@@ -25,15 +26,15 @@ export class UsuarioRegistroComponent implements OnInit {
   }
 
   private buildForm() {
-    this.usuario = new Usuario();
+    this.usuario = new User();
     this.usuario.identificacion = "";
     this.usuario.primerNombre = "";
     this.usuario.segundoNombre = "";
     this.usuario.primerApellido = "";
     this.usuario.segundoAPellido = "";
     this.usuario.telefono = "";
-    this.usuario.correoElectronico = "";
-    this.usuario.clave = "";
+    this.usuario.correo = "";
+    this.usuario.password = "";
 
     this.formGroup = this.formBuilder.group({
       identificacion: [this.usuario.identificacion, Validators.required],
@@ -42,8 +43,9 @@ export class UsuarioRegistroComponent implements OnInit {
       primerApellido: [this.usuario.primerApellido, Validators.required],
       segundoAPellido: [this.usuario.segundoAPellido, Validators.required],
       telefono: [this.usuario.telefono, [Validators.required, Validators.minLength(10), Validators.maxLength(12)]],
-      correoElectronico: [this.usuario.correoElectronico, [Validators.required, Validators.email]],
-      clave: [this.usuario.clave, [Validators.required, Validators.minLength(6)]],
+      correo: [this.usuario.correo, [Validators.required, Validators.email]],
+      usuario: [this.usuario.usuario, [Validators.required]],
+      password: [this.usuario.password, [Validators.required, Validators.minLength(6)]],
       confirmacionClave: ["", [Validators.required, this.ClaveConfirmada('clave')]]
     });
 
@@ -62,6 +64,7 @@ export class UsuarioRegistroComponent implements OnInit {
 
   registrar() {
     this.usuario = this.formGroup.value;
+
     this.usuarioService.post(this.usuario).subscribe(u => {
       if (u != null) {
         const messageBox = this.modalService.open(AlertModalComponent)

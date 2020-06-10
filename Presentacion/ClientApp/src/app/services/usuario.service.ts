@@ -4,6 +4,7 @@ import { HandleHttpErrorService } from '../@base/handle-http-error.service';
 import { Usuario } from '../logisticaDelSinu/Models/usuario';
 import { Observable } from 'rxjs';
 import { tap, catchError } from 'rxjs/operators';
+import { User } from '../seguridad/user';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -22,11 +23,11 @@ export class UsuarioService {
     this.baseUrl = baseUrl;
   }
 
-  post(usuario: Usuario): Observable<Usuario> {
-    return this.http.post<Usuario>(this.baseUrl + 'api/Usuario', usuario)
+  post(usuario: User): Observable<User> {
+    return this.http.post<User>(this.baseUrl + 'api/Usuario', usuario)
       .pipe(
         tap(_ => this.handleErrorService.log('datos enviados')),
-        catchError(this.handleErrorService.handleError<Usuario>('Registrar Usuario', null))
+        catchError(this.handleErrorService.handleError<User>('Registrar Usuario', null))
       );
   }
 

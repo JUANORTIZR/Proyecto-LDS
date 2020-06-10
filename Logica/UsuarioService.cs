@@ -35,40 +35,39 @@ namespace Logica {
         public ConsultarUsuarioResponse Consultar () {
             try {
 
-                List<Usuario> usuarios = _Context.Usuarios.ToList ();
+                List<User> usuarios = _Context.Users.ToList ();
                 return new ConsultarUsuarioResponse (usuarios);
             } catch (Exception e) {
                 return new ConsultarUsuarioResponse ($"Error de la Aplicaion: {e.Message}");
             } 
         }
 
-        public Usuario BuscarxIdentificacion (string identificacion) {
-            var usuario =  _Context.Usuarios.Find (identificacion);
-    
+        public User BuscarxIdentificacion (string identificacion) {
+            var usuario =  _Context.Users.Find (identificacion);
             return usuario;
         }
 
-        public string Modificar (Usuario usuarioNuevo) {
+        public ActualizarUsuarioResponse Modificar (User usuarioNuevo) {
             try {
             
-                var personaVieja = _Context.Usuarios.Find (usuarioNuevo.Identificacion);
+                var personaVieja = _Context.Users.Find (usuarioNuevo.Usuario);
                 if (personaVieja != null) {
                     personaVieja.PrimerNombre = usuarioNuevo.PrimerNombre;
                     personaVieja.SegundoNombre = usuarioNuevo.SegundoNombre;
                     personaVieja.PrimerApellido = usuarioNuevo.PrimerApellido;
                     personaVieja.SegundoApellido = usuarioNuevo.SegundoApellido;
                     personaVieja.Telefono = usuarioNuevo.Telefono;
-                    personaVieja.CorreoElectronico = usuarioNuevo.CorreoElectronico;
-                    personaVieja.Clave = usuarioNuevo.Clave;
-                    _Context.Usuarios.Update (personaVieja);
+                    personaVieja.Correo = usuarioNuevo.Correo;
+                    personaVieja.Password = usuarioNuevo.Password;
+                    _Context.Users.Update (personaVieja);
                     _Context.SaveChanges();
-                    return ($"El registro {usuarioNuevo.PrimerNombre} se ha modificado satisfactoriamente.");
+                    return new ActualizarUsuarioResponse (personaVieja);
                 } else {
-                    return ($"Lo sentimos, {usuarioNuevo.Identificacion} no se encuentra registrada.");
+                    return new ActualizarUsuarioResponse($"Lo sentimos, {usuarioNuevo.Identificacion} no se encuentra registrada.");
                 }
             } catch (Exception e) {
 
-                return $"Error de la Aplicación: {e.Message}";
+                return new ActualizarUsuarioResponse ($"Error de la Aplicación: {e.Message}");
             }
 
         }

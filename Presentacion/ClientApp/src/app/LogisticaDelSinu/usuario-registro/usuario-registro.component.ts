@@ -34,6 +34,7 @@ export class UsuarioRegistroComponent implements OnInit {
     this.usuario.segundoAPellido = "";
     this.usuario.telefono = "";
     this.usuario.correo = "";
+    this.usuario.usuario = "";
     this.usuario.password = "";
 
     this.formGroup = this.formBuilder.group({

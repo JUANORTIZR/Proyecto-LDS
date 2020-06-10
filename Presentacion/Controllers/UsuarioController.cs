@@ -51,27 +51,34 @@ namespace Presentacion.Controllers {
         }
 
         [HttpGet ("{identificacion}")]
-        public ActionResult<UsuarioViewModel> Get (string identificacion) {
+        public ActionResult<LoginViewModel> Get (string identificacion) {
             var usuario = _usuarioService.BuscarxIdentificacion (identificacion);
             if (usuario == null) return NotFound ();
-            var usuarioViewModel = new UsuarioViewModel (usuario);
+            var usuarioViewModel = new LoginViewModel (usuario);
             return usuarioViewModel;
         }
 
         [HttpGet]
-        public IEnumerable<UsuarioViewModel> Gets () {
-            var usuarios = _usuarioService.Consultar ().Usuarios.Select (p => new UsuarioViewModel (p));
+        public IEnumerable<LoginViewModel> Gets () {
+            var usuarios = _usuarioService.Consultar ().Usuarios.Select (p => new LoginViewModel (p));
             return usuarios;
         }
 
         [HttpPut ("{identificacion}")]
-        public ActionResult<string> Put (string identificacion, Usuario usuario) {
-            var id = _usuarioService.BuscarxIdentificacion (usuario.Identificacion);
+        public ActionResult<LoginViewModel> Put (string identificacion, User usuario) {
+            var id = _usuarioService.BuscarxIdentificacion (usuario.Usuario);
             if (id == null) {
                 return BadRequest ("No encontrado");
             }
-            var mensaje = _usuarioService.Modificar (usuario);
-            return Ok (mensaje);
+            var response = _usuarioService.Modificar (usuario);
+            if(response.Error){
+                ModelState.AddModelError ("Actualizar Usuario", response.Mensaje);
+                var problemDetails = new ValidationProblemDetails (ModelState) {
+                    Status = StatusCodes.Status400BadRequest,
+                };
+                return BadRequest (problemDetails);
+            }
+            return Ok (response.Usuario);
         }
     }
 }

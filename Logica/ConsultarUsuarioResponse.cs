@@ -7,8 +7,8 @@ namespace Logica
     {
         public bool Error { get; set; }
         public string Mensaje { get; set; }
-        public List<Usuario> Usuarios { get; set; }
-        public ConsultarUsuarioResponse(List<Usuario> usuarios)
+        public List<User> Usuarios { get; set; }
+        public ConsultarUsuarioResponse(List<User> usuarios)
         {
             Error = false;
             Usuarios = usuarios;

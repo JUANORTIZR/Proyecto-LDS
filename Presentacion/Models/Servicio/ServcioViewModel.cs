@@ -15,6 +15,7 @@ namespace Presentacion.Models
             Refrigerio = servicio.Refrigerio;
             Ponentes = servicio.Ponentes;
             LogisticaCompleta = servicio.LogisticaCompleta;
+            Estado = servicio.Estado;
         }
     }
 }

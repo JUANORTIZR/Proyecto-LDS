@@ -25,5 +25,6 @@ namespace Presentacion.Models.Servicio
         [Required(ErrorMessage = "Debe indicar si requiere la logistica completa o no")]
         public string LogisticaCompleta { get; set; }
         public string Observacion { get; set; }
+        public string Estado { get; set; }
     }
 }

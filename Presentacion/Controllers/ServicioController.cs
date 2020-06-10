@@ -46,7 +46,8 @@ namespace Presentacion.Controllers
                 Refrigerio = servicioInput.Refrigerio,
                 Ponentes = servicioInput.Ponentes,
                 LogisticaCompleta = servicioInput.LogisticaCompleta,
-                Observacion = servicioInput.Observacion
+                Observacion = servicioInput.Observacion,
+                Estado = "Sin revisar"
             };
             return servicio;
         }

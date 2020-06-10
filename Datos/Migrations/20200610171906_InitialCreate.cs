@@ -58,7 +58,8 @@ namespace Datos.Migrations
                     Refrigerio = table.Column<string>(nullable: true),
                     Ponentes = table.Column<string>(nullable: true),
                     LogisticaCompleta = table.Column<string>(nullable: true),
-                    Observacion = table.Column<string>(nullable: true)
+                    Observacion = table.Column<string>(nullable: true),
+                    Estado = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

@@ -17,6 +17,7 @@
             <thead class=" text-primary">
               <th scope="row">#</th>
               <th>Identificacion</th>
+              <th>Nombre de usuario</th>
               <th>Primer Nombre</th>
               <th>Segundo Nombre</th>
               <th>Primer Apellido</th>
@@ -29,13 +30,14 @@
               <tr *ngFor='let usuario of usuarios|filtroUsuarios:searchText; index as i'>
                 <th scope="row">{{i+1}}</th>
                 <td>{{usuario.identificacion}}</td>
+                <td>{{usuario.usuario}}</td>
                 <td>{{usuario.primerNombre}} </td>
                 <td>{{usuario.segundoNombre}} </td>
                 <td>{{usuario.primerApellido}}</td>
                 <td>{{usuario.segundoApellido}}</td>
                 <td>{{usuario.telefono}}</td>
-                <td>{{usuario.correoElectronico}}</td>
-                <td><a [routerLink]="['/ActualizarUsuario', usuario.identificacion]" class="btn btn-primary">Editar</a></td>
+                <td>{{usuario.correo}}</td>
+                <td><a [routerLink]="['/ActualizarUsuario', usuario.usuario]" class="btn btn-primary">Editar</a></td>
               </tr>
             </tbody>
           </table>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { Usuario } from '../Models/usuario';
+import { User } from 'src/app/seguridad/user';
 
 @Component({
   selector: 'app-usuario-consulta',
@@ -9,7 +10,7 @@ import { Usuario } from '../Models/usuario';
 })
 export class UsuarioConsultaComponent implements OnInit {
 
-  usuarios:Usuario[];
+  usuarios:User[];
   searchText:string;
   constructor(private usuarioService:UsuarioService) { }
 

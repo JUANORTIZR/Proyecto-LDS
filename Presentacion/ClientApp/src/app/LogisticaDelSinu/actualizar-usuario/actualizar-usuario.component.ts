@@ -5,6 +5,7 @@ import { Usuario } from '../Models/usuario';
 import { ActivatedRoute } from '@angular/router';
 import { AlertModalComponent } from 'src/app/@base/alert-modal/alert-modal.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { User } from 'src/app/seguridad/user';
 
 @Component({
   selector: 'app-actualizar-usuario',
@@ -14,22 +15,22 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 export class ActualizarUsuarioComponent implements OnInit {
 
   formGroup: FormGroup;
-  usuario: Usuario;
-  uEncontrado:Usuario;
-  identificacion = this.rutaActiva.snapshot.params.identificacion;
+  usuario: User;
+  uEncontrado: User;
+  Nusuario = this.rutaActiva.snapshot.params.identificacion;
   constructor(private usuarioService: UsuarioService, private formBuilder: FormBuilder, private rutaActiva: ActivatedRoute, private modalService: NgbModal) { }
 
   ngOnInit(): void {
-    this.usuarioService.get(this.identificacion).subscribe(result => {
+    this.usuarioService.get(this.Nusuario).subscribe(result => {
       this.uEncontrado = result;
-       this.buildForm(this.uEncontrado);
+      this.buildForm(this.uEncontrado);
     });
 
-   
+
   }
-  private buildForm(usuarioA:Usuario) {
+  private buildForm(usuarioA: User) {
     this.usuario = usuarioA;
-  
+
     this.formGroup = this.formBuilder.group({
       identificacion: [this.usuario.identificacion, Validators.required],
       primerNombre: [this.usuario.primerNombre, Validators.required],
@@ -37,8 +38,9 @@ export class ActualizarUsuarioComponent implements OnInit {
       primerApellido: [this.usuario.primerApellido, Validators.required],
       segundoAPellido: [this.usuario.segundoAPellido, Validators.required],
       telefono: [this.usuario.telefono, [Validators.required, Validators.minLength(10), Validators.maxLength(12)]],
-      correoElectronico: [this.usuario.correoElectronico, [Validators.required, Validators.email]],
-      clave: [this.usuario.clave, [Validators.required, Validators.minLength(6)]],
+      correo: [this.usuario.correo, [Validators.required, Validators.email]],
+      usuario: [this.usuario.usuario, [Validators.required]],
+      password: [this.usuario.password, [Validators.required, Validators.minLength(6)]],
       confirmacionClave: ["", [Validators.required, this.ClaveConfirmada('clave')]]
     });
   }
@@ -55,13 +57,15 @@ export class ActualizarUsuarioComponent implements OnInit {
   }
   update() {
     this.usuario = this.formGroup.value;
-    alert("aqui si")
     this.usuarioService.put(this.usuario).subscribe(p => {
-      this.usuario = p;
+      if (p != null) {
+        const messageBox = this.modalService.open(AlertModalComponent)
+        messageBox.componentInstance.title = "Resultado Operación";
+        messageBox.componentInstance.message = 'Sus datos se han actulizado correctamente';
+        this.usuario = p;
+      }
     });
-    const messageBox = this.modalService.open(AlertModalComponent)
-    messageBox.componentInstance.title = "Resultado Operación";
-    messageBox.componentInstance.message = 'Sus datos se han actulizado correctamente';
+
   }
   ClaveConfirmada(otherControlName: string): ValidatorFn {
     return (control: AbstractControl): { [key: string]: any } => {

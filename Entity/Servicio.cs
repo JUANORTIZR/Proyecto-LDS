@@ -16,5 +16,6 @@ namespace Entity
         public string Ponentes { get; set; }
         public string LogisticaCompleta { get; set; }
         public string Observacion { get; set; }
+        public string Estado { get; set; }
     }
 }

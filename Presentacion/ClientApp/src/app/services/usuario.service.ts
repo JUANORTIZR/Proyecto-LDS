@@ -31,28 +31,28 @@ export class UsuarioService {
       );
   }
 
-  gets(): Observable<Usuario[]> {
-    return this.http.get<Usuario[]>(this.baseUrl + 'api/Usuario')
+  gets(): Observable<User[]> {
+    return this.http.get<User[]>(this.baseUrl + 'api/Usuario')
         .pipe(
             tap(_ => this.handleErrorService.log('datos enviados')),
-            catchError(this.handleErrorService.handleError<Usuario[]>('Consulta Usuario', null))
+            catchError(this.handleErrorService.handleError<User[]>('Consulta Usuario', null))
         );
   }
-  get(identificacion: string): Observable<Usuario> {
+  get(identificacion: string): Observable<User> {
     const url = `${this.baseUrl + 'api/Usuario'}/${identificacion}`;
-      return this.http.get<Usuario>(url,httpOptions)
+      return this.http.get<User>(url,httpOptions)
       .pipe(
         tap(_ => this.handleErrorService.log('Identifiación enviada y usuario recibido')),
-        catchError(this.handleErrorService.handleError<Usuario>("Consulta x id", null))
+        catchError(this.handleErrorService.handleError<User>("Consulta x id", null))
       );
   }
 
-  put(usuario: Usuario): Observable<Usuario> {
+  put(usuario: User): Observable<User> {
     const url = `${this.baseUrl + 'api/Usuario'}/${usuario.identificacion}`;
-    return this.http.put<Usuario>(url, usuario, httpOptions)
+    return this.http.put<User>(url, usuario, httpOptions)
     .pipe(
       tap(_ => this.handleErrorService.log('datos enviados')),
-      catchError(this.handleErrorService.handleError<Usuario>('Editar usuario'))
+      catchError(this.handleErrorService.handleError<User>('Editar usuario'))
     );
   }
 

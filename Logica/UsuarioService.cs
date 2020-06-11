@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Net.Http.Headers;
+using System.Resources;
+using System.Runtime.CompilerServices;
 using Datos;
 using Entity;
 using Infraestructura;
@@ -22,7 +26,7 @@ namespace Logica {
                 var UsuarioBuscado = _Context.Usuarios.Find (usuario.Identificacion);
                 if (UsuarioBuscado != null) {
                     if (UsuarioBuscado.Identificacion == usuario.Usuario) {
-                        return new GuardarUsuarioResponse ("El nombre de usuario ya se encuentra registrado");                  
+                        return new GuardarUsuarioResponse ("El nombre de usuario ya se encuentra registrado");
                     }
                     return new GuardarUsuarioResponse ($"La identificacion que intenta registrar ya se encuntra registrada");
                 }
@@ -47,7 +51,16 @@ namespace Logica {
         }
 
         public User BuscarxIdentificacion (string identificacion) {
-            var usuario =  _Context.Users.Find (identificacion);
+            var usuario = _Context.Users.Find (identificacion);
+           if (usuario != null) {
+                var servicios = _Context.Servicios.ToList ();
+                foreach (var item in servicios) {
+                    if (item.IdCliente == usuario.Identificacion) {
+                        usuario.Servicios.Add(item);
+                    }
+                }
+            }
+
             return usuario;
         }
 

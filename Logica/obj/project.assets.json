@@ -6936,37 +6936,39 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\JUAN CARLOS\\.nuget\\packages\\": {}
+    "C:\\Users\\ANYE\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Logica\\Logica.csproj",
+      "projectUniqueName": "A:\\Escritorio\\proyecto sinu\\Proyecto-LDS\\Logica\\Logica.csproj",
       "projectName": "Logica",
-      "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Logica\\Logica.csproj",
-      "packagesPath": "C:\\Users\\JUAN CARLOS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Logica\\obj\\",
+      "projectPath": "A:\\Escritorio\\proyecto sinu\\Proyecto-LDS\\Logica\\Logica.csproj",
+      "packagesPath": "C:\\Users\\ANYE\\.nuget\\packages\\",
+      "outputPath": "A:\\Escritorio\\proyecto sinu\\Proyecto-LDS\\Logica\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\JUAN CARLOS\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\ANYE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netstandard2.1": {
           "projectReferences": {
-            "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Datos\\Datos.csproj": {
-              "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Datos\\Datos.csproj"
+            "A:\\Escritorio\\proyecto sinu\\Proyecto-LDS\\Datos\\Datos.csproj": {
+              "projectPath": "A:\\Escritorio\\proyecto sinu\\Proyecto-LDS\\Datos\\Datos.csproj"
             },
-            "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Entity\\Entity.csproj": {
-              "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Entity\\Entity.csproj"
+            "A:\\Escritorio\\proyecto sinu\\Proyecto-LDS\\Entity\\Entity.csproj": {
+              "projectPath": "A:\\Escritorio\\proyecto sinu\\Proyecto-LDS\\Entity\\Entity.csproj"
             },
-            "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Infraestructura\\Infraestructura.csproj": {
-              "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\Proyecto-LDS\\Infraestructura\\Infraestructura.csproj"
+            "A:\\Escritorio\\proyecto sinu\\Proyecto-LDS\\Infraestructura\\Infraestructura.csproj": {
+              "projectPath": "A:\\Escritorio\\proyecto sinu\\Proyecto-LDS\\Infraestructura\\Infraestructura.csproj"
             }
           }
         }

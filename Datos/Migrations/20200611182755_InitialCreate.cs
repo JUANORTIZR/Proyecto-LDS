@@ -46,27 +46,6 @@ namespace Datos.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Servicios",
-                columns: table => new
-                {
-                    IdServicio = table.Column<string>(nullable: false),
-                    IdCliente = table.Column<string>(nullable: true),
-                    FechaEvento = table.Column<DateTime>(nullable: false),
-                    FechaSolicitud = table.Column<DateTime>(nullable: false),
-                    TipoServicio = table.Column<string>(nullable: true),
-                    Descripcion = table.Column<string>(nullable: true),
-                    Refrigerio = table.Column<string>(nullable: true),
-                    Ponentes = table.Column<string>(nullable: true),
-                    LogisticaCompleta = table.Column<string>(nullable: true),
-                    Observacion = table.Column<string>(nullable: true),
-                    Estado = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Servicios", x => x.IdServicio);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Transportes",
                 columns: table => new
                 {
@@ -138,6 +117,39 @@ namespace Datos.Migrations
                 {
                     table.PrimaryKey("PK_Utilidades", x => x.IdPago);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "Servicios",
+                columns: table => new
+                {
+                    IdServicio = table.Column<string>(nullable: false),
+                    IdCliente = table.Column<string>(nullable: true),
+                    FechaEvento = table.Column<DateTime>(nullable: false),
+                    FechaSolicitud = table.Column<DateTime>(nullable: false),
+                    TipoServicio = table.Column<string>(nullable: true),
+                    Descripcion = table.Column<string>(nullable: true),
+                    Refrigerio = table.Column<string>(nullable: true),
+                    Ponentes = table.Column<string>(nullable: true),
+                    LogisticaCompleta = table.Column<string>(nullable: true),
+                    Observacion = table.Column<string>(nullable: true),
+                    Estado = table.Column<string>(nullable: true),
+                    UserUsuario = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Servicios", x => x.IdServicio);
+                    table.ForeignKey(
+                        name: "FK_Servicios_Users_UserUsuario",
+                        column: x => x.UserUsuario,
+                        principalTable: "Users",
+                        principalColumn: "Usuario",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Servicios_UserUsuario",
+                table: "Servicios",
+                column: "UserUsuario");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -155,13 +167,13 @@ namespace Datos.Migrations
                 name: "Transportes");
 
             migrationBuilder.DropTable(
-                name: "Users");
-
-            migrationBuilder.DropTable(
                 name: "Usuarios");
 
             migrationBuilder.DropTable(
                 name: "Utilidades");
+
+            migrationBuilder.DropTable(
+                name: "Users");
         }
     }
 }

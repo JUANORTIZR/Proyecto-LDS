@@ -41,6 +41,7 @@ namespace Presentacion.Controllers {
                 PrimerApellido = usuarioInput.PrimerApellido,
                 SegundoApellido = usuarioInput.SegundoApellido,
                 Telefono = usuarioInput.Telefono,
+                Servicios=usuarioInput.Servicios,
                 Correo = usuarioInput.Correo,
                 Usuario = usuarioInput.Usuario,
                 Password = usuarioInput.Password,

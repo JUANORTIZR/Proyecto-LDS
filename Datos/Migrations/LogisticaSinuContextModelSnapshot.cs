@@ -122,7 +122,12 @@ namespace Datos.Migrations
                     b.Property<string>("TipoServicio")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("UserUsuario")
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("IdServicio");
+
+                    b.HasIndex("UserUsuario");
 
                     b.ToTable("Servicios");
                 });
@@ -252,6 +257,13 @@ namespace Datos.Migrations
                     b.HasKey("IdPago");
 
                     b.ToTable("Utilidades");
+                });
+
+            modelBuilder.Entity("Entity.Servicio", b =>
+                {
+                    b.HasOne("Entity.User", null)
+                        .WithMany("Servicios")
+                        .HasForeignKey("UserUsuario");
                 });
 #pragma warning restore 612, 618
         }

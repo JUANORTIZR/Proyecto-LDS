@@ -1,3 +1,5 @@
+import { Servicio } from "../LogisticaDelSinu/Models/servicio";
+
 export class User {
     usuario:string;
     identificacion:string;
@@ -10,5 +12,6 @@ export class User {
     telefono:string;
     correo:string;
     tipo:string;
+    servicios:Servicio[];
     token:string;
 }

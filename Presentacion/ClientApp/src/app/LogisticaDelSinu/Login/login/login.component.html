@@ -12,11 +12,11 @@
                         <input id="txtEmail" formControlName="usuario" [ngClass]="{ 'is-invalid': submitted && f.usuario.errors }" type="text" placeholder="Introduzca numero de identificacion"
                             class="form-control inpt-sm">
                             <div *ngIf="submitted && f.usuario.errors" class="invalid-feedback">
-                                <div *ngIf="f.usuario.errors.required">La identificacion es requerida</div>
+                                <div *ngIf="f.usuario.errors.required">el usuario es requerido</div>
                             </div>
                     </div>
                     <div class="row">
-                        <input id="txtpassword" type="text" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors}" placeholder="Introduzca la contraseña"
+                        <input id="txtpassword" type="password" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors}" placeholder="Introduzca la contraseña"
                             class="form-control inpt-sm">
                             <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
                                 <div *ngIf="f.password.errors.required">Password is required</div>

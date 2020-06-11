@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace Presentacion.Models.Loguin
 {
     public class LoginInputModel
@@ -13,6 +15,7 @@ namespace Presentacion.Models.Loguin
         public string  Correo { get; set; }
         public string  Telefono { get; set; }
         public string Tipo { get; set; }
+        public List<Entity.Servicio> Servicios { get; set; }
         public string Token { get; set; }
         
     }

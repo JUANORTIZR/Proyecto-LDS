@@ -19,6 +19,7 @@ import { UtilidadRegistroComponent } from './LogisticaDelSinu/utilidad-registro/
 import { SolitudServicioComponent } from './LogisticaDelSinu/Servicio/solitud-servicio/solitud-servicio.component';
 import { ConsultarSolicitudesComponent } from './LogisticaDelSinu/Servicio/consultar-solicitudes/consultar-solicitudes.component';
 import { ModificarSolicitudComponent } from './LogisticaDelSinu/Servicio/modificar-solicitud/modificar-solicitud.component';
+import { UsuarioServicioConsultaComponent } from './LogisticaDelSinu/usuario-servicio-consulta/usuario-servicio-consulta.component';
 
 
 
@@ -94,6 +95,10 @@ const routes: Routes = [
   {
     path: 'ModificarSolicitud/:id',
     component: ModificarSolicitudComponent
+  },
+  {
+    path: 'usuarioServicioConsulta',
+    component: UsuarioServicioConsultaComponent
   }
 
 ];

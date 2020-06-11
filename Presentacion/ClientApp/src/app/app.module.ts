@@ -45,6 +45,7 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { ServicioService } from './services/servicio.service';
 import { ConsultarSolicitudesComponent } from './LogisticaDelSinu/Servicio/consultar-solicitudes/consultar-solicitudes.component';
 import { ModificarSolicitudComponent } from './LogisticaDelSinu/Servicio/modificar-solicitud/modificar-solicitud.component';
+import { UsuarioServicioConsultaComponent } from './LogisticaDelSinu/usuario-servicio-consulta/usuario-servicio-consulta.component';
 
 
 
@@ -81,6 +82,7 @@ import { ModificarSolicitudComponent } from './LogisticaDelSinu/Servicio/modific
     SolitudServicioComponent,
     ConsultarSolicitudesComponent,
     ModificarSolicitudComponent,
+    UsuarioServicioConsultaComponent,
     
   ],
   imports: [

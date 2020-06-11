@@ -16,14 +16,14 @@
           <table class="table">
             <thead class=" text-primary">
               <th scope="row">#</th>
-              <th>IdServicio</th>
-              <th>IdCliente</th>
-              <th>Fecha evento</th>
-              <th>Fecha solicitud</th>
+              <th>Id Servicio</th>
+              <th>Identificacion del Cliente</th>
+              <th>Fecha del evento</th>
+              <th>Fehca de la solicitud</th>
               <th>Servicio</th>
-              <th>Refrigerio</th>
+              <th>Refrijerio</th>
               <th>Ponentes</th>
-              <th>Logistica</th>
+              <th>Logistica completa</th>
               <th>Estado</th>
               <th>Accion</th>
             </thead>
@@ -52,6 +52,8 @@
 </div>
 
 
+
+
 <!-- Modals Seminarios -->
 
 <div name="padre" class="modal fade" id="infoSeminarios" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -65,8 +67,8 @@
         </button>
       </div>
       <div class="modal-body">
-        <h3 id="titulo" class="text-center" >Solicitud de servicio</h3><br>
-        <div class="container" >
+        <h3 id="titulo" class="text-center">Solicitud de servicio</h3><br>
+        <div class="container">
           <div class="row">
             <p class="col-sm-5">Fecha del evento: {{servicio.fechaEvento|date:'dd-MM-yyyy'}}</p>
             <p class="col-sm-5">fecha de la solicitud: {{servicio.fechaSolicitud|date:'dd-MM-yyyy'}}</p>
@@ -76,31 +78,30 @@
             <p class="col-5">Idcliente: {{servicio.idCliente}}</p>
           </div>
           <div class="row">
-            <p  class="col-6">Servicio solicitado: {{servicio.tipoServicio}}</p>
+            <p class="col-6">Servicio solicitado: {{servicio.tipoServicio}}</p>
           </div>
-          <h5 id="titulo"class="text-center" >Servicios adicionales</h5><br>
+          <h5 id="titulo" class="text-center">Servicios adicionales</h5><br>
           <div class="row">
-            <p  class="col-3">Refrigerio:{{servicio.refrigerio}}</p>
+            <p class="col-3">Refrigerio:{{servicio.refrigerio}}</p>
             <p class="col-3">Ponentes: {{servicio.ponentes}}</p>
             <p class="col-3">Logistica completa: {{servicio.logisticaCompleta}}</p>
           </div>
           <div class="row">
-            <p class="col-10" >Observacion:</p>
+            <p class="col-10">Observacion:</p>
           </div>
           <div class="row">
             <p class="col-10"> {{servicio.observacion}}</p>
           </div>
           <div class="row">
-            <p   class="col-10" >Descripcion:</p>
+            <p class="col-10">Descripcion:</p>
           </div>
           <div class="row">
-            <p  class="col-10"> {{servicio.descripcion}}</p>
+            <p class="col-10"> {{servicio.descripcion}}</p>
           </div>
         </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="cambiarEstado()">Revisado</button>
       </div>
     </div>
   </div>

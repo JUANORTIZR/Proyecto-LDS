@@ -17,6 +17,7 @@ namespace Presentacion.Models.Loguin
             Correo=usuario.Correo;
             Telefono=usuario.Telefono;
             Tipo = usuario.Tipo;
+            Servicios=usuario.Servicios;
             Token=usuario.Token;
         }
     }

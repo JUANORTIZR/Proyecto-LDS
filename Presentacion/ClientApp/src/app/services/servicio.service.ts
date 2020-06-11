@@ -37,4 +37,22 @@ export class ServicioService {
             catchError(this.handleErrorService.handleError<Servicio[]>('Consulta Usuario', null))
         );
   }
+
+  get(identificacion: string): Observable<Servicio> {
+    const url = `${this.baseUrl + 'api/Servicio'}/${identificacion}`;
+      return this.http.get<Servicio>(url,httpOptions)
+      .pipe(
+        tap(_ => this.handleErrorService.log('Identifiación enviada y servicio recibido')),
+        catchError(this.handleErrorService.handleError<Servicio>("Consulta x id", null))
+      );
+  }
+
+  put(servicio: Servicio): Observable<Servicio> {
+    const url = `${this.baseUrl + 'api/Servicio'}/${servicio.idServicio}`;
+    return this.http.put<Servicio>(url, servicio, httpOptions)
+    .pipe(
+      tap(_ => this.handleErrorService.log('datos enviados')),
+      catchError(this.handleErrorService.handleError<Servicio>('Editar estado de servicio'))
+    );
+  }
 }

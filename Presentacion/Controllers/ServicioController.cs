@@ -57,5 +57,30 @@ namespace Presentacion.Controllers
             var servicio = _servicioService.Consultar ().Servicios.Select (p => new ServcioViewModel (p));
             return servicio;
         }
+
+        [HttpGet ("{identificacion}")]
+        public ActionResult<ServcioViewModel> Get (string identificacion) {
+            var usuario = _servicioService.BuscarxIdentificacion (identificacion);
+            if (usuario == null) return NotFound ();
+            var usuarioViewModel = new ServcioViewModel (usuario);
+            return usuarioViewModel;
+        }
+
+         [HttpPut ("{identificacion}")]
+        public ActionResult<ServcioViewModel> Put (string identificacion, Servicio servicio) {
+            var id = _servicioService.BuscarxIdentificacion (servicio.IdServicio);
+            if (id == null) {
+                return BadRequest ("No encontrado");
+            }
+            var response = _servicioService.Modificar (servicio);
+            if(response.Error){
+                ModelState.AddModelError ("Actualizar Usuario", response.Mensaje);
+                var problemDetails = new ValidationProblemDetails (ModelState) {
+                    Status = StatusCodes.Status400BadRequest,
+                };
+                return BadRequest (problemDetails);
+            }
+            return Ok (response.Servicio);
+        }
     }
 }

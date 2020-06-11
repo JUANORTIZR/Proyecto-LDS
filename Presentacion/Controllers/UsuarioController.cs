@@ -66,7 +66,7 @@ namespace Presentacion.Controllers {
 
         [HttpPut ("{identificacion}")]
         public ActionResult<LoginViewModel> Put (string identificacion, User usuario) {
-            var id = _usuarioService.BuscarxIdentificacion (usuario.Usuario);
+            var id = _usuarioService.BuscarxIdentificacion (usuario.Identificacion);
             if (id == null) {
                 return BadRequest ("No encontrado");
             }

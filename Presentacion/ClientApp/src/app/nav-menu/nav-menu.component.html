@@ -86,7 +86,8 @@
 
           </ul>
         </li>
-        <li>
+       
+        <li *ngIf="currentUser && currentUser.tipo=='Usuario'">
           <a class="nav-link" *ngIf="currentUser" [routerLink]="['/SolicitudServicio']">
             <i class="material-icons">content_paste</i>
             <p>Solicitud de servicio</p>
@@ -116,11 +117,34 @@
             </li>
           </ul>
         </li>
+        <li class="nav-item" *ngIf="currentUser && currentUser.tipo=='admin'">
+          <a href="#SubServicios" [routerLinkActive]="['link-active']" (click)="show3=!show3" data-toggle="collapse"
+            aria-expanded="false" class="nav-link ">
+            <i class="material-icons">event_available</i>
+            <p>Gestion Serivicios <span *ngIf="show3==false" class="material-icons">keyboard_arrow_down </span> <span
+                *ngIf="show3==true" [disabled]="true" class="material-icons">keyboard_arrow_up </span> </p>
+          </a>
+          <ul class="collapse list-unstyled nav " id="SubServicios">
 
+            <li class="nav-item ">
+              <a class="nav-link" [routerLink]="['/SolicitudServicio']">
+                <i class="material-icons">rate_review</i>
+                <p>Realizar Solicitud</p>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" [routerLink]="['/ConsultarSolicitudes']">
+                <i class="material-icons">content_paste</i>
+                <p>Consultar Solicitudes</p>
+              </a>
+            </li>
+
+          </ul>
+        </li>
         <li class="nav-item" *ngIf="currentUser && currentUser.tipo=='admin'">
           <a href="#SubUtilidades" [routerLinkActive]="['link-active']" (click)="show5=!show5" data-toggle="collapse"
             aria-expanded="false" class="nav-link ">
-            <i class="material-icons">local_dining</i>
+            <i class="material-icons">assignment</i>
             <p>Gestion Utilidades <span *ngIf="show5==false" class="material-icons">keyboard_arrow_down </span> <span
                 *ngIf="show5==true" [disabled]="true" class="material-icons">keyboard_arrow_up </span> </p>
           </a>
@@ -128,13 +152,13 @@
 
             <li class="nav-item ">
               <a class="nav-link" [routerLink]="['/RegistroUtilidad']">
-                <i class="material-icons">restaurant</i>
+                <i class="material-icons">attach_money</i>
                 <p>Calcular Utilidades</p>
               </a>
             </li>
             <li>
               <a class="nav-link" [routerLink]="['/UtilidadConsulta']">
-                <i class="material-icons">content_paste</i>
+                <i class="material-icons">show_chart</i>
                 <p>Consultar Utilidades</p>
               </a>
             </li>
@@ -142,11 +166,12 @@
           </ul>
         </li>
         <li class="nav-item " *ngIf="currentUser && currentUser.tipo=='Usuario'">
-          <a class="nav-link" [routerLink]="['/ActualizarUsuario', currentUser.usuario]">
+          <a class="nav-link" [routerLink]="['/ActualizarUsuario', currentUser.identificacion]">
             <i class="material-icons">account_box</i>
             <p>Perfil</p>
           </a>
         </li>
+       
       </ul>
     </div>
   </div>

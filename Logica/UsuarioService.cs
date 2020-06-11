@@ -10,7 +10,7 @@ namespace Logica {
 
         private  readonly  LogisticaSinuContext  _Context;
 
-        public UsuarioService (LogisticaSinuContext _context) {
+        public UsuarioService (LogisticaSinuContext  _context) {
             _Context = _context;
 
         }
@@ -21,15 +21,19 @@ namespace Logica {
                 Email email = new Email ();
                 var UsuarioBuscado = _Context.Usuarios.Find (usuario.Identificacion);
                 if (UsuarioBuscado != null) {
-                    return new GuardarUsuarioResponse ("El usuario ya se encuentra registrado");
+                    if (UsuarioBuscado.Identificacion == usuario.Usuario) {
+                        return new GuardarUsuarioResponse ("El nombre de usuario ya se encuentra registrado");                  
+                    }
+                    return new GuardarUsuarioResponse ($"La identificacion que intenta registrar ya se encuntra registrada");
                 }
+
                 _Context.Users.Add (usuario);
-                _Context.SaveChanges();
+                _Context.SaveChanges ();
                 mensajeEmail = email.EnviarEmail (usuario.Correo, usuario.PrimerNombre);
                 return new GuardarUsuarioResponse (usuario);
             } catch (Exception e) {
                 return new GuardarUsuarioResponse ($"Error de la Aplicacion: {e.Message}");
-            } 
+            }
         }
 
         public ConsultarUsuarioResponse Consultar () {
@@ -39,7 +43,7 @@ namespace Logica {
                 return new ConsultarUsuarioResponse (usuarios);
             } catch (Exception e) {
                 return new ConsultarUsuarioResponse ($"Error de la Aplicaion: {e.Message}");
-            } 
+            }
         }
 
         public User BuscarxIdentificacion (string identificacion) {
@@ -49,8 +53,8 @@ namespace Logica {
 
         public ActualizarUsuarioResponse Modificar (User usuarioNuevo) {
             try {
-            
-                var personaVieja = _Context.Users.Find (usuarioNuevo.Usuario);
+
+                var personaVieja = _Context.Users.Find (usuarioNuevo.Identificacion);
                 if (personaVieja != null) {
                     personaVieja.PrimerNombre = usuarioNuevo.PrimerNombre;
                     personaVieja.SegundoNombre = usuarioNuevo.SegundoNombre;
@@ -58,12 +62,13 @@ namespace Logica {
                     personaVieja.SegundoApellido = usuarioNuevo.SegundoApellido;
                     personaVieja.Telefono = usuarioNuevo.Telefono;
                     personaVieja.Correo = usuarioNuevo.Correo;
+                    personaVieja.Usuario = usuarioNuevo.Usuario;
                     personaVieja.Password = usuarioNuevo.Password;
                     _Context.Users.Update (personaVieja);
-                    _Context.SaveChanges();
+                    _Context.SaveChanges ();
                     return new ActualizarUsuarioResponse (personaVieja);
                 } else {
-                    return new ActualizarUsuarioResponse($"Lo sentimos, {usuarioNuevo.Identificacion} no se encuentra registrada.");
+                    return new ActualizarUsuarioResponse ($"Lo sentimos, {usuarioNuevo.Identificacion} no se encuentra registrada.");
                 }
             } catch (Exception e) {
 

@@ -6,7 +6,7 @@ namespace Entity
     {
         [Key]
         public string  Usuario { get; set; }
-        public string Identificacion { get; set; }
+        public string Identificacion { get; set; }     
         public string  Password { get; set; }
         public string  Estado { get; set; }
         public string  PrimerNombre { get; set; }

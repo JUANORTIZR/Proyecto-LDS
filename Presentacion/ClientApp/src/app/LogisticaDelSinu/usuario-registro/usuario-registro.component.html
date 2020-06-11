@@ -61,7 +61,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-5">
             <div class="form-group">
               <label class="bmd-label-floating">Telefono</label>
               <input id="txtTelefono" type="text" class="form-control" formControlName="telefono"
@@ -75,7 +75,7 @@
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-md-7">
             <div class="form-group">
               <label class="bmd-label-floating">Correo electronico</label>
               <input id="txtEmail" type="email" class="form-control" formControlName="correo"
@@ -90,19 +90,18 @@
 
         </div>
         <div class="row">
-
           <div class="col-md-4">
             <div class="form-group">
               <label class="bmd-label-floating">Nombre de usuario</label>
               <input id="txtPApellido" type="text" class="form-control"formControlName="usuario"
               [ngClass]="{ 'is-invalid': control.usuario.errors && control.usuario.touched}"
-              placeholder="Nombre de usuario para acceder al aplicado">
+              placeholder="Digite aqui su nombre de usuario">
             <div *ngIf="control.usuario.errors && control.usuario.touched" class="invalid-feedback">
-              <div *ngIf="control.usuario.errors.required">Se require el primer apellido</div>
+              <div *ngIf="control.usuario.errors.required">Se require el nombre de usuario</div>
             </div>
             </div>
           </div>
-          
+
           <div class="col-md-4">
             <div class="form-group">
               <label class="bmd-label-floating">Contraseña</label>

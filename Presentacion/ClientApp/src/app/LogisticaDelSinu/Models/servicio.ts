@@ -4,11 +4,12 @@ export class Servicio {
     idCliente:string;
     idServicio:string;
     fechaEvento:Date;
-    fechaDeSolicitud:Date;
+    fechaSolicitud:Date;
     tipoServicio:string;
     descripcion:string;
     refrigerio:string;
     ponentes:string;
     logisticaCompleta:string;
     observacion:string;
+    estado:string;
 }

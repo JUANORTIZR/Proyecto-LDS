@@ -43,6 +43,10 @@ import { SolitudServicioComponent } from './LogisticaDelSinu/Servicio/solitud-se
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { ServicioService } from './services/servicio.service';
+import { ConsultarSolicitudesComponent } from './LogisticaDelSinu/Servicio/consultar-solicitudes/consultar-solicitudes.component';
+import { ModificarSolicitudComponent } from './LogisticaDelSinu/Servicio/modificar-solicitud/modificar-solicitud.component';
+
+
 
 
 @NgModule({
@@ -75,6 +79,8 @@ import { ServicioService } from './services/servicio.service';
     FiltroUtilidadPipe,
     UtilidadRegistroComponent,
     SolitudServicioComponent,
+    ConsultarSolicitudesComponent,
+    ModificarSolicitudComponent,
     
   ],
   imports: [

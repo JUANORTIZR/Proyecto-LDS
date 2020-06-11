@@ -46,5 +46,29 @@ namespace Logica.Servicios
                 return new ConsultarServicioResponse($"Error de aplicacion {e.Message}");
             }
         }
+
+        public Servicio BuscarxIdentificacion (string identificacion) {
+            var servicio =  _context.Servicios.Find(identificacion);
+            return servicio;
+        }
+
+        public ActualizarServicioResponse Modificar (Servicio servicioNuevo) {
+            try {
+
+                var servicioViejo = _context.Servicios.Find (servicioNuevo.IdServicio);
+                if (servicioViejo != null) {
+                    servicioViejo.Estado = servicioNuevo.Estado;
+                    _context.Servicios.Update (servicioViejo);
+                    _context.SaveChanges ();
+                    return new ActualizarServicioResponse (servicioViejo);
+                } else {
+                    return new ActualizarServicioResponse ($"Lo sentimos, {servicioViejo.IdServicio} no se encuentra registrada.");
+                }
+            } catch (Exception e) {
+
+                return new ActualizarServicioResponse ($"Error de la Aplicación: {e.Message}");
+            }
+
+        }
     }
 }

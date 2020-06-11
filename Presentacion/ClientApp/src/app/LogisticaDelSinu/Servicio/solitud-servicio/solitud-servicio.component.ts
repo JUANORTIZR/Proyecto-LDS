@@ -107,7 +107,7 @@ export class SolitudServicioComponent implements OnInit {
           return;
     }
     this.servicio = this.formGroup.value;
-    this.servicio.fechaDeSolicitud = new Date();
+    this.servicio.fechaSolicitud = new Date();
     this.servicio.refrigerio = this.refrigerio;
     this.servicio.ponentes = this.ponente;
     this.servicio.logisticaCompleta = this.logistica;

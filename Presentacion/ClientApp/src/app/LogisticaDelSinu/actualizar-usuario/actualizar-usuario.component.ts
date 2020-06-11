@@ -17,11 +17,11 @@ export class ActualizarUsuarioComponent implements OnInit {
   formGroup: FormGroup;
   usuario: User;
   uEncontrado: User;
-  Nusuario = this.rutaActiva.snapshot.params.identificacion;
+  IdUsuario = this.rutaActiva.snapshot.params.identificacion;
   constructor(private usuarioService: UsuarioService, private formBuilder: FormBuilder, private rutaActiva: ActivatedRoute, private modalService: NgbModal) { }
 
   ngOnInit(): void {
-    this.usuarioService.get(this.Nusuario).subscribe(result => {
+    this.usuarioService.get(this.IdUsuario).subscribe(result => {
       this.uEncontrado = result;
       this.buildForm(this.uEncontrado);
     });

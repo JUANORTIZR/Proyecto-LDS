@@ -52,7 +52,9 @@ namespace Presentacion.Controllers
                 Barrio = trasnporteInputModel.Barrio,
                 Telefono = trasnporteInputModel.Telefono,
                 CorreoElectronico = trasnporteInputModel.CorreoElectronico,
-                SitioWeb = trasnporteInputModel.SitioWeb
+                SitioWeb = trasnporteInputModel.SitioWeb,
+                ClaseTransporte=trasnporteInputModel.ClaseTransporte,
+                CapacidadAsientos=trasnporteInputModel.CapacidadAsientos
             };
             return transporte;
         }

@@ -86,3 +86,14 @@ C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Infraest
 C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Infraestructura\obj\Debug\netstandard2.1\Infraestructura.csproj.CopyComplete
 C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Infraestructura\obj\Debug\netstandard2.1\Infraestructura.dll
 C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Infraestructura\obj\Debug\netstandard2.1\Infraestructura.pdb
+A:\Escritorio\ProyectoNuevo\Proyecto-LDS\Infraestructura\bin\Debug\netstandard2.1\Infraestructura.deps.json
+A:\Escritorio\ProyectoNuevo\Proyecto-LDS\Infraestructura\bin\Debug\netstandard2.1\Infraestructura.dll
+A:\Escritorio\ProyectoNuevo\Proyecto-LDS\Infraestructura\bin\Debug\netstandard2.1\Infraestructura.pdb
+A:\Escritorio\ProyectoNuevo\Proyecto-LDS\Infraestructura\bin\Debug\netstandard2.1\Entity.dll
+A:\Escritorio\ProyectoNuevo\Proyecto-LDS\Infraestructura\bin\Debug\netstandard2.1\Entity.pdb
+A:\Escritorio\ProyectoNuevo\Proyecto-LDS\Infraestructura\obj\Debug\netstandard2.1\Infraestructura.csprojAssemblyReference.cache
+A:\Escritorio\ProyectoNuevo\Proyecto-LDS\Infraestructura\obj\Debug\netstandard2.1\Infraestructura.AssemblyInfoInputs.cache
+A:\Escritorio\ProyectoNuevo\Proyecto-LDS\Infraestructura\obj\Debug\netstandard2.1\Infraestructura.AssemblyInfo.cs
+A:\Escritorio\ProyectoNuevo\Proyecto-LDS\Infraestructura\obj\Debug\netstandard2.1\Infraestructura.csproj.CopyComplete
+A:\Escritorio\ProyectoNuevo\Proyecto-LDS\Infraestructura\obj\Debug\netstandard2.1\Infraestructura.dll
+A:\Escritorio\ProyectoNuevo\Proyecto-LDS\Infraestructura\obj\Debug\netstandard2.1\Infraestructura.pdb

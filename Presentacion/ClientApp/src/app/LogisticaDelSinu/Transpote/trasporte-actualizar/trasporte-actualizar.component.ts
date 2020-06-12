@@ -37,7 +37,9 @@ export class TrasporteActualizarComponent implements OnInit {
       barrio: [this.transporte.barrio, Validators.required],
       telefono: [this.transporte.telefono, Validators.required],
       correoElectronico: [this.transporte.correoElectronico, [Validators.required, Validators.email]],
-      sitioWeb: [this.transporte.sitioWeb, Validators.required]
+      sitioWeb: [this.transporte.sitioWeb, Validators.required],
+      claseTransporte: [this.transporte.claseTransporte, Validators.required],
+      capacidadAsientos: [this.transporte.capacidadAsientos, Validators.required]
     });
   }
   get control() {

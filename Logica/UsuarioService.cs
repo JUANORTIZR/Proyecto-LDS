@@ -67,7 +67,7 @@ namespace Logica {
         public ActualizarUsuarioResponse Modificar (User usuarioNuevo) {
             try {
 
-                var personaVieja = _Context.Users.Find (usuarioNuevo.Identificacion);
+                var personaVieja = _Context.Users.Find (usuarioNuevo.Usuario);
                 if (personaVieja != null) {
                     personaVieja.PrimerNombre = usuarioNuevo.PrimerNombre;
                     personaVieja.SegundoNombre = usuarioNuevo.SegundoNombre;

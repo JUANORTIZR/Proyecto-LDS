@@ -30,7 +30,7 @@
               <th>Accion</th>
             </thead>
             <tbody>
-              <tr *ngFor='let serivicio of servicios; index as i'>
+              <tr *ngFor='let serivicio of servicios|filtroServicioo:searchText; index as i'>
                 <th scope="row">{{i+1}}</th>
                 <td>{{serivicio.idServicio}}</td>
                 <td>{{serivicio.idCliente}} </td>

@@ -110,24 +110,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\JUAN CARLOS\\.nuget\\packages\\": {}
+    "C:\\Users\\ANYE\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Entity\\Entity.csproj",
+      "projectUniqueName": "a:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Entity\\Entity.csproj",
       "projectName": "Entity",
-      "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Entity\\Entity.csproj",
-      "packagesPath": "C:\\Users\\JUAN CARLOS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Entity\\obj\\",
+      "projectPath": "a:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Entity\\Entity.csproj",
+      "packagesPath": "C:\\Users\\ANYE\\.nuget\\packages\\",
+      "outputPath": "a:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Entity\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\JUAN CARLOS\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\ANYE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

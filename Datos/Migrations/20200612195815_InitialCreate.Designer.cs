@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Datos.Migrations
 {
     [DbContext(typeof(LogisticaSinuContext))]
-    [Migration("20200612145005_InitialCreate")]
+    [Migration("20200612195815_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,6 +27,9 @@ namespace Datos.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Barrio")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CategoriaHotel")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Ciudad")
@@ -50,6 +53,9 @@ namespace Datos.Migrations
                     b.Property<string>("Telefono")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("TipoHabitacion")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Nit");
 
                     b.ToTable("Hoteles");
@@ -64,6 +70,9 @@ namespace Datos.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Ciudad")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaseComida")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CorreoElectronico")
@@ -142,7 +151,13 @@ namespace Datos.Migrations
                     b.Property<string>("Barrio")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("CapacidadAsientos")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Ciudad")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaseTransporte")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("CorreoElectronico")

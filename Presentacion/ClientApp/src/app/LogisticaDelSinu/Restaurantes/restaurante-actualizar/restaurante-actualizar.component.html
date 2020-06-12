@@ -72,7 +72,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-12">
+                                <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="bmd-label-floating">Barrio</label>
                                         <input type="text" class="form-control" formControlName="barrio"
@@ -85,6 +85,19 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                      <label class="bmd-label-floating">Tipo de Comida</label>
+                                      <input type="text" class="form-control" formControlName="claseComida"
+                                      [ngClass]="{ 'is-invalid': control.claseComida.errors && control.claseComida.touched}"
+                                      placeholder="Especifique el tipo de comida">
+                                    <div *ngIf="control.claseComida.errors && control.claseComida.touched" class="invalid-feedback">
+                                      <div *ngIf="control.claseComida.errors.required">Se require el tipo de comida</div>
+                                    </div>
+                                    </div>
+                                  </div>
+
                             </div>
                             <div class="row">
                                 <div class="col-md-12">

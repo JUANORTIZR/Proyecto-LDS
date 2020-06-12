@@ -49,6 +49,7 @@ namespace Logica.Restaurantes {
                     restauranteViejo.Telefono = restauranteNuevo.Telefono;
                     restauranteViejo.CorreoElectronico = restauranteNuevo.CorreoElectronico;
                     restauranteViejo.SitioWeb = restauranteNuevo.SitioWeb;
+                    restauranteViejo.ClaseComida=restauranteNuevo.ClaseComida;
                     _Context.Restaurantes.Update (restauranteViejo);
                     _Context.SaveChanges();
                     return ($"El registro {restauranteNuevo.Nombre} se ha modificado satisfactoriamente.");

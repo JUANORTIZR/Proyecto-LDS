@@ -19,7 +19,9 @@ namespace Datos.Migrations
                     Barrio = table.Column<string>(nullable: true),
                     Telefono = table.Column<string>(nullable: true),
                     CorreoElectronico = table.Column<string>(nullable: true),
-                    SitioWeb = table.Column<string>(nullable: true)
+                    SitioWeb = table.Column<string>(nullable: true),
+                    CategoriaHotel = table.Column<string>(nullable: true),
+                    TipoHabitacion = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -38,7 +40,8 @@ namespace Datos.Migrations
                     Barrio = table.Column<string>(nullable: true),
                     Telefono = table.Column<string>(nullable: true),
                     CorreoElectronico = table.Column<string>(nullable: true),
-                    SitioWeb = table.Column<string>(nullable: true)
+                    SitioWeb = table.Column<string>(nullable: true),
+                    ClaseComida = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -57,7 +60,9 @@ namespace Datos.Migrations
                     Barrio = table.Column<string>(nullable: true),
                     Telefono = table.Column<string>(nullable: true),
                     CorreoElectronico = table.Column<string>(nullable: true),
-                    SitioWeb = table.Column<string>(nullable: true)
+                    SitioWeb = table.Column<string>(nullable: true),
+                    ClaseTransporte = table.Column<string>(nullable: true),
+                    CapacidadAsientos = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

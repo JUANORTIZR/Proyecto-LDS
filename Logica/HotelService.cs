@@ -56,6 +56,8 @@ namespace Logica {
                     hotelViejo.Telefono = hotelNuevo.Telefono;
                     hotelViejo.CorreoElectronico = hotelNuevo.CorreoElectronico;
                     hotelViejo.SitioWeb = hotelNuevo.SitioWeb;
+                    hotelViejo.CategoriaHotel = hotelNuevo.CategoriaHotel;
+                    hotelViejo.TipoHabitacion = hotelNuevo.TipoHabitacion;
                     _Context.Hoteles.Update (hotelViejo);
                     _Context.SaveChanges ();
                     return ($"El registro {hotelNuevo.Nombre} se ha modificado satisfactoriamente.");

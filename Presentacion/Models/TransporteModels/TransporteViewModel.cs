@@ -18,6 +18,8 @@ namespace Presentacion.Models.TransporteModels
             Telefono = transporte.Telefono.Trim();
             CorreoElectronico = transporte.CorreoElectronico.Trim();
             SitioWeb = transporte.SitioWeb.Trim();
+            ClaseTransporte=transporte.ClaseTransporte.Trim();
+            CapacidadAsientos=transporte.CapacidadAsientos.Trim();
         }
     }
 }

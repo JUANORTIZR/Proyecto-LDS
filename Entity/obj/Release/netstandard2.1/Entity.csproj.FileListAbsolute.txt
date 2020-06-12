@@ -16,3 +16,11 @@ C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Entity\obj\
 C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Entity\obj\Release\netstandard2.1\Entity.dll
 C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Entity\obj\Release\netstandard2.1\Entity.pdb
 >>>>>>> 183bc23ce9ed4106244f12041ded65255494ba0c
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Entity\bin\Release\netstandard2.1\Entity.deps.json
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Entity\bin\Release\netstandard2.1\Entity.dll
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Entity\bin\Release\netstandard2.1\Entity.pdb
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Entity\obj\Release\netstandard2.1\Entity.csprojAssemblyReference.cache
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Entity\obj\Release\netstandard2.1\Entity.AssemblyInfoInputs.cache
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Entity\obj\Release\netstandard2.1\Entity.AssemblyInfo.cs
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Entity\obj\Release\netstandard2.1\Entity.dll
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Entity\obj\Release\netstandard2.1\Entity.pdb

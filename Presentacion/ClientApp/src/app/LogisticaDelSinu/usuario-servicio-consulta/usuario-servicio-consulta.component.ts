@@ -3,6 +3,7 @@ import { Servicio } from '../Models/servicio';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { ServicioService } from 'src/app/services/servicio.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { AlertModalComponent } from 'src/app/@base/alert-modal/alert-modal.component';
 
 @Component({
   selector: 'app-usuario-servicio-consulta',
@@ -19,7 +20,6 @@ export class UsuarioServicioConsultaComponent implements OnInit {
   ngOnInit(): void {
     var usuario = (JSON.parse(localStorage.getItem('currentUser')));
     this.usuarioService.get(usuario.usuario).subscribe(s => {
-      alert(s.usuario);
       this.servicios = s.servicios;
     });
   }

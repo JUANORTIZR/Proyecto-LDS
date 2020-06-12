@@ -36,6 +36,11 @@ export class SolitudServicioComponent implements OnInit {
     this.cambiarLogistica();
     this.cambiarPonentes();
     this.cambiarRefrigerio();
+    if(this.usuario==null){
+      const messageBox = this.modalService.open(AlertModalComponent)
+          messageBox.componentInstance.title = "Resultado Operación";
+          messageBox.componentInstance.message = 'Para poder hacer la solicitud de uno de nuestros servicios por favor inicia sesión o registrate';
+    }
   }
 
   private buildForm() {
@@ -103,7 +108,7 @@ export class SolitudServicioComponent implements OnInit {
     if(this.usuario==null){
       const messageBox = this.modalService.open(AlertModalComponent)
           messageBox.componentInstance.title = "Resultado Operación";
-          messageBox.componentInstance.message = 'Para poder hacer la solicitud de uno de nuestros servicios pro favor inicia sesión o registrate';
+          messageBox.componentInstance.message = 'Para poder hacer la solicitud de uno de nuestros servicios por favor inicia sesión o registrate';
           return;
     }
     this.servicio = this.formGroup.value;

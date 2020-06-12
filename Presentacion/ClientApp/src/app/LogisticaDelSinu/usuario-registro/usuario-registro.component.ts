@@ -25,6 +25,7 @@ export class UsuarioRegistroComponent implements OnInit {
     this.buildForm();
   }
 
+  
   private buildForm() {
     this.usuario = new User();
     this.usuario.identificacion = "";
@@ -38,7 +39,7 @@ export class UsuarioRegistroComponent implements OnInit {
     this.usuario.password = "";
 
     this.formGroup = this.formBuilder.group({
-      identificacion: [this.usuario.identificacion, Validators.required],
+      identificacion: [this.usuario.identificacion, [Validators.required]],
       primerNombre: [this.usuario.primerNombre, Validators.required],
       segundoNombre: [this.usuario.segundoNombre],
       primerApellido: [this.usuario.primerApellido, Validators.required],

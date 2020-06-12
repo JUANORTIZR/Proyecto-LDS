@@ -1,3 +1,5 @@
+
+
 <div class="row">
   <div class="col-6">
     <input [(ngModel)]="searchText" type="text" class="form-control" placeholder="Buscar Restaurantes">
@@ -53,7 +55,6 @@
 
 
 
-
 <!-- Modals Seminarios -->
 
 <div name="padre" class="modal fade" id="infoSeminarios" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -74,8 +75,9 @@
             <p class="col-sm-5">fecha de la solicitud: {{servicio.fechaSolicitud|date:'dd-MM-yyyy'}}</p>
           </div>
           <div class="row">
-            <p class="col-5">Id servicio: {{servicio.idServicio}}</p>
-            <p class="col-5">Idcliente: {{servicio.idCliente}}</p>
+            <p class="col-4">Id servicio: {{servicio.idServicio}}</p>
+            <p class="col-4">Idcliente: {{servicio.idCliente}}</p>
+            <p class="col-4">Estado: {{servicio.estado}}</p>
           </div>
           <div class="row">
             <p class="col-6">Servicio solicitado: {{servicio.tipoServicio}}</p>
@@ -96,7 +98,8 @@
             <p class="col-10">Descripcion:</p>
           </div>
           <div class="row">
-            <p class="col-10"> {{servicio.descripcion}}</p>
+            <p class="col-12"> {{servicio.descripcion}}</p>
+            
           </div>
         </div>
       </div>
@@ -106,3 +109,4 @@
     </div>
   </div>
 </div>
+

@@ -27,8 +27,8 @@ export class ConsultarSolicitudesComponent implements OnInit {
     });
   }
   
-  cambiarEstado(){
-    this.servicio.estado = "Revisado";
+  cambiarEstado(estado:string){
+    this.servicio.estado = estado;
     this.servicioService.put(this.servicio).subscribe(s => {
       if(s != null){
         this.servicio = s;

@@ -23,3 +23,14 @@ C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Datos\obj\R
 C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Datos\obj\Release\netstandard2.1\Datos.dll
 C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Datos\obj\Release\netstandard2.1\Datos.pdb
 >>>>>>> 183bc23ce9ed4106244f12041ded65255494ba0c
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Datos\bin\Release\netstandard2.1\Datos.deps.json
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Datos\bin\Release\netstandard2.1\Datos.dll
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Datos\bin\Release\netstandard2.1\Datos.pdb
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Datos\bin\Release\netstandard2.1\Entity.dll
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Datos\bin\Release\netstandard2.1\Entity.pdb
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Datos\obj\Release\netstandard2.1\Datos.csprojAssemblyReference.cache
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Datos\obj\Release\netstandard2.1\Datos.AssemblyInfoInputs.cache
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Datos\obj\Release\netstandard2.1\Datos.AssemblyInfo.cs
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Datos\obj\Release\netstandard2.1\Datos.csproj.CopyComplete
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Datos\obj\Release\netstandard2.1\Datos.dll
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Datos\obj\Release\netstandard2.1\Datos.pdb

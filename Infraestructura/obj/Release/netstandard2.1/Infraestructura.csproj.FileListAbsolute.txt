@@ -23,3 +23,14 @@ C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Infraestruc
 C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Infraestructura\obj\Release\netstandard2.1\Infraestructura.dll
 C:\Users\JUAN CARLOS\Documents\GitHub\Logistica del sinú\Proyecto01\Infraestructura\obj\Release\netstandard2.1\Infraestructura.pdb
 >>>>>>> 183bc23ce9ed4106244f12041ded65255494ba0c
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Infraestructura\bin\Release\netstandard2.1\Infraestructura.deps.json
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Infraestructura\bin\Release\netstandard2.1\Infraestructura.dll
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Infraestructura\bin\Release\netstandard2.1\Infraestructura.pdb
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Infraestructura\bin\Release\netstandard2.1\Entity.dll
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Infraestructura\bin\Release\netstandard2.1\Entity.pdb
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Infraestructura\obj\Release\netstandard2.1\Infraestructura.csprojAssemblyReference.cache
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Infraestructura\obj\Release\netstandard2.1\Infraestructura.AssemblyInfoInputs.cache
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Infraestructura\obj\Release\netstandard2.1\Infraestructura.AssemblyInfo.cs
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Infraestructura\obj\Release\netstandard2.1\Infraestructura.csproj.CopyComplete
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Infraestructura\obj\Release\netstandard2.1\Infraestructura.dll
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Infraestructura\obj\Release\netstandard2.1\Infraestructura.pdb

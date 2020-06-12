@@ -1,14 +1,13 @@
 using Entity;
 using Microsoft.EntityFrameworkCore;
-
+using Microsoft.EntityFrameworkCore.Design;
 
 namespace Datos {
-    public class LogisticaSinuContext: DbContext {
+    public class LogisticaSinuContext : DbContext {
 
-       public LogisticaSinuContext(DbContextOptions options) : base(options)
-       {
-           
-       }
+        public LogisticaSinuContext (DbContextOptions options) : base (options) {
+
+        }
         public DbSet<Hotel> Hoteles { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Restaurante> Restaurantes { get; set; }
@@ -17,4 +16,6 @@ namespace Datos {
         public DbSet<Utilidad> Utilidades { get; set; }
         public DbSet<Servicio> Servicios { get; set; }
     }
+
+    
 }

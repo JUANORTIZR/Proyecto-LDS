@@ -172,7 +172,7 @@
           </ul>
         </li>
         <li class="nav-item " *ngIf="currentUser && currentUser.tipo=='Usuario'">
-          <a class="nav-link" [routerLink]="['/ActualizarUsuario', currentUser.identificacion]">
+          <a class="nav-link" [routerLink]="['/ActualizarUsuario', currentUser.usuario]">
             <i class="material-icons">account_box</i>
             <p>Perfil</p>
           </a>

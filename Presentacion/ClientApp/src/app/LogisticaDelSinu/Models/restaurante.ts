@@ -8,4 +8,5 @@ export class Restaurante {
     telefono:string;
     correoElectronico:string;
     sitioWeb:string;
+    claseComida:string;
 }

@@ -37,7 +37,8 @@ export class RestauranteActualizarComponent implements OnInit {
       barrio: [this.restaurante.barrio, Validators.required],
       telefono: [this.restaurante.telefono, Validators.required],
       correoElectronico: [this.restaurante.correoElectronico, [Validators.required, Validators.email]],
-      sitioWeb: [this.restaurante.sitioWeb, Validators.required]
+      sitioWeb: [this.restaurante.sitioWeb, Validators.required],
+      claseComida: [this.restaurante.claseComida, Validators.required]
     });
   }
   get control() {

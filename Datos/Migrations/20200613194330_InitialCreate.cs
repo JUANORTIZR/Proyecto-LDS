@@ -19,11 +19,41 @@ namespace Datos.Migrations
                     Barrio = table.Column<string>(nullable: true),
                     Telefono = table.Column<string>(nullable: true),
                     CorreoElectronico = table.Column<string>(nullable: true),
-                    SitioWeb = table.Column<string>(nullable: true)
+                    SitioWeb = table.Column<string>(nullable: true),
+                    CategoriaHotel = table.Column<string>(nullable: true),
+                    TipoHabitacion = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Hoteles", x => x.Nit);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Movilidades",
+                columns: table => new
+                {
+                    IdMovilidad = table.Column<string>(nullable: false),
+                    IdCliente = table.Column<string>(nullable: true),
+                    FechaEvento = table.Column<DateTime>(nullable: false),
+                    FechaSolicitud = table.Column<DateTime>(nullable: false),
+                    Destino = table.Column<string>(nullable: true),
+                    NocheAlojamiento = table.Column<string>(nullable: true),
+                    TipoAcomodacion = table.Column<string>(nullable: true),
+                    Transporte = table.Column<string>(nullable: true),
+                    Alimentacion = table.Column<string>(nullable: true),
+                    AcompañamientoGuia = table.Column<string>(nullable: true),
+                    SeguroViaje = table.Column<string>(nullable: true),
+                    OrganizacionAjenda = table.Column<string>(nullable: true),
+                    VisitaTecnica = table.Column<string>(nullable: true),
+                    CostoEntrada = table.Column<string>(nullable: true),
+                    Objervacion = table.Column<string>(nullable: true),
+                    TipoHotel = table.Column<string>(nullable: true),
+                    Refrigerio = table.Column<string>(nullable: true),
+                    Estado = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Movilidades", x => x.IdMovilidad);
                 });
 
             migrationBuilder.CreateTable(
@@ -38,7 +68,8 @@ namespace Datos.Migrations
                     Barrio = table.Column<string>(nullable: true),
                     Telefono = table.Column<string>(nullable: true),
                     CorreoElectronico = table.Column<string>(nullable: true),
-                    SitioWeb = table.Column<string>(nullable: true)
+                    SitioWeb = table.Column<string>(nullable: true),
+                    ClaseComida = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -57,7 +88,9 @@ namespace Datos.Migrations
                     Barrio = table.Column<string>(nullable: true),
                     Telefono = table.Column<string>(nullable: true),
                     CorreoElectronico = table.Column<string>(nullable: true),
-                    SitioWeb = table.Column<string>(nullable: true)
+                    SitioWeb = table.Column<string>(nullable: true),
+                    ClaseTransporte = table.Column<string>(nullable: true),
+                    CapacidadAsientos = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -156,6 +189,9 @@ namespace Datos.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Hoteles");
+
+            migrationBuilder.DropTable(
+                name: "Movilidades");
 
             migrationBuilder.DropTable(
                 name: "Restaurantes");

@@ -19,6 +19,7 @@ namespace Presentacion.Models.RestauranteModels
             Telefono = restaurante.Telefono.Trim();
             CorreoElectronico = restaurante.CorreoElectronico.Trim();
             SitioWeb = restaurante.SitioWeb.Trim();
+            ClaseComida=restaurante.ClaseComida.Trim();
         }
     }
 }

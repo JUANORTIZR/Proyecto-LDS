@@ -62,3 +62,11 @@ C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Entity\o
 C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Entity\obj\Debug\netstandard2.1\Entity.AssemblyInfo.cs
 C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Entity\obj\Debug\netstandard2.1\Entity.dll
 C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Entity\obj\Debug\netstandard2.1\Entity.pdb
+A:\Escritorio\ProyectoNuevo\Proyecto-LDS\Entity\bin\Debug\netstandard2.1\Entity.deps.json
+A:\Escritorio\ProyectoNuevo\Proyecto-LDS\Entity\bin\Debug\netstandard2.1\Entity.dll
+A:\Escritorio\ProyectoNuevo\Proyecto-LDS\Entity\bin\Debug\netstandard2.1\Entity.pdb
+A:\Escritorio\ProyectoNuevo\Proyecto-LDS\Entity\obj\Debug\netstandard2.1\Entity.csprojAssemblyReference.cache
+A:\Escritorio\ProyectoNuevo\Proyecto-LDS\Entity\obj\Debug\netstandard2.1\Entity.AssemblyInfoInputs.cache
+A:\Escritorio\ProyectoNuevo\Proyecto-LDS\Entity\obj\Debug\netstandard2.1\Entity.AssemblyInfo.cs
+A:\Escritorio\ProyectoNuevo\Proyecto-LDS\Entity\obj\Debug\netstandard2.1\Entity.dll
+A:\Escritorio\ProyectoNuevo\Proyecto-LDS\Entity\obj\Debug\netstandard2.1\Entity.pdb

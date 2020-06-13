@@ -50,7 +50,8 @@ namespace Presentacion.Controllers
                 Barrio = restauranteInput.Barrio,
                 Telefono = restauranteInput.Telefono,
                 CorreoElectronico = restauranteInput.CorreoElectronico,
-                SitioWeb = restauranteInput.SitioWeb
+                SitioWeb = restauranteInput.SitioWeb,
+                ClaseComida=restauranteInput.ClaseComida
             };
             return restaurante;
         }

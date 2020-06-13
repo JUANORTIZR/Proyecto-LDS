@@ -15,6 +15,8 @@ namespace Datos {
         public DbSet<User> Users { get; set; }
         public DbSet<Utilidad> Utilidades { get; set; }
         public DbSet<Servicio> Servicios { get; set; }
+        public DbSet<MovilidadAcademica> Movilidades { get; set; }
+
     }
 
     

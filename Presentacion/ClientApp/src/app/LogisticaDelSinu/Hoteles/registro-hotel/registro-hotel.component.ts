@@ -32,6 +32,8 @@ export class RegistroHotelComponent implements OnInit {
     this.hotel.telefono = "";
     this.hotel.correoElectronico = "";
     this.hotel.sitioWeb = "";
+    this.hotel.categoriaHotel = "";
+    this.hotel.tipoHabitacion = "";
     this.formGroup = this.formBuilder.group({
       nit: [this.hotel.nit, Validators.required],
       nombre: [this.hotel.nombre, Validators.required],
@@ -41,7 +43,9 @@ export class RegistroHotelComponent implements OnInit {
       barrio: [this.hotel.barrio, Validators.required],
       telefono: [this.hotel.telefono, Validators.required],
       correoElectronico: [this.hotel.correoElectronico, [Validators.required, Validators.email]],
-      sitioWeb: [this.hotel.sitioWeb, Validators.required]
+      sitioWeb: [this.hotel.sitioWeb, Validators.required],
+      categoriaHotel: [this.hotel.categoriaHotel, Validators.required],
+      tipoHabitacion: [this.hotel.tipoHabitacion, Validators.required]
     });
   }
 

@@ -59,7 +59,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
               <div class="form-group">
                 <label class="bmd-label-floating">Barrio</label>
                 <input type="text" class="form-control" formControlName="barrio"
@@ -70,9 +70,22 @@
               </div>
               </div>
             </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="bmd-label-floating">Categoria de hotel</label>
+                <input type="text" class="form-control" formControlName="categoriaHotel"
+                [ngClass]="{ 'is-invalid': control.categoriaHotel.errors && control.categoriaHotel.touched}"
+                placeholder="Numero de estrellas">
+              <div *ngIf="control.categoriaHotel.errors && control.categoriaHotel.touched" class="invalid-feedback">
+                <div *ngIf="control.categoriaHotel.errors.required">Se require la categoria del hotel</div>
+              </div>
+              </div>
+            </div>
+
           </div>
           <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
               <div class="form-group">
                 <label class="bmd-label-floating">Telefono</label>
                 <input type="text" class="form-control" formControlName="telefono"
@@ -85,6 +98,20 @@
               </div>
               </div>
             </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="bmd-label-floating">Tipo de habitacion</label>
+                <input type="text" class="form-control" formControlName="tipoHabitacion"
+                [ngClass]="{ 'is-invalid': control.tipoHabitacion.errors && control.tipoHabitacion.touched}"
+                placeholder="Especifique el tipo de habitacion">
+              <div *ngIf="control.tipoHabitacion.errors && control.tipoHabitacion.touched" class="invalid-feedback">
+                <div *ngIf="control.tipoHabitacion.errors.required">Se require el tipo de habitacion</div>
+              </div>
+              </div>
+            </div>
+
+
           </div>
           <div class="row">
             <div class="col-md-4">

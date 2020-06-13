@@ -29,6 +29,7 @@ export class RestauranteRegistroComponent implements OnInit {
     this.restaurante.telefono = "";
     this.restaurante.correoElectronico = "";
     this.restaurante.sitioWeb = "";
+    this.restaurante.claseComida = "";
     this.formGroup = this.formBuilder.group({
       nit: [this.restaurante.nit, Validators.required],
       nombre: [this.restaurante.nombre, Validators.required],
@@ -38,7 +39,8 @@ export class RestauranteRegistroComponent implements OnInit {
       barrio: [this.restaurante.barrio, Validators.required],
       telefono: [this.restaurante.telefono, Validators.required],
       correoElectronico: [this.restaurante.correoElectronico, [Validators.required, Validators.email]],
-      sitioWeb: [this.restaurante.sitioWeb, Validators.required]
+      sitioWeb: [this.restaurante.sitioWeb, Validators.required],
+      claseComida: [this.restaurante.claseComida, Validators.required]
     });
   }
 

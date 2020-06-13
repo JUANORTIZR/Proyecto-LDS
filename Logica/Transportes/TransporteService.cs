@@ -39,19 +39,21 @@ namespace Logica.Transportes {
         }
         public string Modificar (Transporte transporteNuevo) {
             try {
-                
+
                 var trasporteViejo = _Context.Transportes.Find (transporteNuevo.Nit);
                 if (trasporteViejo != null) {
-                   trasporteViejo.Nombre=transporteNuevo.Nombre;
-                   trasporteViejo.Pais=transporteNuevo.Pais;
-                   trasporteViejo.Ciudad=transporteNuevo.Ciudad;
-                   trasporteViejo.Direccion=transporteNuevo.Direccion;
-                   trasporteViejo.Barrio=transporteNuevo.Barrio;
-                   trasporteViejo.Telefono=transporteNuevo.Telefono;
-                   trasporteViejo.CorreoElectronico=transporteNuevo.CorreoElectronico;
-                   trasporteViejo.SitioWeb=transporteNuevo.SitioWeb;
+                    trasporteViejo.Nombre = transporteNuevo.Nombre;
+                    trasporteViejo.Pais = transporteNuevo.Pais;
+                    trasporteViejo.Ciudad = transporteNuevo.Ciudad;
+                    trasporteViejo.Direccion = transporteNuevo.Direccion;
+                    trasporteViejo.Barrio = transporteNuevo.Barrio;
+                    trasporteViejo.Telefono = transporteNuevo.Telefono;
+                    trasporteViejo.CorreoElectronico = transporteNuevo.CorreoElectronico;
+                    trasporteViejo.SitioWeb = transporteNuevo.SitioWeb;
+                    trasporteViejo.ClaseTransporte = transporteNuevo.ClaseTransporte;
+                    trasporteViejo.CapacidadAsientos = transporteNuevo.CapacidadAsientos;
                     _Context.Transportes.Update (trasporteViejo);
-                   _Context.SaveChanges();
+                    _Context.SaveChanges ();
                     return ($"El registro {transporteNuevo.Nombre} se ha modificado satisfactoriamente.");
                 } else {
                     return ($"Lo sentimos, {transporteNuevo.Nit} no se encuentra registrada.");

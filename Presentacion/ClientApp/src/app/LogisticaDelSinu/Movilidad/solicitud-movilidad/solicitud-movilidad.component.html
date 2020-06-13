@@ -1,0 +1,239 @@
+<p>solicitud-movilidad works!</p>
+<div class="col-md-8 container">
+    <div class="card">
+      <div class="card-header card-header-primary">
+        <h4 class="card-title">Solicitud De Servicio</h4>
+        <p class="card-category">Movilidad Academica Nacional e Internacional</p>
+      </div>
+      <div class="card-body">
+        <form id="contenedor">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="bmd-label-floating">Id Movilidad</label>
+                <input id="txtIdentificacion" type="text" class="form-control" formControlName="idMovilidad">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="bmd-label-floating">Fecha del Evento</label>
+                <input id="txtIdentificacion" type="text" class="form-control" formControlName="fechaEvento">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="bmd-label-floating">Destino</label>
+                <input id="txtPNombre" type="text" class="form-control" formControlName="destino">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="bmd-label-floating">Noches de Alojamiento</label>
+                <input id="txtSNombre" type="text" class="form-control" formControlName="nocheAlojamiento"
+                  placeholder="ingrese el numero de noches">
+              </div>
+            </div>
+  
+  
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="bmd-label-floating">Tipo de Acomodacion</label>
+                <select class="custom-select" formControlName="tipoAcomodacion">
+                  <option selected>Seleccione</option>
+                  <option value="1">Sencilla</option>
+                  <option value="2">Multiple</option>
+                  <option value="3">Habitacion Individual</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="bmd-label-floating">Tipo de Hotel</label>
+                <select class="custom-select " formControlName="tipoHotel">
+                  <option selected>Seleccione</option>
+                  <option value="1">Sencillo</option>
+                  <option value="2">3 Estella</option>
+                  <option value="2">4 Estella</option>
+                  <option value="2">5 Estella</option>
+                </select>
+              </div>
+            </div>
+  
+  
+            <div class="col-md-12">
+              <div class="form-group">
+                <label class="bmd-label-floating">Transporte</label>
+                <select class="custom-select " formControlName="transporte">
+                  <option selected>Seleccione</option>
+                  <option value="1">Terrestre</option>
+                  <option value="2">Aereo</option>
+                </select>
+              </div>
+  
+            </div>
+            <div class="col-md-12">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="bmd-label-floating">
+                    Plan de Alimentacion: </label>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline1">Desayuno</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline2">Almuerzo</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline2">Cena</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="bmd-label-floating">
+                    Refrigerios: </label>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline1">Mañana</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline2">Tarde</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline2">Noche</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline2">Transporte</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="bmd-label-floating">
+                    Aconpañamiento Guia:</label>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline1">Si</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline2">No</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="bmd-label-floating">
+                    Visita Tecnica</label>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline1">Si</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline2">No</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="bmd-label-floating">Seguro de Viaje: </label>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline1">Si</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline2">No</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="bmd-label-floating">Organizacion de Agenda: </label>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline1">Si</label>
+                  </div>
+                  <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline2">No</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Costo por entrada: </label>
+                  </div>
+                </div>
+                <div class="col-md-5">
+                  <div class="form-group">
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                      <label class="custom-control-label" for="customRadioInline1">Si</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                      <label class="custom-control-label" for="customRadioInline2">No</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <div class="col-md-12">
+              <div class="form-group">
+                <label class="bmd-label-floating">Observaciones</label>
+                <input id="txtSNombre" type="text" class="form-control" formControlName="objervacion"
+                  placeholder="Ingrese las Obserbaciones">
+              </div>
+            </div>
+            <div>
+              <button type="button" id="btn-registro" class="btn  pull-right">Solicitar Servicio</button>
+              <button type="reset" id="btn-cancelar" class="btn  pull-right">Cancelar</button>
+            </div>
+           
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

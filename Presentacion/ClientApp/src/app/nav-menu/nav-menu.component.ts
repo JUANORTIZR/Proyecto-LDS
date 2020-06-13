@@ -18,6 +18,7 @@ export class NavMenuComponent {
   show3: boolean = false;
   show4: boolean = false;
   show5: boolean = false;
+  show6: boolean = false;
   currentUser: User;
 
   constructor(

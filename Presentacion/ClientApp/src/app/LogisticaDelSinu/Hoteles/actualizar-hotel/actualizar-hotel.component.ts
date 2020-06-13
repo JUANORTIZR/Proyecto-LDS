@@ -39,7 +39,9 @@ export class ActualizarHotelComponent implements OnInit {
       barrio: [this.hotel.barrio, Validators.required],
       telefono: [this.hotel.telefono, Validators.required],
       correoElectronico: [this.hotel.correoElectronico, [Validators.required, Validators.email]],
-      sitioWeb: [this.hotel.sitioWeb, Validators.required]
+      sitioWeb: [this.hotel.sitioWeb, Validators.required],
+      categoriaHotel: [this.hotel.categoriaHotel, Validators.required],
+      tipoHabitacion: [this.hotel.tipoHabitacion, Validators.required]
     });
   }
 

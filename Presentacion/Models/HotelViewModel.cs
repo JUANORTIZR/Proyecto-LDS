@@ -19,6 +19,8 @@ namespace Presentacion.Models
             Telefono = hotel.Telefono.Trim();
             CorreoElectronico = hotel.CorreoElectronico.Trim();
             SitioWeb = hotel.SitioWeb.Trim();
+            CategoriaHotel=hotel.CategoriaHotel.Trim();         
+            TipoHabitacion=hotel.TipoHabitacion.Trim();
         }
     }
 }

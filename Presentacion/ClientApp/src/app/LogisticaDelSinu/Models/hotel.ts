@@ -8,4 +8,6 @@ export class Hotel {
     telefono:string;
     correoElectronico:string;
     sitioWeb:string;
+    categoriaHotel:string;
+    tipoHabitacion:string;
 }

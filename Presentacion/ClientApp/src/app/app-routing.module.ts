@@ -20,6 +20,10 @@ import { SolitudServicioComponent } from './LogisticaDelSinu/Servicio/solitud-se
 import { ConsultarSolicitudesComponent } from './LogisticaDelSinu/Servicio/consultar-solicitudes/consultar-solicitudes.component';
 import { ModificarSolicitudComponent } from './LogisticaDelSinu/Servicio/modificar-solicitud/modificar-solicitud.component';
 import { UsuarioServicioConsultaComponent } from './LogisticaDelSinu/usuario-servicio-consulta/usuario-servicio-consulta.component';
+import { UsuarioMovilidadConsultaComponent } from './LogisticaDelSinu/usuario-movilidad-consulta/usuario-movilidad-consulta.component';
+import { SolicitudMovilidadComponent } from './LogisticaDelSinu/Movilidad/solicitud-movilidad/solicitud-movilidad.component';
+import { ModificarMovilidadComponent } from './LogisticaDelSinu/Movilidad/modificar-movilidad/modificar-movilidad.component';
+import { ConsultarMovilidadesComponent } from './LogisticaDelSinu/Movilidad/consultar-movilidades/consultar-movilidades.component';
 
 
 
@@ -99,6 +103,22 @@ const routes: Routes = [
   {
     path: 'usuarioServicioConsulta',
     component: UsuarioServicioConsultaComponent
+  },
+  {
+    path: 'usuarioMovilidadConsulta',
+    component: UsuarioMovilidadConsultaComponent
+  },
+  {
+    path: 'solicituMovilidad',
+    component: SolicitudMovilidadComponent
+  },
+  {
+    path: 'modificarMovilidad',
+    component: ModificarMovilidadComponent
+  },
+  {
+    path: 'consultarMovilidad',
+    component: ConsultarMovilidadesComponent
   }
 
 ];

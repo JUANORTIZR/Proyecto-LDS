@@ -29,6 +29,8 @@ export class TransporteRegistroComponent implements OnInit {
     this.transporte.telefono = "";
     this.transporte.correoElectronico = "";
     this.transporte.sitioWeb = "";
+    this.transporte.claseTransporte = "";
+    this.transporte.capacidadAsientos = "";
     this.formGroup = this.formBuilder.group({
       nit: [this.transporte.nit, Validators.required],
       nombre: [this.transporte.nombre, Validators.required],
@@ -38,7 +40,9 @@ export class TransporteRegistroComponent implements OnInit {
       barrio: [this.transporte.barrio, Validators.required],
       telefono: [this.transporte.telefono, Validators.required],
       correoElectronico: [this.transporte.correoElectronico, [Validators.required, Validators.email]],
-      sitioWeb: [this.transporte.sitioWeb, Validators.required]
+      sitioWeb: [this.transporte.sitioWeb, Validators.required],
+      claseTransporte: [this.transporte.sitioWeb, Validators.required],
+      capacidadAsientos: [this.transporte.sitioWeb, Validators.required]
     });
   }
 

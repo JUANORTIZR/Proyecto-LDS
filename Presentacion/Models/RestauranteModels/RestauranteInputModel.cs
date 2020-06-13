@@ -20,6 +20,8 @@ namespace Presentacion.Models.RestauranteModels
         [Required(ErrorMessage = "El correo electronico de la empresa es requerido")]
         public string CorreoElectronico { get; set; }
         public string SitioWeb { get; set; }
+         [Required(ErrorMessage = "La clase de comida es requerida")]
+        public string ClaseComida { get; set; }
 
     }
 }

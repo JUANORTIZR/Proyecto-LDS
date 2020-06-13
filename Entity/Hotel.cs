@@ -1,9 +1,7 @@
-using System.ComponentModel.DataAnnotations;
+using  System.ComponentModel.DataAnnotations;
 
-namespace Entity
-{
-    public class Hotel
-    {
+namespace Entity {
+    public class Hotel {
         [Key]
         public string Nit { get; set; }
         public string Nombre { get; set; }
@@ -14,6 +12,8 @@ namespace Entity
         public string Telefono { get; set; }
         public string CorreoElectronico { get; set; }
         public string SitioWeb { get; set; }
+        public string CategoriaHotel { get; set; }
+        public string TipoHabitacion { get; set; }
 
     }
 }

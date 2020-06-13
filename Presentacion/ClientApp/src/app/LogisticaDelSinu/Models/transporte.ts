@@ -8,4 +8,6 @@ export class Transporte {
     telefono:string;
     correoElectronico:string;
     sitioWeb:string;
+    claseTransporte:string;
+    capacidadAsientos:string;
 }

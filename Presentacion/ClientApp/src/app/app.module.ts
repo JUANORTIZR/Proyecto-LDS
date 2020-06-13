@@ -48,6 +48,10 @@ import { ModificarSolicitudComponent } from './LogisticaDelSinu/Servicio/modific
 import { UsuarioServicioConsultaComponent } from './LogisticaDelSinu/usuario-servicio-consulta/usuario-servicio-consulta.component';
 import { FiltroServicioPipe } from './pipe/filtro-servicio.pipe';
 import { FiltroServiciooPipe } from './pipe/filtro-servicioo.pipe';
+import { SolicitudMovilidadComponent } from './LogisticaDelSinu/Movilidad/solicitud-movilidad/solicitud-movilidad.component';
+import { ConsultarMovilidadesComponent } from './LogisticaDelSinu/Movilidad/consultar-movilidades/consultar-movilidades.component';
+import { ModificarMovilidadComponent } from './LogisticaDelSinu/Movilidad/modificar-movilidad/modificar-movilidad.component';
+import { UsuarioMovilidadConsultaComponent } from './LogisticaDelSinu/usuario-movilidad-consulta/usuario-movilidad-consulta.component';
 
 
 
@@ -87,6 +91,10 @@ import { FiltroServiciooPipe } from './pipe/filtro-servicioo.pipe';
     UsuarioServicioConsultaComponent,
     FiltroServicioPipe,
     FiltroServiciooPipe,
+    SolicitudMovilidadComponent,
+    ConsultarMovilidadesComponent,
+    ModificarMovilidadComponent,
+    UsuarioMovilidadConsultaComponent,
     
   ],
   imports: [

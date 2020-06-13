@@ -14,4 +14,5 @@ export class User {
     tipo:string;
     servicios:Servicio[];
     token:string;
+  movilidades: import("a:/Escritorio/ProyectoNuevo/Proyecto-LDS/Presentacion/ClientApp/src/app/LogisticaDelSinu/Models/movilidad").Movilidad[];
 }

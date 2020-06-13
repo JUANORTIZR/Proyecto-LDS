@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Datos.Migrations
 {
     [DbContext(typeof(LogisticaSinuContext))]
-    [Migration("20200612195815_InitialCreate")]
+    [Migration("20200613194330_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -59,6 +59,67 @@ namespace Datos.Migrations
                     b.HasKey("Nit");
 
                     b.ToTable("Hoteles");
+                });
+
+            modelBuilder.Entity("Entity.MovilidadAcademica", b =>
+                {
+                    b.Property<string>("IdMovilidad")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("AcompañamientoGuia")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Alimentacion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CostoEntrada")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Destino")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Estado")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("FechaEvento")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("FechaSolicitud")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("IdCliente")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NocheAlojamiento")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Objervacion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OrganizacionAjenda")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Refrigerio")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SeguroViaje")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TipoAcomodacion")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TipoHotel")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Transporte")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("VisitaTecnica")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("IdMovilidad");
+
+                    b.ToTable("Movilidades");
                 });
 
             modelBuilder.Entity("Entity.Restaurante", b =>

@@ -26,6 +26,7 @@ export class SolitudServicioComponent implements OnInit {
   refrigerio:string;
   ponente:string;
   logistica:string;
+  idServicio:string;
   usuario: User = (JSON.parse(localStorage.getItem('currentUser')));
   constructor(private servicioService: ServicioService, private usuarioService: UsuarioService, private formBuilder: FormBuilder, private modalService: NgbModal) {
     
@@ -33,6 +34,12 @@ export class SolitudServicioComponent implements OnInit {
 
   ngOnInit(): void {
     this.buildForm();
+    this.servicioService.getCantidad(this.usuario.identificacion).subscribe(c => {
+      if(c!=null){
+        this.idServicio = this.usuario.identificacion+(c+1);
+        this.control.idServicio.setValue(this.idServicio);
+      }
+    });
     this.cambiarLogistica();
     this.cambiarPonentes();
     this.cambiarRefrigerio();

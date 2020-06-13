@@ -17,7 +17,7 @@
                                 <div class="col-md-5">
                                     <div class="form-group">
                                         <label class="bmd-label-floating">Identificacion</label>
-                                        <input type="text" class="form-control" formControlName="identificacion"
+                                        <input type="text" readonly class="form-control" formControlName="identificacion"
                                             [ngClass]="{ 'is-invalid': control.identificacion.errors && control.identificacion.touched}"
                                             placeholder="Escriba aquí su identificación">
                                         <div *ngIf="control.identificacion.errors && control.identificacion.touched"

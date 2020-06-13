@@ -38,6 +38,16 @@ export class ServicioService {
         );
   }
 
+  getCantidad(identificacion:string):Observable<number> {
+    const url = `${this.baseUrl + 'api/ObtenerSuma'}/${identificacion}`;
+    return this.http.get<number>(url,httpOptions)
+    .pipe(
+      tap(_ => this.handleErrorService.log('datos enviados')),
+      catchError(this.handleErrorService.handleError<number>('Obtener codigo', null))
+
+    );
+  }
+
   get(identificacion: string): Observable<Servicio> {
     const url = `${this.baseUrl + 'api/Servicio'}/${identificacion}`;
       return this.http.get<Servicio>(url,httpOptions)

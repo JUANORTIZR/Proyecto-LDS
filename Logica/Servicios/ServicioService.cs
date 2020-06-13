@@ -47,6 +47,11 @@ namespace Logica.Servicios
             }
         }
 
+        public int ConsultarCantidad(string identificacion){
+            int cantidad = _context.Servicios.Count(s => s.IdCliente==identificacion);
+            return cantidad;
+        }
+
         public Servicio BuscarxIdentificacion (string identificacion) {
             var servicio =  _context.Servicios.Find(identificacion);
             return servicio;

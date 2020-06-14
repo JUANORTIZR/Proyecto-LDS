@@ -6898,33 +6898,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ANYE\\.nuget\\packages\\": {}
+    "C:\\Users\\JUAN CARLOS\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "A:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Datos\\Datos.csproj",
+      "projectUniqueName": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Datos\\Datos.csproj",
       "projectName": "Datos",
-      "projectPath": "A:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Datos\\Datos.csproj",
-      "packagesPath": "C:\\Users\\ANYE\\.nuget\\packages\\",
-      "outputPath": "A:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Datos\\obj\\",
+      "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Datos\\Datos.csproj",
+      "packagesPath": "C:\\Users\\JUAN CARLOS\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Datos\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ANYE\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\JUAN CARLOS\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netstandard2.1": {
           "projectReferences": {
-            "A:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Entity\\Entity.csproj": {
-              "projectPath": "A:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Entity\\Entity.csproj"
+            "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Entity\\Entity.csproj": {
+              "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Entity\\Entity.csproj"
             }
           }
         }

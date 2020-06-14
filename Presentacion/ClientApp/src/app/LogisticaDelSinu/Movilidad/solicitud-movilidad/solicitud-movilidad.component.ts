@@ -14,13 +14,90 @@ import { MovilidadService } from 'src/app/services/movilidad.service';
 export class SolicitudMovilidadComponent implements OnInit {
   formGroup: FormGroup;
   movilidad:Movilidad;
-  tipoAcomodacion:string[] = ["Sencilla","Multiple","Individual"];
-  tipoHotel:string[] = ["Sencillo","3 Estrellas","4 Estrellas","5 Estrellas"];
-  transporte:string[] = ["Aereo","Terrestre"];
   usuario: User = (JSON.parse(localStorage.getItem('currentUser')));
-  constructor(private movilidadService:MovilidadService, private usuarioService: UsuarioService, private formBuilder: FormBuilder, private modalService: NgbModal) { }
+  guiaCheked:boolean=false;
+  guia:string;
+  visitaCheked:boolean= false;
+  visita:string;
+  seguroCheked:boolean;
+  seguro:string;
+  agendaCheked:boolean=false;
+  agenda:string;
+  costoCheked:boolean= false;
+  costo:string;
+  refrigerio:string[]=[];
+  //Seleccionados para plan alimentacion
+  planAlimentacion:string[]=[];
+  
+  constructor(private movilidadService:MovilidadService, private formBuilder: FormBuilder, private modalService: NgbModal) { }
 
   ngOnInit(): void {
+    
   }
 
+  cambiarGuia(){
+    this.guiaCheked=!this.guiaCheked;
+    if(this.guiaCheked){
+      this.guia = "SI";
+      return;
+    }
+    this.guia = "NO";
+  }
+  cambiarVisita(){
+    this.visitaCheked=!this.visitaCheked;
+    if(this.visitaCheked){
+      this.visita = "SI";
+      return;
+    }
+    this.visita = "NO";
+  }
+  cambiarSeguro(){
+    this.seguroCheked=!this.seguroCheked;
+    if(this.seguroCheked){
+      this.seguro = "SI";
+      return;
+    }
+    this.seguro = "NO";
+  }
+  cambiarAgenda(){
+    this.agendaCheked=!this.agendaCheked;
+    if(this.agendaCheked){
+      this.agenda = "SI";
+      return;
+    }
+    this.agenda = "NO";
+  }
+  cambiarCosto(){
+    this.costoCheked=!this.costoCheked;
+    if(this.costoCheked){
+      this.costo = "SI";
+      return;
+    }
+    this.costo = "NO";
+  }
+  seleccionarRefrigerio(){
+    if(this.refrigerio==null){
+      alert("error");
+    }
+    var servicios="";
+    this.refrigerio.forEach(element => {
+      servicios+=element+",";
+    });
+    alert(servicios);
+   //this.control.refrigerio.setValue(servicios);
+  }
+  seleccionarPlanAlimentacion(){
+    if(this.planAlimentacion==null){
+      alert("error");
+    }
+    var planAlimentacion="";
+    this.planAlimentacion.forEach(element => {
+      planAlimentacion+=element+",";
+    });
+   //this.control.tipoServicio.setValue(servicios);
+  }
+
+  Prueba(){
+  
+  }
 }

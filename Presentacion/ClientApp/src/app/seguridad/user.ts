@@ -1,4 +1,5 @@
 import { Servicio } from "../LogisticaDelSinu/Models/servicio";
+import { Movilidad } from "../LogisticaDelSinu/Models/movilidad";
 
 export class User {
     usuario:string;
@@ -14,5 +15,5 @@ export class User {
     tipo:string;
     servicios:Servicio[];
     token:string;
-  movilidades: import("a:/Escritorio/ProyectoNuevo/Proyecto-LDS/Presentacion/ClientApp/src/app/LogisticaDelSinu/Models/movilidad").Movilidad[];
+    movilidades:Movilidad[];
 }

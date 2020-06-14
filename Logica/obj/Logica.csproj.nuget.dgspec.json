@@ -1,34 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "A:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Logica\\Logica.csproj": {}
+    "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Logica\\Logica.csproj": {}
   },
   "projects": {
-    "A:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Datos\\Datos.csproj": {
+    "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Datos\\Datos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Datos\\Datos.csproj",
+        "projectUniqueName": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Datos\\Datos.csproj",
         "projectName": "Datos",
-        "projectPath": "A:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Datos\\Datos.csproj",
-        "packagesPath": "C:\\Users\\ANYE\\.nuget\\packages\\",
-        "outputPath": "A:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Datos\\obj\\",
+        "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Datos\\Datos.csproj",
+        "packagesPath": "C:\\Users\\JUAN CARLOS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Datos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ANYE\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\JUAN CARLOS\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "A:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Entity\\Entity.csproj": {
-                "projectPath": "A:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Entity\\Entity.csproj"
+              "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Entity\\Entity.csproj": {
+                "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Entity\\Entity.csproj"
               }
             }
           }
@@ -74,24 +72,22 @@
         }
       }
     },
-    "A:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Entity\\Entity.csproj": {
+    "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Entity\\Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Entity\\Entity.csproj",
+        "projectUniqueName": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Entity\\Entity.csproj",
         "projectName": "Entity",
-        "projectPath": "A:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Entity\\Entity.csproj",
-        "packagesPath": "C:\\Users\\ANYE\\.nuget\\packages\\",
-        "outputPath": "A:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Entity\\obj\\",
+        "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Entity\\Entity.csproj",
+        "packagesPath": "C:\\Users\\JUAN CARLOS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Entity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ANYE\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\JUAN CARLOS\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -132,31 +128,29 @@
         }
       }
     },
-    "A:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Infraestructura\\Infraestructura.csproj": {
+    "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Infraestructura\\Infraestructura.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Infraestructura\\Infraestructura.csproj",
+        "projectUniqueName": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Infraestructura\\Infraestructura.csproj",
         "projectName": "Infraestructura",
-        "projectPath": "A:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Infraestructura\\Infraestructura.csproj",
-        "packagesPath": "C:\\Users\\ANYE\\.nuget\\packages\\",
-        "outputPath": "A:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Infraestructura\\obj\\",
+        "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Infraestructura\\Infraestructura.csproj",
+        "packagesPath": "C:\\Users\\JUAN CARLOS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Infraestructura\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ANYE\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\JUAN CARLOS\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "A:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Entity\\Entity.csproj": {
-                "projectPath": "A:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Entity\\Entity.csproj"
+              "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Entity\\Entity.csproj": {
+                "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Entity\\Entity.csproj"
               }
             }
           }
@@ -188,37 +182,35 @@
         }
       }
     },
-    "A:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Logica\\Logica.csproj": {
+    "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Logica\\Logica.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Logica\\Logica.csproj",
+        "projectUniqueName": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Logica\\Logica.csproj",
         "projectName": "Logica",
-        "projectPath": "A:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Logica\\Logica.csproj",
-        "packagesPath": "C:\\Users\\ANYE\\.nuget\\packages\\",
-        "outputPath": "A:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Logica\\obj\\",
+        "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Logica\\Logica.csproj",
+        "packagesPath": "C:\\Users\\JUAN CARLOS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Logica\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ANYE\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\JUAN CARLOS\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "A:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Datos\\Datos.csproj": {
-                "projectPath": "A:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Datos\\Datos.csproj"
+              "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Datos\\Datos.csproj": {
+                "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Datos\\Datos.csproj"
               },
-              "A:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Entity\\Entity.csproj": {
-                "projectPath": "A:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Entity\\Entity.csproj"
+              "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Entity\\Entity.csproj": {
+                "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Entity\\Entity.csproj"
               },
-              "A:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Infraestructura\\Infraestructura.csproj": {
-                "projectPath": "A:\\Escritorio\\ProyectoNuevo\\Proyecto-LDS\\Infraestructura\\Infraestructura.csproj"
+              "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Infraestructura\\Infraestructura.csproj": {
+                "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Infraestructura\\Infraestructura.csproj"
               }
             }
           }

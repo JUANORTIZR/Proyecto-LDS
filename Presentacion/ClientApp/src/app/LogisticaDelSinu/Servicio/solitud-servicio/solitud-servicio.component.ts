@@ -27,6 +27,8 @@ export class SolitudServicioComponent implements OnInit {
   ponente:string;
   logistica:string;
   idServicio:string;
+  lista:string[]=["hola","que","tal", "estas"];
+  seleccionados:string[]=[];
   usuario: User = (JSON.parse(localStorage.getItem('currentUser')));
   constructor(private servicioService: ServicioService, private usuarioService: UsuarioService, private formBuilder: FormBuilder, private modalService: NgbModal) {
     
@@ -67,12 +69,14 @@ export class SolitudServicioComponent implements OnInit {
     });
   }
 
-  cambiarTipoServicio(e){
+ cambiarTipoServicio(e){
     this.control.tipoServicio.setValue(e.target.value, {
       onlySelf: true,  
     })
     alert(this.control.tipoServicio.value);
   }
+
+ 
 
   cambiarRefrigerio(){
    

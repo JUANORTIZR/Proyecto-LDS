@@ -38,8 +38,8 @@ export class UsuarioService {
             catchError(this.handleErrorService.handleError<User[]>('Consulta Usuario', null))
         );
   }
-  get(identificacion: string): Observable<User> {
-    const url = `${this.baseUrl + 'api/Usuario'}/${identificacion}`;
+  get(identificacion: string, tipoServicio : string): Observable<User> {
+    const url = `${this.baseUrl + 'api/Usuario'}/${identificacion},${tipoServicio}`;
       return this.http.get<User>(url,httpOptions)
       .pipe(
         tap(_ => this.handleErrorService.log('Identifiación enviada y usuario recibido')),

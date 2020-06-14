@@ -5,55 +5,68 @@
       <p class="card-category">Movilidad Academica Nacional e Internacional</p>
     </div>
     <div class="card-body">
-      <form id="contenedor">
+      <form [formGroup]="formGroup" id="contenedor" >
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
               <label class="bmd-label-floating">Id Movilidad</label>
-              <input id="txtIdentificacion" type="text" class="form-control" formControlName="idMovilidad">
+              <input id="txtIdentificacion" type="text" class="form-control" formControlName="idMovilidad"
+                [ngClass]="{ 'is-invalid': control.idMovilidad.errors && control.idMovilidad.touched}"
+                placeholder="Escriba aquí el id del servicio">
+              <div *ngIf="control.idMovilidad.errors && control.idMovilidad.touched" class="invalid-feedback">
+                <div *ngIf="control.idMovilidad.errors.required">Se require el id del servicio</div>
+              </div>
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
               <label class="bmd-label-floating">Fecha del Evento</label>
-              <input id="txtIdentificacion" type="text" class="form-control" formControlName="fechaEvento">
+              <input id="txtIdentificacion" type="date" class="form-control" formControlName="fechaEvento">
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
               <label class="bmd-label-floating">Destino</label>
-              <input id="txtPNombre" type="text" class="form-control" formControlName="destino">
+              <input id="txtPNombre" type="text" class="form-control" formControlName="destino"
+                [ngClass]="{ 'is-invalid': control.destino.errors && control.destino.touched}">
+              <div *ngIf="control.destino.errors && control.destino.touched" class="invalid-feedback">
+                <div *ngIf="control.destino.errors.required">Se require el id del servicio</div>
+              </div>
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
               <label class="bmd-label-floating">Noches de Alojamiento</label>
               <input id="txtSNombre" type="text" class="form-control" formControlName="nocheAlojamiento"
+                [ngClass]="{ 'is-invalid': control.nocheAlojamiento.errors && control.nocheAlojamiento.touched}"
                 placeholder="ingrese el numero de noches">
+              <div *ngIf="control.nocheAlojamiento.errors && control.nocheAlojamiento.touched" class="invalid-feedback">
+                <div *ngIf="control.nocheAlojamiento.errors.required">Se require el id del servicio</div>
+              </div>
             </div>
           </div>
 
 
-          <div class="col-md-6">
+         <div class="col-md-6">
             <div class="form-group">
               <label class="bmd-label-floating">Tipo de Acomodacion</label>
-              <select class="custom-select" formControlName="tipoAcomodacion">
+              <select (change)="cambiarTipoAcomodacion($event)" class="custom-select" formControlName="tipoAcomodacion">
                 <option selected>Seleccione</option>
-                <option value="1">Sencilla</option>
-                <option value="2">Multiple</option>
-                <option value="3">Habitacion Individual</option>
+                <option>Sencilla</option>
+                <option>Multiple</option>
+                <option>Habitacion Individual</option>
               </select>
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
               <label class="bmd-label-floating">Tipo de Hotel</label>
-              <select class="custom-select " formControlName="tipoHotel">
+              <select (change)="cambiarTipoHotel($event)" class="custom-select " formControlName="tipoHotel">
                 <option selected>Seleccione</option>
-                <option value="1">Sencillo</option>
-                <option value="2">3 Estella</option>
-                <option value="2">4 Estella</option>
-                <option value="2">5 Estella</option>
+                <option>Sencillo</option>
+                <option>3 Estella</option>
+                <option>4 Estella</option>
+                <option>5 Estella</option>
               </select>
             </div>
           </div>
@@ -62,34 +75,28 @@
           <div class="col-md-12">
             <div class="form-group">
               <label class="bmd-label-floating">Transporte</label>
-              <select class="custom-select " formControlName="transporte">
+              <select (change)="cambiarTransporte($event)" class="custom-select " formControlName="transporte">
                 <option selected>Seleccione</option>
-                <option value="1">Terrestre</option>
-                <option value="2">Aereo</option>
+                <option>Terrestre</option>
+                <option>Aereo</option>
               </select>
             </div>
 
           </div>
-          <div class="col-12">
-            <div>
-              <label class="bmd-label-floating">Refrigerio (Precione la tecla "CTRL + Click" para seleccionar varias opciones)</label>
-            </div>
-            <select [(ngModel)]="refrigerio"  class="form-control" multiple="multiple">
-              <option value="1">Mañana</option>
-              <option value="2">Tarde</option>
-              <option value="3">Noche</option>
-              <option value="4">Transporte</option>
+          <div class="col-6">
+            <select class="custom-select " formControlName="alimentacion"  [(ngModel)]="seleccionados1" multiple="multiple" >
+            <option [value]="item" *ngFor="let item of lista1">{{item}}</option>
             </select>
+                                    
           </div>
-          <div class="col-12">
-            <div>
-              <label class="bmd-label-floating">Plan de Alimentacion (Precione la tecla "CTRL + Click" para seleccionar varias opciones)</label>
-            </div>
-            <select [(ngModel)]="planAlimentacion"  class="form-control" multiple="multiple">
-              <option value="1">Desayuno</option>
-              <option value="2">Almuerzo</option>
-              <option value="3">Cena</option>
+
+          <hr>
+
+          <div class="col-6" >
+            <select  class="custom-select "formControlName="refrigerio"  [(ngModel)]="seleccionados" multiple="multiple" >
+            <option [value]="item" *ngFor="let item of lista">{{item}}</option>
             </select>
+                                    
           </div>
           <hr>
           <hr>
@@ -160,16 +167,16 @@
           <div class="col-md-12">
             <div class="form-group">
               <label class="bmd-label-floating">Observaciones</label>
-              <textarea formControlName="observacion" class="form-control" id="exampleFormControlTextarea1"
+              <textarea formControlName="objervacion" class="form-control" id="exampleFormControlTextarea1"
                 rows="3"></textarea>
             </div>
           </div>
-          <div>
-            <button type="button" id="btn-registro" (click)="Prueba()" class="btn  pull-right">Solicitar
-              Servicio</button>
-            <button type="reset" id="btn-cancelar" class="btn  pull-right">Cancelar</button>
-          </div>
+
         </div>
+        <button type="button" id="btn-registro" class="btn pull-right btn-primary" (click)="onSubmit()"
+          [disabled]="formGroup.invalid">Registrar</button>
+        <button type="reset" id="btn-cancelar" class="btn  pull-right">Cancelar</button>
+        <div class="clearfix"></div>
       </form>
     </div>
   </div>

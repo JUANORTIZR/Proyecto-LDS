@@ -1,3 +1,4 @@
+using System.Resources;
 using Entity;
 
 namespace Presentacion.Models.Loguin
@@ -18,6 +19,7 @@ namespace Presentacion.Models.Loguin
             Telefono=usuario.Telefono;
             Tipo = usuario.Tipo;
             Servicios=usuario.Servicios;
+            Movilidades=usuario.Movilidades;
             Token=usuario.Token;
         }
     }

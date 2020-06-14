@@ -9,6 +9,7 @@ namespace Entity
         public User()
         {
            Servicios=new List<Servicio> ();
+           Movilidades=new List<MovilidadAcademica>();
         }
         [Key]
         public string  Usuario { get; set; }
@@ -23,6 +24,7 @@ namespace Entity
         public string  Telefono { get; set; }
         public string  Tipo { get; set; }
         public List<Servicio> Servicios { get; set; }
+        public List<MovilidadAcademica> Movilidades { get; set; }
         public string  Token { get; set; }
       
         

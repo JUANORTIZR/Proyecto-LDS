@@ -14,7 +14,7 @@ namespace Entity {
         public string TipoAcomodacion { get; set; }
         public string Transporte { get; set; }
         public string Alimentacion { get; set; }
-        public string AcompañamientoGuia { get; set; }
+        public string AcompanamientoGuia { get; set; }
         public string SeguroViaje { get; set; }
         public string OrganizacionAjenda { get; set; }
         public string VisitaTecnica { get; set; }

@@ -42,7 +42,7 @@ namespace Presentacion.Controllers {
                     TipoAcomodacion = movilidadInput.TipoAcomodacion,
                     Transporte = movilidadInput.Transporte,
                     Alimentacion = movilidadInput.Alimentacion,
-                    AcompañamientoGuia = movilidadInput.AcompañamientoGuia,
+                    AcompanamientoGuia = movilidadInput.AcompanamientoGuia,
                     SeguroViaje = movilidadInput.SeguroViaje,
                     OrganizacionAjenda = movilidadInput.OrganizacionAjenda,
                     VisitaTecnica = movilidadInput.VisitaTecnica,

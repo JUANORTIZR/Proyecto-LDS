@@ -42,6 +42,7 @@ namespace Presentacion.Controllers {
                 SegundoApellido = usuarioInput.SegundoApellido,
                 Telefono = usuarioInput.Telefono,
                 Servicios=usuarioInput.Servicios,
+                Movilidades=usuarioInput.Movilidades,
                 Correo = usuarioInput.Correo,
                 Usuario = usuarioInput.Usuario,
                 Password = usuarioInput.Password,
@@ -51,9 +52,9 @@ namespace Presentacion.Controllers {
             return usuario;
         }
 
-        [HttpGet ("{identificacion}")]
-        public ActionResult<LoginViewModel> Get (string identificacion) {
-            var usuario = _usuarioService.BuscarxIdentificacion (identificacion);
+        [HttpGet ("{identificacion},{tipoServicio}")]
+        public ActionResult<LoginViewModel> Get (string identificacion, string tipoServicio) {
+            var usuario = _usuarioService.BuscarxIdentificacion (identificacion,tipoServicio);
             if (usuario == null) return NotFound ();
             var usuarioViewModel = new LoginViewModel (usuario);
             return usuarioViewModel;
@@ -67,7 +68,7 @@ namespace Presentacion.Controllers {
 
         [HttpPut ("{identificacion}")]
         public ActionResult<LoginViewModel> Put (string identificacion, User usuario) {
-            var id = _usuarioService.BuscarxIdentificacion (usuario.Identificacion);
+            var id = _usuarioService.BuscarxIdentificacion (usuario.Identificacion,"");
             if (id == null) {
                 return BadRequest ("No encontrado");
             }

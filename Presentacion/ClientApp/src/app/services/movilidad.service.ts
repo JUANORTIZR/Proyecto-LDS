@@ -24,7 +24,7 @@ export class MovilidadService {
 
 
   post(movilidad: Movilidad): Observable<Movilidad> {
-    return this.http.post<Movilidad>(this.baseUrl + 'api/Movilidad', movilidad)
+    return this.http.post<Movilidad>(this.baseUrl + 'api/MovilidadAcademica', movilidad)
       .pipe(
         tap(_ => this.handleErrorService.log('datos enviados')),
         catchError(this.handleErrorService.handleError<Movilidad>('Registrar Servicio', null))
@@ -32,7 +32,7 @@ export class MovilidadService {
   }
 
   gets(): Observable<Movilidad[]> {
-    return this.http.get<Movilidad[]>(this.baseUrl + 'api/Movilidad')
+    return this.http.get<Movilidad[]>(this.baseUrl + 'api/MovilidadAcademica')
         .pipe(
             tap(_ => this.handleErrorService.log('datos enviados')),
             catchError(this.handleErrorService.handleError<Movilidad[]>('Consulta Servico Movilidad', null))
@@ -40,7 +40,7 @@ export class MovilidadService {
   }
 
   get(identificacion: string): Observable<Movilidad> {
-    const url = `${this.baseUrl + 'api/Movilidad'}/${identificacion}`;
+    const url = `${this.baseUrl + 'api/MovilidadAcademica'}/${identificacion}`;
       return this.http.get<Movilidad>(url,httpOptions)
       .pipe(
         tap(_ => this.handleErrorService.log('Identifiación enviada y servicio recibido')),
@@ -48,8 +48,9 @@ export class MovilidadService {
       );
   }
 
+
   put(movilidad: Movilidad): Observable<Movilidad> {
-    const url = `${this.baseUrl + 'api/Movilidad'}/${movilidad.idMovilidad}`;
+    const url = `${this.baseUrl + 'api/MovilidadAcademica'}/${movilidad.idMovilidad}`;
     return this.http.put<Movilidad>(url, movilidad, httpOptions)
     .pipe(
       tap(_ => this.handleErrorService.log('datos enviados')),

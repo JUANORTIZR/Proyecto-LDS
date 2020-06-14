@@ -49,13 +49,25 @@ namespace Logica {
             }
         }
 
-        public User BuscarxIdentificacion (string identificacion) {
-            var usuario = _Context.Users.Find (identificacion);
-           if (usuario != null) {
+        public User BuscarxIdentificacion (string identificacion, string tipoServicio) {
+             var usuario = _Context.Users.Find (identificacion);
+            if (tipoServicio == "Movilidad") {
+                if (usuario != null) {
+                    var movilidades = _Context.Movilidades.ToList ();
+                    foreach (var item in movilidades) {
+                        if (item.IdCliente == usuario.Identificacion) {
+                            usuario.Movilidades.Add (item);
+                        }
+                    }
+                    
+                }
+                return usuario;
+            }
+            if (usuario != null) {
                 var servicios = _Context.Servicios.ToList ();
                 foreach (var item in servicios) {
                     if (item.IdCliente == usuario.Identificacion) {
-                        usuario.Servicios.Add(item);
+                        usuario.Servicios.Add (item);
                     }
                 }
             }

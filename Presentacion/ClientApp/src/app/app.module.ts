@@ -111,6 +111,11 @@ import { UsuarioMovilidadConsultaComponent } from './LogisticaDelSinu/usuario-mo
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'SolicitudServicio', component: SolitudServicioComponent, canActivate: [AuthGuard] },
+      {
+        path: 'solicituMovilidad',
+        component: SolicitudMovilidadComponent,
+        canActivate: [AuthGuard]
+      },
     ]),
     AppRoutingModule
   ],

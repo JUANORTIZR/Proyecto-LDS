@@ -49,6 +49,7 @@ namespace Logica.Servicios
 
         public int ConsultarCantidad(string identificacion){
             int cantidad = _context.Servicios.Count(s => s.IdCliente==identificacion);
+            cantidad += _context.Movilidades.Count(s => s.IdCliente==identificacion);
             return cantidad;
         }
 

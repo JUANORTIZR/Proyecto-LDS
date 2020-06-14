@@ -23,12 +23,9 @@ namespace Logica {
             try {
                 string mensajeEmail = string.Empty;
                 Email email = new Email ();
-                var UsuarioBuscado = _Context.Users.Find (usuario.Usuario);
+                var UsuarioBuscado = _Context.Users.Where (s => s.Usuario == usuario.Usuario || s.Identificacion == usuario.Identificacion);
                 if (UsuarioBuscado != null) {
-                    if (UsuarioBuscado.Identificacion == usuario.Identificacion) {
-                        return new GuardarUsuarioResponse ($"La identificacion que intenta registrar ya se encuntra registrada");
-                    }
-                    return new GuardarUsuarioResponse ("El nombre de usuario ya se encuentra registrado");
+                    return new GuardarUsuarioResponse ("Identificaion y/o nombre de usuario ya se encuentra registrado");
                 }
                 _Context.Users.Add (usuario);
                 _Context.SaveChanges ();

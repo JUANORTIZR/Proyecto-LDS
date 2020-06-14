@@ -48,6 +48,16 @@ export class MovilidadService {
       );
   }
 
+  getCantidad(identificacion:string):Observable<number> {
+    const url = `${this.baseUrl + 'api/ObtenerSuma'}/${identificacion}`;
+    return this.http.get<number>(url,httpOptions)
+    .pipe(
+      tap(_ => this.handleErrorService.log('datos enviados')),
+      catchError(this.handleErrorService.handleError<number>('Obtener codigo', null))
+
+    );
+  }
+
   put(movilidad: Movilidad): Observable<Movilidad> {
     const url = `${this.baseUrl + 'api/Movilidad'}/${movilidad.idMovilidad}`;
     return this.http.put<Movilidad>(url, movilidad, httpOptions)

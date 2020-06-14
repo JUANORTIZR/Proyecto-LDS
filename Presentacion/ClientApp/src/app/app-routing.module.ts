@@ -24,6 +24,7 @@ import { UsuarioMovilidadConsultaComponent } from './LogisticaDelSinu/usuario-mo
 import { SolicitudMovilidadComponent } from './LogisticaDelSinu/Movilidad/solicitud-movilidad/solicitud-movilidad.component';
 import { ModificarMovilidadComponent } from './LogisticaDelSinu/Movilidad/modificar-movilidad/modificar-movilidad.component';
 import { ConsultarMovilidadesComponent } from './LogisticaDelSinu/Movilidad/consultar-movilidades/consultar-movilidades.component';
+import { AuthGuard } from './services/auth.guard';
 
 
 
@@ -34,47 +35,58 @@ const routes: Routes = [
   },
   {
     path: 'UsuarioConsulta',
-    component: UsuarioConsultaComponent
+    component: UsuarioConsultaComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'ActualizarUsuario/:identificacion',
-    component: ActualizarUsuarioComponent
+    component: ActualizarUsuarioComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'RegistroHotel',
-    component: RegistroHotelComponent
+    component: RegistroHotelComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'ConsultaHotel',
-    component: ConsultaHotelComponent
+    component: ConsultaHotelComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'ActualizarHotel/:nit',
-    component: ActualizarHotelComponent
+    component: ActualizarHotelComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'RestauranteRegistro',
-    component: RestauranteRegistroComponent
+    component: RestauranteRegistroComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'RestauranteConsulta',
-    component: RestauranteConsultaComponent
+    component: RestauranteConsultaComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'RestauranteActualizar/:nit',
-    component: RestauranteActualizarComponent
+    component: RestauranteActualizarComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'TransporteRegistro',
-    component: TransporteRegistroComponent
+    component: TransporteRegistroComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'TransporteConsulta',
-    component: TransporteConsultaComponent
+    component: TransporteConsultaComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'TrasporteActualizar/:nit',
-    component: TrasporteActualizarComponent
+    component: TrasporteActualizarComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'Login',
@@ -82,43 +94,43 @@ const routes: Routes = [
   },
   {
     path: 'RegistroUtilidad',
-    component: UtilidadRegistroComponent
+    component: UtilidadRegistroComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'UtilidadConsulta',
-    component: UtilidadConsultaComponent
-  },
-  {
-    path: 'SolicitudServicio',
-    component: SolitudServicioComponent
+    component: UtilidadConsultaComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'ConsultarSolicitudes',
-    component: ConsultarSolicitudesComponent
+    component: ConsultarSolicitudesComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'ModificarSolicitud/:id',
-    component: ModificarSolicitudComponent
+    component: ModificarSolicitudComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'usuarioServicioConsulta',
-    component: UsuarioServicioConsultaComponent
+    component: UsuarioServicioConsultaComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'usuarioMovilidadConsulta',
-    component: UsuarioMovilidadConsultaComponent
-  },
-  {
-    path: 'solicituMovilidad',
-    component: SolicitudMovilidadComponent
+    component: UsuarioMovilidadConsultaComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'modificarMovilidad',
-    component: ModificarMovilidadComponent
+    component: ModificarMovilidadComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'consultarMovilidad',
-    component: ConsultarMovilidadesComponent
+    component: ConsultarMovilidadesComponent,
+    canActivate: [AuthGuard]
   }
 
 ];

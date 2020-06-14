@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { Usuario } from '../Models/usuario';
 import { User } from 'src/app/seguridad/user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-usuario-consulta',
@@ -12,12 +13,18 @@ export class UsuarioConsultaComponent implements OnInit {
 
   usuarios:User[];
   searchText:string;
-  constructor(private usuarioService:UsuarioService) { }
+  usuario: User = (JSON.parse(localStorage.getItem('currentUser')));
+  constructor(private router: Router,private usuarioService:UsuarioService) { }
 
   ngOnInit() {
-    this.usuarioService.gets().subscribe(result=>{
-      this.usuarios = result;
-    });
+    if(this.usuario.tipo=="admin"){
+      this.usuarioService.gets().subscribe(result=>{
+        this.usuarios = result;
+      });
+      return;
+    }
+    alert("Acceso denegado");
+    this.router.navigate(['/Login']);
   }
 
 }

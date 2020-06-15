@@ -6,6 +6,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { MovilidadService } from 'src/app/services/movilidad.service';
 import { AlertModalComponent } from 'src/app/@base/alert-modal/alert-modal.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-solicitud-movilidad',
@@ -16,34 +17,42 @@ export class SolicitudMovilidadComponent implements OnInit {
   formGroup: FormGroup;
   movilidad: Movilidad;
   usuario: User = (JSON.parse(localStorage.getItem('currentUser')));
-  guiaCheked: boolean;
+  guiaCheked: boolean =true;
   guia: string;
-  visitaCheked: boolean;
+  visitaCheked: boolean=true;
   visita: string;
-  seguroCheked: boolean;
+  seguroCheked: boolean=true;
   seguro: string;
-  agendaCheked: boolean;
+  agendaCheked: boolean=true;
   agenda: string;
-  costoCheked: boolean;
+  costoCheked: boolean=true;
   costo: string;
-  refrigerio: string[] = [];
-  planAlimentacion: string[] = [];
-  idMovilida:string;
-  constructor(private movilidadService: MovilidadService, private formBuilder: FormBuilder, private modalService: NgbModal) { }
+  idMovilida: string;
+  lista:string[]=["Mañana", "Tarde", "Noche", "Transporte"];
+  seleccionados:string[]=[];
+  lista1:string[]=["Desayuno", "Almuerzo", "Cena"];
+  seleccionados1:string[]=[];
+  constructor(private router: Router,private movilidadService: MovilidadService, private formBuilder: FormBuilder, private modalService: NgbModal) { }
+
 
   ngOnInit(): void {
     this.contruirFormulario();
-    this.movilidadService.getCantidad(this.usuario.identificacion).subscribe(c => {
-      if(c!=null){
-        this.idMovilida = this.usuario.identificacion+(c+1);
-        this.control.idMovilidad.setValue(this.idMovilida);
-      }
-    });
+     this.movilidadService.getCantidad(this.usuario.identificacion).subscribe(c => {
+       if(c!=null){
+         this.idMovilida = this.usuario.identificacion+(c+1);
+         this.control.idMovilidad.setValue(this.idMovilida);
+       }
+     });
     this.cambiarGuia();
     this.cambiarVisita();
     this.cambiarSeguro();
     this.cambiarAgenda();
     this.cambiarCosto();
+    if (this.usuario == null) {
+      const messageBox = this.modalService.open(AlertModalComponent)
+      messageBox.componentInstance.title = "Resultado Operación";
+      messageBox.componentInstance.message = 'Para poder hacer la solicitud de uno de nuestros servicios por favor inicia sesión o registrate';
+    }
   }
 
   contruirFormulario() {
@@ -57,43 +66,58 @@ export class SolicitudMovilidadComponent implements OnInit {
     this.movilidad.transporte = "";
     this.movilidad.refrigerio = "";
     this.movilidad.alimentacion = "";
-    this.movilidad.acompanamientoGuia = "NO";
-    this.movilidad.visitaTecnica = "NO";
-    this.movilidad.seguroViaje = "NO";
-    this.movilidad.organizacionAgenda = "NO";
-    this.movilidad.costoEntrada = "NO";
     this.movilidad.objervacion = "";
     this.movilidad.fechaSolicitud = new Date();
     this.formGroup = this.formBuilder.group({
       idMovilidad: [this.movilidad.idMovilidad, Validators.required],
-      fechaEvento: [this.movilidad.fechaEvento, Validators.required],
+      fechaEvento: [this.movilidad.fechaEvento],
       destino: [this.movilidad.destino, Validators.required],
       nocheAlojamiento: [this.movilidad.nocheAlojamiento, Validators.required],
-      tipoAcomodacion: [this.movilidad.tipoAcomodacion, Validators.required],
-      tipoHotel: [this.movilidad.tipoHotel, Validators.required],
-      transporte: [this.movilidad.transporte, Validators.required],
-      observacion: [this.movilidad.objervacion]
+      tipoAcomodacion: [this.movilidad.tipoAcomodacion],
+      tipoHotel: [this.movilidad.tipoHotel],
+      transporte: [this.movilidad.transporte],
+      objervacion: [this.movilidad.objervacion],
+      refrigerio : [this.movilidad.refrigerio],
+      alimentacion: [this.movilidad.alimentacion]
     })
   }
   cambiarTipoAcomodacion(e) {
     this.control.tipoAcomodacion.setValue(e.target.value, {
       onlySelf: true,
     })
-    alert(this.control.tipoAcomodacion.value);
   }
   cambiarTipoHotel(e) {
     this.control.tipoHotel.setValue(e.target.value, {
       onlySelf: true,
     })
-    alert(this.control.tipoHotel.value);
   }
   cambiarTransporte(e) {
     this.control.transporte.setValue(e.target.value, {
       onlySelf: true,
     })
-    alert(this.control.transporte.value);
   }
+  cambiarRefrigerio(){
+    if(this.seleccionados==null){
+      alert("error");
+    }
+    var servicios="";
+    this.seleccionados.forEach(element => {
+      servicios+=element+",";
+    });
+   this.control.refrigerio.setValue(servicios);
+   }
 
+
+   seleccionarPlanAlimentacion() {
+    if (this.seleccionados1 == null) {
+      alert("error");
+    }
+    var alimentacion = "";
+    this.seleccionados1.forEach(element => {
+      alimentacion += element + ",";
+    });
+    this.control.alimentacion.setValue(alimentacion);
+  }
   get control() {
     return this.formGroup.controls;
   }
@@ -106,6 +130,7 @@ export class SolicitudMovilidadComponent implements OnInit {
       return;
     }
     this.guia = "NO";
+
   }
   cambiarVisita() {
     this.visitaCheked = !this.visitaCheked;
@@ -139,42 +164,40 @@ export class SolicitudMovilidadComponent implements OnInit {
     }
     this.costo = "NO";
   }
-  seleccionarRefrigerio(): string {
-    var refrigerioI = "";
-    this.refrigerio.forEach(element => {
-      refrigerioI += element + ",";
-    });
-    return refrigerioI;
-  }
-  seleccionarPlanAlimentacion(): string {
-    var planAlimentacionI = "";
-    this.planAlimentacion.forEach(element => {
-      planAlimentacionI += element + ",";
-    });
-    return planAlimentacionI;
-  }
-  onSubmit(){
-    if(this.formGroup.invalid){
+
+  
+
+  onSubmit() {
+    if (this.formGroup.invalid) {
       return;
     }
-    this.Registrar();
+    this.registrar();
   }
 
-  Registrar() {
+  registrar() {
+    if (this.usuario == null) {
+    
+      const messageBox = this.modalService.open(AlertModalComponent)
+      messageBox.componentInstance.title = "Resultado Operación";
+      messageBox.componentInstance.message = 'Para poder hacer la solicitud de uno de nuestros servicios por favor inicia sesión o registrate';
+      return;
+    }
+    this.cambiarRefrigerio();
+    this.seleccionarPlanAlimentacion();
     this.movilidad = this.formGroup.value;
+    this.movilidad.fechaSolicitud = new Date();
     this.movilidad.acompanamientoGuia = this.guia;
     this.movilidad.visitaTecnica = this.visita;
     this.movilidad.seguroViaje = this.seguro;
-    this.movilidad.organizacionAgenda = this.agenda;
+    this.movilidad.organizacionAjenda = this.agenda;
     this.movilidad.costoEntrada = this.costo;
-    this.movilidad.refrigerio = this.seleccionarRefrigerio();
-    this.movilidad.alimentacion = this.seleccionarPlanAlimentacion();
+    this.movilidad.idCliente = this.usuario.identificacion;
     this.movilidadService.post(this.movilidad).subscribe(m => {
       if (m != null) {
-        this.movilidad = m;
         const messageBox = this.modalService.open(AlertModalComponent)
         messageBox.componentInstance.title = "Resultado Operación";
         messageBox.componentInstance.message = 'Su solicitud de servicio ha sido registrada con exito!!!';
+        this.movilidad = m;
       }
     })
   }

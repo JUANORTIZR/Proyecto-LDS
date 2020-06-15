@@ -24,7 +24,7 @@ namespace Presentacion.Models.SMovilidadAcademica
         [Required(ErrorMessage = "La alimentacion es requerida")]
         public string Alimentacion { get; set; }
         [Required(ErrorMessage = "El acompañamiento guia es requerido")]
-        public string AcompañamientoGuia { get; set; }
+        public string AcompanamientoGuia { get; set; }
         [Required(ErrorMessage = "El seguro de viaje es requerido")]
         public string SeguroViaje { get; set; }
         [Required(ErrorMessage = "La organizacion de agenda es requerida")]
@@ -33,7 +33,6 @@ namespace Presentacion.Models.SMovilidadAcademica
         public string VisitaTecnica { get; set; }
         [Required(ErrorMessage = "El costo de entrada es requerido")]
         public string CostoEntrada { get; set; }
-        [Required(ErrorMessage = "La observacion es requerida")]
         public string Objervacion { get; set; }
         [Required(ErrorMessage = "El Tipo de hotal es requerido")]
         public string TipoHotel { get; set; }

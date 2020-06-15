@@ -97,3 +97,14 @@ A:\Escritorio\ProyectoNuevo\Proyecto-LDS\Datos\obj\Debug\netstandard2.1\Datos.As
 A:\Escritorio\ProyectoNuevo\Proyecto-LDS\Datos\obj\Debug\netstandard2.1\Datos.csproj.CopyComplete
 A:\Escritorio\ProyectoNuevo\Proyecto-LDS\Datos\obj\Debug\netstandard2.1\Datos.dll
 A:\Escritorio\ProyectoNuevo\Proyecto-LDS\Datos\obj\Debug\netstandard2.1\Datos.pdb
+A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Datos\bin\Debug\netstandard2.1\Datos.deps.json
+A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Datos\bin\Debug\netstandard2.1\Datos.dll
+A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Datos\bin\Debug\netstandard2.1\Datos.pdb
+A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Datos\bin\Debug\netstandard2.1\Entity.dll
+A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Datos\bin\Debug\netstandard2.1\Entity.pdb
+A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Datos\obj\Debug\netstandard2.1\Datos.csprojAssemblyReference.cache
+A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Datos\obj\Debug\netstandard2.1\Datos.AssemblyInfoInputs.cache
+A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Datos\obj\Debug\netstandard2.1\Datos.AssemblyInfo.cs
+A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Datos\obj\Debug\netstandard2.1\Datos.csproj.CopyComplete
+A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Datos\obj\Debug\netstandard2.1\Datos.dll
+A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Datos\obj\Debug\netstandard2.1\Datos.pdb

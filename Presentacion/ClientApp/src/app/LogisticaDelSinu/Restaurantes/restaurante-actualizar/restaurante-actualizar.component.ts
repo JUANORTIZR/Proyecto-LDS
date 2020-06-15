@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Restaurante } from '../../Models/restaurante';
 import { RestaurantesService } from 'src/app/services/restaurantes.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AlertModalComponent } from 'src/app/@base/alert-modal/alert-modal.component';
+import { User } from 'src/app/seguridad/user';
 
 @Component({
   selector: 'app-restaurante-actualizar',
@@ -16,10 +17,14 @@ export class RestauranteActualizarComponent implements OnInit {
   restaurante:Restaurante;
   rEncontrado:Restaurante;
   nit = this.rutaActiva.snapshot.params.nit;
-  constructor(private restauranteServices: RestaurantesService, private formBuilder: FormBuilder, private rutaActiva:ActivatedRoute, private modalService:NgbModal) { }
+  usuario: User = (JSON.parse(localStorage.getItem('currentUser')));
+  constructor(private router: Router,private restauranteServices: RestaurantesService, private formBuilder: FormBuilder, private rutaActiva:ActivatedRoute, private modalService:NgbModal) { }
 
   ngOnInit(): void {
-    
+    if(this.usuario.tipo!="admin"){
+      alert("Acceso denegado");
+      this.router.navigate(['/Login']);
+    }
     this.restauranteServices.get(this.nit).subscribe(r => {
       this.rEncontrado = r;
       this.buildForm(this.rEncontrado);

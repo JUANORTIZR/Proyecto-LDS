@@ -70,3 +70,11 @@ A:\Escritorio\ProyectoNuevo\Proyecto-LDS\Entity\obj\Debug\netstandard2.1\Entity.
 A:\Escritorio\ProyectoNuevo\Proyecto-LDS\Entity\obj\Debug\netstandard2.1\Entity.AssemblyInfo.cs
 A:\Escritorio\ProyectoNuevo\Proyecto-LDS\Entity\obj\Debug\netstandard2.1\Entity.dll
 A:\Escritorio\ProyectoNuevo\Proyecto-LDS\Entity\obj\Debug\netstandard2.1\Entity.pdb
+A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Entity\bin\Debug\netstandard2.1\Entity.deps.json
+A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Entity\bin\Debug\netstandard2.1\Entity.dll
+A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Entity\bin\Debug\netstandard2.1\Entity.pdb
+A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Entity\obj\Debug\netstandard2.1\Entity.csprojAssemblyReference.cache
+A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Entity\obj\Debug\netstandard2.1\Entity.AssemblyInfoInputs.cache
+A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Entity\obj\Debug\netstandard2.1\Entity.AssemblyInfo.cs
+A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Entity\obj\Debug\netstandard2.1\Entity.dll
+A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Entity\obj\Debug\netstandard2.1\Entity.pdb

@@ -23,7 +23,7 @@ namespace Logica {
             try {
                 string mensajeEmail = string.Empty;
                 Email email = new Email ();
-                var UsuarioBuscado = _Context.Users.Where (s => s.Usuario == usuario.Usuario || s.Identificacion == usuario.Identificacion);
+                var UsuarioBuscado = _Context.Users.Find (usuario.Usuario);
                 if (UsuarioBuscado != null) {
                     return new GuardarUsuarioResponse ("Identificaion y/o nombre de usuario ya se encuentra registrado");
                 }
@@ -46,13 +46,25 @@ namespace Logica {
             }
         }
 
-        public User BuscarxIdentificacion (string identificacion) {
-            var usuario = _Context.Users.Find (identificacion);
-           if (usuario != null) {
+        public User BuscarxIdentificacion (string identificacion, string tipoServicio) {
+             var usuario = _Context.Users.Find (identificacion);
+            if (tipoServicio == "Movilidad") {
+                if (usuario != null) {
+                    var movilidades = _Context.Movilidades.ToList ();
+                    foreach (var item in movilidades) {
+                        if (item.IdCliente == usuario.Identificacion) {
+                            usuario.Movilidades.Add (item);
+                        }
+                    }
+                    
+                }
+                return usuario;
+            }
+            if (usuario != null) {
                 var servicios = _Context.Servicios.ToList ();
                 foreach (var item in servicios) {
                     if (item.IdCliente == usuario.Identificacion) {
-                        usuario.Servicios.Add(item);
+                        usuario.Servicios.Add (item);
                     }
                 }
             }

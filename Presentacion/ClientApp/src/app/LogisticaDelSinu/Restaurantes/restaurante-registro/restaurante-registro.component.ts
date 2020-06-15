@@ -4,6 +4,8 @@ import { RestaurantesService } from 'src/app/services/restaurantes.service';
 import { FormGroup,FormBuilder, Validators } from '@angular/forms';
 import { AlertModalComponent } from 'src/app/@base/alert-modal/alert-modal.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Router } from '@angular/router';
+import { User } from 'src/app/seguridad/user';
 
 @Component({
   selector: 'app-restaurante-registro',
@@ -13,9 +15,14 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 export class RestauranteRegistroComponent implements OnInit {
   formGroup: FormGroup;
   restaurante:Restaurante;
-  constructor(private restauranteService:RestaurantesService, private formBuilder: FormBuilder, private modalService: NgbModal) { }
+  usuario: User = (JSON.parse(localStorage.getItem('currentUser')));
+  constructor(private router: Router,private restauranteService:RestaurantesService, private formBuilder: FormBuilder, private modalService: NgbModal) { }
 
   ngOnInit(): void {
+    if(this.usuario.tipo!="admin"){
+      alert("Acceso denegado");
+      this.router.navigate(['/Login']);
+    }
     this.buildForm();
   }
   private buildForm() {

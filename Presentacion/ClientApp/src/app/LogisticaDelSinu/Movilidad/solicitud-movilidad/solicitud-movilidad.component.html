@@ -5,7 +5,7 @@
       <p class="card-category">Movilidad Academica Nacional e Internacional</p>
     </div>
     <div class="card-body">
-      <form id="contenedor" [formGroup]="formGroup">
+      <form [formGroup]="formGroup" id="contenedor" >
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
@@ -21,29 +21,33 @@
           <div class="col-md-6">
             <div class="form-group">
               <label class="bmd-label-floating">Fecha del Evento</label>
-              <input id="txtIdentificacion" type="date" class="form-control" formControlName="fechaEvento"
-              [ngClass]="{ 'is-invalid': control.fechaEvento.errors && control.fechaEvento.touched}">
-              <div *ngIf="control.fechaEvento.errors && control.fechaEvento.touched" class="invalid-feedback">
-                <div *ngIf="control.fechaEvento.errors.required">Se require el id del servicio</div>
-              </div>
+              <input id="txtIdentificacion" type="date" class="form-control" formControlName="fechaEvento">
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
               <label class="bmd-label-floating">Destino</label>
-              <input id="txtPNombre" type="text" class="form-control" formControlName="destino">
+              <input id="txtPNombre" type="text" class="form-control" formControlName="destino"
+                [ngClass]="{ 'is-invalid': control.destino.errors && control.destino.touched}">
+              <div *ngIf="control.destino.errors && control.destino.touched" class="invalid-feedback">
+                <div *ngIf="control.destino.errors.required">Se require el id del servicio</div>
+              </div>
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
               <label class="bmd-label-floating">Noches de Alojamiento</label>
               <input id="txtSNombre" type="text" class="form-control" formControlName="nocheAlojamiento"
+                [ngClass]="{ 'is-invalid': control.nocheAlojamiento.errors && control.nocheAlojamiento.touched}"
                 placeholder="ingrese el numero de noches">
+              <div *ngIf="control.nocheAlojamiento.errors && control.nocheAlojamiento.touched" class="invalid-feedback">
+                <div *ngIf="control.nocheAlojamiento.errors.required">Se require el id del servicio</div>
+              </div>
             </div>
           </div>
 
 
-          <div class="col-md-6">
+         <div class="col-md-6">
             <div class="form-group">
               <label class="bmd-label-floating">Tipo de Acomodacion</label>
               <select (change)="cambiarTipoAcomodacion($event)" class="custom-select" formControlName="tipoAcomodacion">
@@ -79,106 +83,20 @@
             </div>
 
           </div>
-         <!-- <div class="col-6">
-            <div>
-              <label class="bmd-label-floating">Refrigerio (Precione la tecla "CTRL + Click" para seleccionar varias
-                opciones)</label>
-            </div>
-            <select name="refrigerio" [(ngModel)]="refrigerio" class="form-control" multiple>
-              <option>Mañana</option>
-              <option>Tarde</option>
-              <option>Noche</option>
-              <option>Transporte</option>
+          <div class="col-6">
+            <select class="custom-select " formControlName="alimentacion"  [(ngModel)]="seleccionados1" multiple="multiple" >
+            <option [value]="item" *ngFor="let item of lista1">{{item}}</option>
             </select>
-
-          </div>-->
-          <div class="accordion row" id="accordionExample">
-            <div class="card">
-              <div class="card-header" id="headingOne">
-                <h2 class="mb-0">
-                  <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    Refrigerio
-                  </button>
-                </h2>
-              </div>
-          
-              <div id="collapseOne"  class="collapse show " aria-labelledby="headingOne" data-parent="#accordionExample">
-                <div class="card-body">
-                  <div class="form-group col-4">
-                    <label class="bmd-label-floating">Aconpañamiento Guia: </label>
-                    <div class="host">
-                      <input type="checkbox" id="toggle-button-checkbox9" (click)="cambiarGuia()">
-                      <label class="toggle-button-switch" for="toggle-button-checkbox9"></label>
-                      <div class="toggle-button-text">
-                        <div class="toggle-button-text-on">SI</div>
-                        <div class="toggle-button-text-off">NO</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group col-4">
-                    <label class="bmd-label-floating">Aconpañamiento Guia: </label>
-                    <div class="host">
-                      <input type="checkbox" id="toggle-button-checkbox9" (click)="cambiarGuia()">
-                      <label class="toggle-button-switch" for="toggle-button-checkbox9"></label>
-                      <div class="toggle-button-text">
-                        <div class="toggle-button-text-on">SI</div>
-                        <div class="toggle-button-text-off">NO</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group col-4">
-                    <label class="bmd-label-floating">Aconpañamiento Guia: </label>
-                    <div class="host">
-                      <input type="checkbox" id="toggle-button-checkbox9" (click)="cambiarGuia()">
-                      <label class="toggle-button-switch" for="toggle-button-checkbox9"></label>
-                      <div class="toggle-button-text">
-                        <div class="toggle-button-text-on">SI</div>
-                        <div class="toggle-button-text-off">NO</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header" id="headingTwo">
-                <h2 class="mb-0">
-                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Collapsible Group Item #2
-                  </button>
-                </h2>
-              </div>
-              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                <div class="card-body">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header" id="headingThree">
-                <h2 class="mb-0">
-                  <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Collapsible Group Item #3
-                  </button>
-                </h2>
-              </div>
-              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                <div class="card-body">
-                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                </div>
-              </div>
-            </div>
+                                    
           </div>
-          <div class="col-12">
-            <div>
-              <label class="bmd-label-floating">Plan de Alimentacion (Precione la tecla "CTRL + Click" para seleccionar
-                varias opciones)</label>
-            </div>
-            <select [(ngModel)]="planAlimentacion" class="form-control" multiple="multiple">
-              <option>Desayuno</option>
-              <option>Almuerzo</option>
-              <option>Cena</option>
+
+          <hr>
+
+          <div class="col-6" >
+            <select  class="custom-select "formControlName="refrigerio"  [(ngModel)]="seleccionados" multiple="multiple" >
+            <option [value]="item" *ngFor="let item of lista">{{item}}</option>
             </select>
+                                    
           </div>
           <hr>
           <hr>
@@ -249,13 +167,13 @@
           <div class="col-md-12">
             <div class="form-group">
               <label class="bmd-label-floating">Observaciones</label>
-              <textarea formControlName="observacion" class="form-control" id="exampleFormControlTextarea1"
+              <textarea formControlName="objervacion" class="form-control" id="exampleFormControlTextarea1"
                 rows="3"></textarea>
             </div>
           </div>
 
         </div>
-        <button type="button" id="btn-registro" class="btn  pull-right btn-primary" (click)="onSubmit()"
+        <button type="button" id="btn-registro" class="btn pull-right btn-primary" (click)="onSubmit()"
           [disabled]="formGroup.invalid">Registrar</button>
         <button type="reset" id="btn-cancelar" class="btn  pull-right">Cancelar</button>
         <div class="clearfix"></div>

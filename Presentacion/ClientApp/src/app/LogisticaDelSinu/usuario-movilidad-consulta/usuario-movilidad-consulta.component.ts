@@ -17,7 +17,7 @@ export class UsuarioMovilidadConsultaComponent implements OnInit {
 
   ngOnInit(): void {
     var usuario = (JSON.parse(localStorage.getItem('currentUser')));
-    this.usuarioService.get(usuario.usuario).subscribe(m => {
+    this.usuarioService.get(usuario.usuario,"Movilidad").subscribe(m => {
       this.movilidades = m.movilidades;
     });
   }

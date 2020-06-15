@@ -1,7 +1,6 @@
-<p>usuario-movilidad-consulta works!</p>
 <div class="row">
     <div class="col-6">
-        <input [(ngModel)]="searchText" type="text" class="form-control" placeholder="Buscar Restaurantes">
+        <input [(ngModel)]="searchText" type="text" class="form-control" placeholder="Buscar Movilidades">
     </div>
 </div>
 <hr>
@@ -41,6 +40,7 @@
                                 <td><a href="#" data-toggle="modal" data-target="#infoSeminarios"
                                         (click)="consultarPorId(movilidad.idMovilidad)" type="button"
                                         class="btn btn-primary">Ver
+                                     
                                         solicitud</a></td>
                             </tr>
                         </tbody>
@@ -90,7 +90,7 @@
                     <h5 id="titulo" class="text-center">Servicios adicionales</h5><br>
                     <div class="row">
                         <p class="col-3">Refrigerio: {{movilidad.refrigerio}}</p>
-                        <p class="col-3">Organizacion de agenda: {{movilidad.organizacionAgenda}}</p>
+                        <p class="col-3">Organizacion de agenda: {{movilidad.organizacionAjenda}}</p>
                         <p class="col-3">Visita tecnica: {{movilidad.visitaTecnica}}</p>
                     </div>
                     <div class="row">

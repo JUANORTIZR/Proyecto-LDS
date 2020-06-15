@@ -3,6 +3,8 @@ import { Movilidad } from '../../Models/movilidad';
 import { MovilidadService } from 'src/app/services/movilidad.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AlertModalComponent } from 'src/app/@base/alert-modal/alert-modal.component';
+import { Router } from '@angular/router';
+import { User } from 'src/app/seguridad/user';
 
 @Component({
   selector: 'app-consultar-movilidades',
@@ -13,9 +15,14 @@ export class ConsultarMovilidadesComponent implements OnInit {
   movilidades:Movilidad[];
   searchText:string;
   movilidad:Movilidad;
-  constructor(private movilidadService:MovilidadService, private modalService: NgbModal) { }
+  usuario: User = (JSON.parse(localStorage.getItem('currentUser')));
+  constructor(private router: Router,private movilidadService:MovilidadService, private modalService: NgbModal) { }
 
   ngOnInit(): void {
+    if(this.usuario.tipo!="admin"){
+      alert("Acceso denegado");
+      this.router.navigate(['/Login']);
+    }
     this.movilidadService.gets().subscribe(s=> {
       this.movilidades = s;
     })

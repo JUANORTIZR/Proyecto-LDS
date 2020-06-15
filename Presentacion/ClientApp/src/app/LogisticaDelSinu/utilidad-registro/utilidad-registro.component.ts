@@ -4,6 +4,8 @@ import { Utilidad } from '../Models/utilidad';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AlertModalComponent } from 'src/app/@base/alert-modal/alert-modal.component';
+import { Router } from '@angular/router';
+import { User } from 'src/app/seguridad/user';
 
 @Component({
   selector: 'app-utilidad-registro',
@@ -13,10 +15,14 @@ import { AlertModalComponent } from 'src/app/@base/alert-modal/alert-modal.compo
 export class UtilidadRegistroComponent implements OnInit {
   formGroup: FormGroup;
   utilidad: Utilidad;
-  
-  constructor(private utilidadService: UtilidadService, private formBuilder: FormBuilder, private modalService: NgbModal) { }
+  usuario: User = (JSON.parse(localStorage.getItem('currentUser')));
+  constructor(private router: Router,private utilidadService: UtilidadService, private formBuilder: FormBuilder, private modalService: NgbModal) { }
 
   ngOnInit(): void {
+    if(this.usuario.tipo!="admin"){
+      alert("Acceso denegado");
+      this.router.navigate(['/Login']);
+    }
     this.buildForm();
   }
   private buildForm() {

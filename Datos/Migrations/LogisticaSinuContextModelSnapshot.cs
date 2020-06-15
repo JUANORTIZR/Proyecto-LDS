@@ -64,7 +64,7 @@ namespace Datos.Migrations
                     b.Property<string>("IdMovilidad")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("AcompañamientoGuia")
+                    b.Property<string>("AcompanamientoGuia")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Alimentacion")
@@ -112,10 +112,15 @@ namespace Datos.Migrations
                     b.Property<string>("Transporte")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("UserUsuario")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("VisitaTecnica")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("IdMovilidad");
+
+                    b.HasIndex("UserUsuario");
 
                     b.ToTable("Movilidades");
                 });
@@ -333,6 +338,13 @@ namespace Datos.Migrations
                     b.HasKey("IdPago");
 
                     b.ToTable("Utilidades");
+                });
+
+            modelBuilder.Entity("Entity.MovilidadAcademica", b =>
+                {
+                    b.HasOne("Entity.User", null)
+                        .WithMany("Movilidades")
+                        .HasForeignKey("UserUsuario");
                 });
 
             modelBuilder.Entity("Entity.Servicio", b =>

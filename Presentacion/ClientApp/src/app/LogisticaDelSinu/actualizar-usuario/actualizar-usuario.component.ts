@@ -21,7 +21,8 @@ export class ActualizarUsuarioComponent implements OnInit {
   constructor(private usuarioService: UsuarioService, private formBuilder: FormBuilder, private rutaActiva: ActivatedRoute, private modalService: NgbModal) { }
 
   ngOnInit(): void {
-    this.usuarioService.get(this.IdUsuario).subscribe(result => {
+    
+    this.usuarioService.get(this.IdUsuario,"Servicio").subscribe(result => {
       this.uEncontrado = result;
       this.buildForm(this.uEncontrado);
     });

@@ -4,6 +4,8 @@ import { Hotel } from '../../Models/hotel';
 import { HotelService } from 'src/app/services/hotel.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AlertModalComponent } from 'src/app/@base/alert-modal/alert-modal.component';
+import { Router } from '@angular/router';
+import { User } from 'src/app/seguridad/user';
 
 @Component({
   selector: 'app-registro-hotel',
@@ -14,10 +16,14 @@ export class RegistroHotelComponent implements OnInit {
 
   formGroup: FormGroup;
   hotel:Hotel;
-
-  constructor(private hotelService: HotelService, private formBuilder: FormBuilder, private modalService: NgbModal) { }
+  usuario: User = (JSON.parse(localStorage.getItem('currentUser')));
+  constructor(private router: Router,private hotelService: HotelService, private formBuilder: FormBuilder, private modalService: NgbModal) { }
 
   ngOnInit(): void {
+    if(this.usuario.tipo!="admin"){
+      alert("Acceso denegado");
+      this.router.navigate(['/Login']);
+    }
     this.buildForm();
   }
 

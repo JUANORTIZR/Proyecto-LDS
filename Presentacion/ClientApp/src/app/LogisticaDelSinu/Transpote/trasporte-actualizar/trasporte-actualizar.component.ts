@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TransporteService } from 'src/app/services/transporte.service';
 import { Transporte } from '../../Models/transporte';
 import { AlertModalComponent } from 'src/app/@base/alert-modal/alert-modal.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { User } from 'src/app/seguridad/user';
 
 @Component({
   selector: 'app-trasporte-actualizar',
@@ -16,9 +17,14 @@ export class TrasporteActualizarComponent implements OnInit {
   transporte:Transporte;
   tEncontrar:Transporte;
   nit = this.rutaActiva.snapshot.params.nit;
-  constructor(private transporteServices: TransporteService, private formBuilder: FormBuilder, private rutaActiva:ActivatedRoute, private modalService:NgbModal) { }
+  usuario: User = (JSON.parse(localStorage.getItem('currentUser')));
+  constructor(private router: Router,private transporteServices: TransporteService, private formBuilder: FormBuilder, private rutaActiva:ActivatedRoute, private modalService:NgbModal) { }
 
   ngOnInit(): void {
+    if(this.usuario.tipo!="admin"){
+      alert("Acceso denegado");
+      this.router.navigate(['/Login']);
+    }
     this.transporteServices.get(this.nit).subscribe(r => {
       this.tEncontrar = r;
       this.buildForm(this.tEncontrar);

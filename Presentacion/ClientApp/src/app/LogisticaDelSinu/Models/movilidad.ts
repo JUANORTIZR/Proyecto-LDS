@@ -10,7 +10,7 @@ export class Movilidad {
     alimentacion:string;
     acompanamientoGuia:string;
     seguroViaje:string;
-    organizacionAgenda:string;
+    organizacionAjenda:string;
     visitaTecnica:string;
     costoEntrada:string;
     objervacion:string;

@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { HotelService } from 'src/app/services/hotel.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Hotel } from '../../Models/hotel';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AlertModalComponent } from 'src/app/@base/alert-modal/alert-modal.component';
+import { User } from 'src/app/seguridad/user';
 
 @Component({
   selector: 'app-actualizar-hotel',
@@ -17,9 +18,14 @@ export class ActualizarHotelComponent implements OnInit {
   hotel:Hotel;
   hEncontrado:Hotel;
   nit = this.rutaActiva.snapshot.params.nit;
-  constructor(private hotelService: HotelService, private formBuilder: FormBuilder, private rutaActiva:ActivatedRoute, private modalService:NgbModal) { }
+  usuario: User = (JSON.parse(localStorage.getItem('currentUser')));
+  constructor(private router: Router,private hotelService: HotelService, private formBuilder: FormBuilder, private rutaActiva:ActivatedRoute, private modalService:NgbModal) { }
 
   ngOnInit(): void {
+    if(this.usuario.tipo!="admin"){
+      alert("Acceso denegado");
+      this.router.navigate(['/Login']);
+    }
     this.hotelService.get(this.nit).subscribe(h => {
       this.hEncontrado = h;
       this.buildForm(this.hEncontrado);

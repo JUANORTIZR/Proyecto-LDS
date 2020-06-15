@@ -16,7 +16,7 @@ namespace Presentacion.Models.SMovilidadAcademicaModels
             TipoAcomodacion=movilidad.TipoAcomodacion;
             Transporte=movilidad.Transporte;
             Alimentacion=movilidad.Alimentacion;
-            AcompañamientoGuia=movilidad.AcompañamientoGuia;
+            AcompanamientoGuia=movilidad.AcompanamientoGuia;
             SeguroViaje=movilidad.SeguroViaje;
             OrganizacionAjenda=movilidad.OrganizacionAjenda;
             VisitaTecnica=movilidad.VisitaTecnica;

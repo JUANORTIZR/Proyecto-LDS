@@ -29,6 +29,7 @@ export class SolitudServicioComponent implements OnInit {
   idServicio:string;
   lista:string[]=["hola","que","tal", "estas"];
   seleccionados:string[]=[];
+  loading=false;
   usuario: User = (JSON.parse(localStorage.getItem('currentUser')));
   constructor(private servicioService: ServicioService, private usuarioService: UsuarioService, private formBuilder: FormBuilder, private modalService: NgbModal) {
     
@@ -73,7 +74,6 @@ export class SolitudServicioComponent implements OnInit {
     this.control.tipoServicio.setValue(e.target.value, {
       onlySelf: true,  
     })
-    alert(this.control.tipoServicio.value);
   }
 
  
@@ -116,24 +116,23 @@ export class SolitudServicioComponent implements OnInit {
   }
 
   registrar() {
-    if(this.usuario==null){
-      const messageBox = this.modalService.open(AlertModalComponent)
-          messageBox.componentInstance.title = "Resultado Operación";
-          messageBox.componentInstance.message = 'Para poder hacer la solicitud de uno de nuestros servicios por favor inicia sesión o registrate';
-          return;
-    }
+    this.loading = true;
     this.servicio = this.formGroup.value;
     this.servicio.fechaSolicitud = new Date();
+    this.servicio.correo = this.usuario.correo;
+    this.servicio.nombreCliente = this.usuario.primerNombre;
     this.servicio.refrigerio = this.refrigerio;
     this.servicio.ponentes = this.ponente;
     this.servicio.logisticaCompleta = this.logistica;
     this.servicio.idCliente = this.usuario.identificacion;
       this.servicioService.post(this.servicio).subscribe(s => {
         if (s != null) {
+          this.loading = false;
           const messageBox = this.modalService.open(AlertModalComponent)
           messageBox.componentInstance.title = "Resultado Operación";
           messageBox.componentInstance.message = 'Su solicitud de servicio ha sido registrada con exito!!!';
           this.servicio = s;
+
         }
       });
   }

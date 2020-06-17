@@ -192,6 +192,8 @@ export class SolicitudMovilidadComponent implements OnInit {
     this.movilidad.organizacionAjenda = this.agenda;
     this.movilidad.costoEntrada = this.costo;
     this.movilidad.idCliente = this.usuario.identificacion;
+    this.movilidad.nombreCliente = this.usuario.primerNombre;
+    this.movilidad.correo = this.usuario.correo;
     this.movilidadService.post(this.movilidad).subscribe(m => {
       if (m != null) {
         const messageBox = this.modalService.open(AlertModalComponent)

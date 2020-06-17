@@ -129,6 +129,8 @@ namespace Datos.Migrations
                 {
                     IdMovilidad = table.Column<string>(nullable: false),
                     IdCliente = table.Column<string>(nullable: true),
+                    NombreCliente = table.Column<string>(nullable: true),
+                    Correo = table.Column<string>(nullable: true),
                     FechaEvento = table.Column<DateTime>(nullable: false),
                     FechaSolicitud = table.Column<DateTime>(nullable: false),
                     Destino = table.Column<string>(nullable: true),
@@ -163,6 +165,7 @@ namespace Datos.Migrations
                 columns: table => new
                 {
                     IdServicio = table.Column<string>(nullable: false),
+                    NombreCliente = table.Column<string>(nullable: true),
                     IdCliente = table.Column<string>(nullable: true),
                     FechaEvento = table.Column<DateTime>(nullable: false),
                     FechaSolicitud = table.Column<DateTime>(nullable: false),
@@ -172,6 +175,7 @@ namespace Datos.Migrations
                     Ponentes = table.Column<string>(nullable: true),
                     LogisticaCompleta = table.Column<string>(nullable: true),
                     Observacion = table.Column<string>(nullable: true),
+                    Correo = table.Column<string>(nullable: true),
                     Estado = table.Column<string>(nullable: true),
                     UserUsuario = table.Column<string>(nullable: true)
                 },

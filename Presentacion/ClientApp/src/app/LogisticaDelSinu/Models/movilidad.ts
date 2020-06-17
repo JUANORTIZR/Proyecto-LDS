@@ -1,5 +1,7 @@
 export class Movilidad {
     idCliente:string;
+    nombreCliente:string;
+    correo:string;
     idMovilidad:string;
     fechaEvento:Date;
     fechaSolicitud:Date;

@@ -9,6 +9,7 @@
     <div class="card">
       <div class="card-header card-header-primary">
         <h4 class="card-title ">Solicitudes de servicio</h4>
+        <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
         <p class="card-category"> Vista previa de solicitudes </p>
       </div>
       <div class="card-body">
@@ -100,8 +101,8 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="cambiarEstado('Rechazado')">Rechazar</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="cambiarEstado('Aceptado')">Aceptar</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="cambiarEstado('Rechazada')">Rechazar</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="cambiarEstado('Aceptada')">Aceptar</button>
       </div>
     </div>
   </div>

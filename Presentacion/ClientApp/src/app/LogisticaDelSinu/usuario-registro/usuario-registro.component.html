@@ -130,7 +130,9 @@
           </div>
         </div>
         <button type="button" id="btn-registro" class="btn  pull-right" (click)="onSubmit()"
-        [disabled]="formGroup.invalid">Registrar</button>
+        [disabled]="formGroup.invalid || loading" >
+        <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+        Registrar</button>
         <button type="reset"  id="btn-cancelar" class="btn  pull-right">Cancelar</button>
         <div class="clearfix"></div>
       </form>

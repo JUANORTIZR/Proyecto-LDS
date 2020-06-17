@@ -7,6 +7,8 @@ namespace Entity {
         [Key]
         public string IdMovilidad { get; set; }
         public string IdCliente { get; set; }
+        public string NombreCliente { get; set; }
+        public string Correo { get; set; }
         public DateTime FechaEvento { get; set; }
         public DateTime FechaSolicitud { get; set; }
         public string Destino { get; set; }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Datos;
 using Entity;
+using Infraestructura;
 
 namespace Logica.Transportes {
     public class TransporteService {
@@ -13,16 +14,27 @@ namespace Logica.Transportes {
 
         public GuardarTransporteResponse Guardar (Transporte transporte) {
             try {
+                string MensajeEmail = string.Empty;
+                Email email = new Email ();
                 var TrasporteBuscado = _Context.Transportes.Find (transporte.Nit);
                 if (TrasporteBuscado != null) {
                     return new GuardarTransporteResponse ("El transporte ya se encuentra registrado");
                 }
                 _Context.Transportes.Add (transporte);
                 _Context.SaveChanges ();
+                 MensajeEmail = email.EnviarEmail (transporte.CorreoElectronico, EscribirCuerpo(transporte.Nombre),EscribirEncabezado());
                 return new GuardarTransporteResponse (transporte);
             } catch (Exception e) {
                 return new GuardarTransporteResponse ($"Error de la Aplicacion: {e.Message}");
             }
+        }
+
+        public string EscribirEncabezado(){
+            return "Registro de transporte " + DateTime.Now.ToString ("dd/MMM/yyy hh:mm:ss");
+        }
+        public string EscribirCuerpo(string nombre){
+            return  $"<b> {nombre }</b> <br " +
+                $" > se ha realizado su registro Sartisfactoriamente";
         }
         public ConsultarTransporteResponse Consultar () {
             try {

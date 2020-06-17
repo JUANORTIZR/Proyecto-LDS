@@ -8,6 +8,8 @@ namespace Presentacion.Models.SMovilidadAcademicaModels
         public MovilidadAcademicaViewModel(MovilidadAcademica movilidad)
         {
             IdMovilidad=movilidad.IdMovilidad;
+            NombreCliente = movilidad.NombreCliente;
+            Correo = movilidad.Correo;
             IdCliente=movilidad.IdCliente;
             FechaEvento=movilidad.FechaEvento;
             FechaSolicitud=movilidad.FechaSolicitud;

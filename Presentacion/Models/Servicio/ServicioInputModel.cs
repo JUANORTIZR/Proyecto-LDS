@@ -10,6 +10,7 @@ namespace Presentacion.Models.Servicio
         public string IdServicio { get; set; }
         [Required(ErrorMessage = "El cliente es requerido")]
         public string IdCliente { get; set; }        
+        public string NombreCliente { get; set; }
         [Required(ErrorMessage = "La fecha en la que se realizara el evento es requerida")]
         public DateTime FechaEvento { get; set; }
         [Required(ErrorMessage = "La fecha en la que se solicita el servicio es requerida")]
@@ -25,6 +26,7 @@ namespace Presentacion.Models.Servicio
         [Required(ErrorMessage = "Debe indicar si requiere la logistica completa o no")]
         public string LogisticaCompleta { get; set; }
         public string Observacion { get; set; }
+        public string Correo { get; set; }
         public string Estado { get; set; }
     }
 }

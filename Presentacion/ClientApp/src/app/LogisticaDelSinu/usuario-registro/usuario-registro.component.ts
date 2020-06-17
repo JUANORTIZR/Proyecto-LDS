@@ -7,6 +7,7 @@ import { Subscription } from 'rxjs';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AlertModalComponent } from 'src/app/@base/alert-modal/alert-modal.component';
 import { User } from 'src/app/seguridad/user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-usuario-registro',
@@ -18,7 +19,8 @@ export class UsuarioRegistroComponent implements OnInit {
   formGroup: FormGroup;
   usuario: User;
   otro: Usuario;
-  constructor(private usuarioService: UsuarioService,  private formBuilder: FormBuilder, private modalService: NgbModal) { }
+  loading= false;
+  constructor(private router: Router,private usuarioService: UsuarioService,  private formBuilder: FormBuilder, private modalService: NgbModal) { }
 
   ngOnInit(): void {
 
@@ -64,15 +66,21 @@ export class UsuarioRegistroComponent implements OnInit {
   }
 
   registrar() {
+    this.loading = true;
     this.usuario = this.formGroup.value;
 
     this.usuarioService.post(this.usuario).subscribe(u => {
       if (u != null) {
         const messageBox = this.modalService.open(AlertModalComponent)
         messageBox.componentInstance.title = "Resultado Operación";
-        messageBox.componentInstance.message = 'Usuario creado!!!';
+        messageBox.componentInstance.message = 'Usuario creado, ya puedes iniciar sesión';
         this.usuario = u;
+        if(this.usuario.tipo!="admin"){
+          this.router.navigate(['/Login']);
+        }
+        
       }
+      this.loading = false;
     });
   }
 

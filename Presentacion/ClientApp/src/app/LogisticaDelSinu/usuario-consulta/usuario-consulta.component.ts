@@ -14,6 +14,7 @@ export class UsuarioConsultaComponent implements OnInit {
   usuarios:User[];
   searchText:string;
   usuario: User = (JSON.parse(localStorage.getItem('currentUser')));
+  
   constructor(private router: Router,private usuarioService:UsuarioService) { }
 
   ngOnInit() {

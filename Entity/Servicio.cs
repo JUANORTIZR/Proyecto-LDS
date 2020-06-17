@@ -7,6 +7,7 @@ namespace Entity
     {
         [Key]
         public string IdServicio { get; set; }
+        public string NombreCliente { get; set; }
         public string IdCliente { get; set; }        
         public DateTime FechaEvento { get; set; }
         public DateTime FechaSolicitud { get; set; }
@@ -16,6 +17,7 @@ namespace Entity
         public string Ponentes { get; set; }
         public string LogisticaCompleta { get; set; }
         public string Observacion { get; set; }
+        public string Correo { get; set; }
         public string Estado { get; set; }
     }
 }

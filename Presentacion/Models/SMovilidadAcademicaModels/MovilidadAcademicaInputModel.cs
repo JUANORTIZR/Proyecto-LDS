@@ -9,6 +9,8 @@ namespace Presentacion.Models.SMovilidadAcademica
         public string IdMovilidad { get; set; }
         [Required(ErrorMessage = "El cliente es requerido")]
         public string IdCliente { get; set; }
+        public string NombreCliente { get; set; }
+        public string Correo { get; set; }
         [Required(ErrorMessage = "La fecha en la que se realizara el evento es requerida")]
         public DateTime FechaEvento { get; set; }
          [Required(ErrorMessage = "La fecha en la que se solicita el servicio es requerida")]

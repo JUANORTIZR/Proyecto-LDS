@@ -16,6 +16,7 @@ export class ConsultarSolicitudesComponent implements OnInit {
   searchText:string;
   servicio:Servicio;
   usuario: User = (JSON.parse(localStorage.getItem('currentUser')));
+  loading=false;
   constructor(private router: Router,private servicioService:ServicioService, private modalService: NgbModal) { }
 
   ngOnInit(): void {
@@ -23,7 +24,9 @@ export class ConsultarSolicitudesComponent implements OnInit {
       alert("Acceso denegado");
       this.router.navigate(['/Login']);
     }
+    this.loading = true;
     this.servicioService.gets().subscribe(s=> {
+      this.loading = false;
       this.servicios = s;
     })
 

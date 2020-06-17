@@ -70,6 +70,9 @@ namespace Datos.Migrations
                     b.Property<string>("Alimentacion")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Correo")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("CostoEntrada")
                         .HasColumnType("nvarchar(max)");
 
@@ -89,6 +92,9 @@ namespace Datos.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NocheAlojamiento")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NombreCliente")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Objervacion")
@@ -167,6 +173,9 @@ namespace Datos.Migrations
                     b.Property<string>("IdServicio")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("Correo")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Descripcion")
                         .HasColumnType("nvarchar(max)");
 
@@ -183,6 +192,9 @@ namespace Datos.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LogisticaCompleta")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NombreCliente")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Observacion")

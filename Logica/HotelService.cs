@@ -23,11 +23,18 @@ namespace Logica {
                 }
                 _Context.Hoteles.Add (hotel);
                 _Context.SaveChanges ();
-                MensajeEmail = email.EnviarEmail (hotel.CorreoElectronico, hotel.Nombre);
+                MensajeEmail = email.EnviarEmail (hotel.CorreoElectronico, EscribirCuerpo(hotel.Nombre),EscribirEncabezado());
                 return new GuardarHotelResponse (hotel);
             } catch (Exception e) {
                 return new GuardarHotelResponse ($"Error de la Aplicacion: {e.Message}");
             }
+        }
+        public string EscribirEncabezado(){
+            return "Registro de hotel " + DateTime.Now.ToString ("dd/MMM/yyy hh:mm:ss");
+        }
+        public string EscribirCuerpo(string nombre){
+            return  $"<b> {nombre }</b> <br " +
+                $" > se ha realizado su registro Sartisfactoriamente";
         }
 
         public ConsultarHotelesResponse Consultar () {

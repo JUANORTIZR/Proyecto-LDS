@@ -22,11 +22,42 @@ namespace Logica.SMovilidadAcademica {
                 }
                 _context.Movilidades.Add (movilidad);
                 _context.SaveChanges ();
-                //  mensajeEmail = email.EnviarEmail(servicio.IdCliente.CorreoElectronico,servicio.IdCliente.PrimerNombre);
+                mensajeEmail = email.EnviarEmail (movilidad.Correo, EscribirCuerpo (movilidad.NombreCliente,"Solicitud",movilidad.IdMovilidad), EscribirEncabezado ("Solicitud"));
                 return new GuardarMovilidadAcademicaResponse (movilidad);
             } catch (Exception e) {
                 return new GuardarMovilidadAcademicaResponse ($"Error de la aplicacion {e.Message}");
             }
+        }
+
+        public string EscribirEncabezado (string tipo) {
+            if (tipo == "Solicitud") {
+                return "Solicitud de servicio " + DateTime.Now.ToString ("dd/MMM/yyy hh:mm:ss");
+            }
+            return "Informacion de estado de solicitud " + DateTime.Now.ToString ("dd/MMM/yyy hh:mm:ss");
+        }
+        public string EscribirCuerpo (string nombre,string tipo,string numero) {
+            if(tipo == "Solicitud"){
+                return $"<b>¡¡Bienvenido a logística educativa del Sinú¡¡</b><br>"+
+                $"Hola {nombre}.<br>"+
+                "Gracias por preferirnos al momento de organizar y realizar sus eventos académicos. <br>"+
+                $"Tenemos el gusto de informarle que su solicitud de servicio número {numero} fue registrada con éxito.<br>"+
+                "También puede consultar el estado de su solicitud en nuestro aplicativo web a través del siguiente enlace.<br>"+
+                "<a href='https://logisticadelsinu.azurewebsites.net/usuarioMovilidadConsulta'>Mis servicios</a>";
+            }
+            if(tipo == "Aceptada"){
+                return "<b>¡¡Bienvenido a logística educativa del Sinú¡¡</b><br>"+
+                $"Hola {nombre} <br>"+
+                "Gracias por preferirnos al momento de organizar y realizar sus eventos académicos.<br>"+
+                $"Tenemos el gusto de informarle que su solicitud de servicio número {numero} fue <b>aceptada</b>."+
+                "Para mayor información visite nuestra aplicación web a través de siguiente enlace.<br>"+
+                "<a href='https://logisticadelsinu.azurewebsites.net/usuarioMovilidadConsulta'>Mis servicios</a>";
+            }
+            return "<b>¡¡Bienvenido a logística educativa del Sinú¡¡</b><br>"+
+            $"Hola {nombre}<br>"+
+            "Gracias por preferirnos al momento de organizar y realizar sus eventos académicos.<br>"+
+            $"Le informamos que su solicitud de servicio número {numero} fue rechazada por el momento no podemos ofrecerle nuestros servicios.<br>"+
+            "Para mayor información o si desea agendar una nueva solicitud de servicio visite nuestra aplicación web a través de siguiente enlace.<br>"+
+            "<a href='https://logisticadelsinu.azurewebsites.net/usuarioMovilidadConsulta'>Mis servicios</a>";
         }
         public ConsultarMovilidadAcademicaResponse Consultar () {
             try {
@@ -44,12 +75,14 @@ namespace Logica.SMovilidadAcademica {
 
          public ActualizarMovilidadAcademicaResponse Modificar (MovilidadAcademica movilidadNueva) {
             try {
-
+                string mensajeEmail = string.Empty;
+                Email email = new Email ();
                 var movilidadViejo = _context.Movilidades.Find (movilidadNueva.IdMovilidad);
                 if (movilidadViejo != null) {
                     movilidadViejo.Estado = movilidadNueva.Estado;
                     _context.Movilidades.Update (movilidadViejo);
                     _context.SaveChanges ();
+                    mensajeEmail = email.EnviarEmail (movilidadViejo.Correo, EscribirCuerpo (movilidadViejo.NombreCliente,movilidadViejo.Estado,movilidadViejo.IdMovilidad), EscribirEncabezado ("Solicitud"));
                     return new ActualizarMovilidadAcademicaResponse (movilidadViejo);
                 } else {
                     return new ActualizarMovilidadAcademicaResponse ($"Lo sentimos, {movilidadViejo.IdMovilidad} no se encuentra registrada.");

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Datos;
 using Entity;
+using Infraestructura;
 using Logica.Restaurantes;
 
 namespace Logica.Restaurantes {
@@ -13,16 +14,27 @@ namespace Logica.Restaurantes {
         }
         public GuardarRestauranteResponse Guardar (Restaurante restaurante) {
             try {
+                string MensajeEmail = string.Empty;
+                Email email = new Email ();
                 var RestauranteBuscado = _Context.Restaurantes.Find (restaurante.Nit);
                 if (RestauranteBuscado != null) {
                     return new GuardarRestauranteResponse ("El Restaurante ya se encuentra registrado");
                 }
                 _Context.Restaurantes.Add (restaurante);
                 _Context.SaveChanges ();
+                 MensajeEmail = email.EnviarEmail (restaurante.CorreoElectronico, EscribirCuerpo(restaurante.Nombre),EscribirEncabezado());
                 return new GuardarRestauranteResponse (restaurante);
             } catch (Exception e) {
                 return new GuardarRestauranteResponse ($"Error de la Aplicacion: {e.Message}");
             }
+        }
+
+        public string EscribirEncabezado(){
+            return "Registro de Restaurante " + DateTime.Now.ToString ("dd/MMM/yyy hh:mm:ss");
+        }
+        public string EscribirCuerpo(string nombre){
+            return  $"<b>{nombre }</b> <br " +
+                $" > se ha realizado su registro Sartisfactoriamente";
         }
         public ConsultarRestauranteResponse Consultar () {
             try {

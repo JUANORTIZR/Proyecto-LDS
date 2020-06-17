@@ -13,23 +13,22 @@ namespace Infraestructura {
             smtp.Port = 587;
             smtp.EnableSsl = true;
             smtp.UseDefaultCredentials = false;
-            smtp.Credentials = new System.Net.NetworkCredential ("ojuankita9@gmail.com", "1064121751Jk");
+            smtp.Credentials = new System.Net.NetworkCredential ("ojuankita9@gmail.com", "Jk1064121751");
         }
-        private void ConfigurarEmail (string correoElectronico,string nombre) {
+        private void ConfigurarEmail (string correoElectronico,string cuerpoEmail,string encabezado) {
 
             email = new MailMessage ();
             email.To.Add (correoElectronico);
             email.From = new MailAddress ("ojuankita9@gmail.com");
-            email.Subject = "Registro de Hotel " + DateTime.Now.ToString ("dd/MMM/yyy hh:mm:ss");
-            email.Body = $"<b>Sr {nombre }</b> <br " +
-                $" > se ha realizado su registro Sartisfactoriamente";
+            email.Subject = encabezado;
+            email.Body = cuerpoEmail;
             email.IsBodyHtml = true;
             email.Priority = MailPriority.Normal;
         }
-        public string EnviarEmail (string correoElectronico, string nombre) {
+        public string EnviarEmail (string correoElectronico,string cuerpoEmail, string encabezado) {
             try {
                 ConfigurarSmt ();
-                ConfigurarEmail (correoElectronico, nombre);
+                ConfigurarEmail (correoElectronico, cuerpoEmail, encabezado);
                 smtp.Send (email);
                 return ("Correo enviado Satifactoriamente");
             } catch (Exception e) {

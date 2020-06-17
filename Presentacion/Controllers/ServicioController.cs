@@ -39,6 +39,7 @@ namespace Presentacion.Controllers
             var servicio = new Servicio {
                 IdServicio = servicioInput.IdServicio,
                 IdCliente = servicioInput.IdCliente,
+                NombreCliente = servicioInput.NombreCliente,
                 FechaEvento = servicioInput.FechaEvento,
                 FechaSolicitud = servicioInput.FechaSolicitud,
                 TipoServicio = servicioInput.TipoServicio,
@@ -46,6 +47,7 @@ namespace Presentacion.Controllers
                 Refrigerio = servicioInput.Refrigerio,
                 Ponentes = servicioInput.Ponentes,
                 LogisticaCompleta = servicioInput.LogisticaCompleta,
+                Correo = servicioInput.Correo,
                 Observacion = servicioInput.Observacion,
                 Estado = "Sin revisar"
             };

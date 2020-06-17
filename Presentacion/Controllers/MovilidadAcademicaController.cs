@@ -35,6 +35,8 @@ namespace Presentacion.Controllers {
             var movilidad = new MovilidadAcademica {
                 IdMovilidad = movilidadInput.IdMovilidad,
                     IdCliente = movilidadInput.IdCliente,
+                    NombreCliente = movilidadInput.NombreCliente,
+                    Correo = movilidadInput.Correo,
                     FechaEvento = movilidadInput.FechaEvento,
                     FechaSolicitud = movilidadInput.FechaSolicitud,
                     Destino = movilidadInput.Destino,

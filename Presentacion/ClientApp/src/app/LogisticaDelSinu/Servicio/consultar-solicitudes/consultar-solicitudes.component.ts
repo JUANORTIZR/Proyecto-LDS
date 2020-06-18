@@ -5,6 +5,7 @@ import { AlertModalComponent } from 'src/app/@base/alert-modal/alert-modal.compo
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
 import { User } from 'src/app/seguridad/user';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-consultar-solicitudes',
@@ -12,11 +13,12 @@ import { User } from 'src/app/seguridad/user';
   styleUrls: ['./consultar-solicitudes.component.css']
 })
 export class ConsultarSolicitudesComponent implements OnInit {
-  servicios:Servicio[];
+  servicios:Servicio[]=[];
   searchText:string;
   servicio:Servicio;
   usuario: User = (JSON.parse(localStorage.getItem('currentUser')));
   loading=false;
+  suscripcion: Subscription;
   constructor(private router: Router,private servicioService:ServicioService, private modalService: NgbModal) { }
 
   ngOnInit(): void {
@@ -24,19 +26,24 @@ export class ConsultarSolicitudesComponent implements OnInit {
       alert("Acceso denegado");
       this.router.navigate(['/Login']);
     }
-    this.loading = true;
     this.servicioService.gets().subscribe(s=> {
       this.loading = false;
       this.servicios = s;
     })
-
+    this.actualizarListaSignal();
+  }
+  private actualizarListaSignal(){
+    this.servicioService.signalRecived.subscribe((servicio: Servicio) => {
+      this.servicios.push(servicio);
+    });
   }
   consultarPorId(id:string){
     this.servicioService.get(id).subscribe(s => {
       this.servicio = s;
     });
+    
   }
-  
+
   cambiarEstado(estado:string){
     this.servicio.estado = estado;
     this.servicioService.put(this.servicio).subscribe(s => {

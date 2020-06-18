@@ -12,7 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Presentacion.Configuraciones;
-
+using Presentacion.Hubs;
 namespace Presentacion
 {
     public class Startup
@@ -32,7 +32,7 @@ namespace Presentacion
             var connectionString=Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<LogisticaSinuContext>(p=>p.UseSqlServer(connectionString));
             services.AddControllersWithViews();
-            
+            services.AddSignalR();
             // configure strongly typed settings objects
             var appSettingsSection = Configuration.GetSection("AppSetting");
             services.Configure<AppSetting>(appSettingsSection);
@@ -126,6 +126,7 @@ namespace Presentacion
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller}/{action=Index}/{id?}");
+                    endpoints.MapHub<SignalHub>("/signalHub");
             });
 
             app.UseSwagger();

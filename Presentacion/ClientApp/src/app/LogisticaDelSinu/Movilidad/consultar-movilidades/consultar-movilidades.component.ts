@@ -26,7 +26,12 @@ export class ConsultarMovilidadesComponent implements OnInit {
     this.movilidadService.gets().subscribe(s=> {
       this.movilidades = s;
     })
-
+    this.actualizarListaSignal();
+  }
+  private actualizarListaSignal(){
+    this.movilidadService.signalRecived.subscribe((movilidad: Movilidad) => {
+      this.movilidades.push(movilidad);
+    });
   }
   consultarPorId(id:string){
     this.movilidadService.get(id).subscribe(s => {

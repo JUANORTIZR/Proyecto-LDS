@@ -7,6 +7,7 @@ import { ServicioService } from 'src/app/services/servicio.service';
 import { Usuario } from '../../Models/usuario';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { User } from 'src/app/seguridad/user';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -18,9 +19,9 @@ export class SolitudServicioComponent implements OnInit {
 
   formGroup: FormGroup;
   servicio:Servicio;
-  checkedRefrigerio:boolean=false;
-  checkedPonente:boolean=false;
-  checkedLogistica:boolean=false;
+  checkedRefrigerio:boolean=true;
+  checkedPonente:boolean=true;
+  checkedLogistica:boolean=true;
   listaServicios:string[] = ["Seminario","Taller","Congreso"];
   servicioSele:string;
   refrigerio:string;
@@ -31,7 +32,7 @@ export class SolitudServicioComponent implements OnInit {
   seleccionados:string[]=[];
   loading=false;
   usuario: User = (JSON.parse(localStorage.getItem('currentUser')));
-  constructor(private servicioService: ServicioService, private usuarioService: UsuarioService, private formBuilder: FormBuilder, private modalService: NgbModal) {
+  constructor(private router: Router,private servicioService: ServicioService, private usuarioService: UsuarioService, private formBuilder: FormBuilder, private modalService: NgbModal) {
     
    }
 
@@ -79,7 +80,6 @@ export class SolitudServicioComponent implements OnInit {
  
 
   cambiarRefrigerio(){
-   
     this.checkedRefrigerio=!this.checkedRefrigerio;
     if(this.checkedRefrigerio){
       this.refrigerio = "SI";
@@ -94,6 +94,7 @@ export class SolitudServicioComponent implements OnInit {
       return;
     }
     this.ponente = "NO";
+
   }
   cambiarLogistica(){
     this.checkedLogistica=!this.checkedLogistica;
@@ -101,7 +102,7 @@ export class SolitudServicioComponent implements OnInit {
       this.logistica = "SI";
       return;
     }
-    this.ponente = "NO";
+    this.logistica = "NO";
   }
 
   get control() {
@@ -131,8 +132,14 @@ export class SolitudServicioComponent implements OnInit {
           const messageBox = this.modalService.open(AlertModalComponent)
           messageBox.componentInstance.title = "Resultado Operación";
           messageBox.componentInstance.message = 'Su solicitud de servicio ha sido registrada con exito!!!';
-          this.servicio = s;
-
+         this.servicio = s;
+         this.buildForm();
+         this.servicioService.getCantidad(this.usuario.identificacion).subscribe(c => {
+          if(c!=null){
+            this.idServicio = this.usuario.identificacion+(c+1);
+            this.control.idServicio.setValue(this.idServicio);
+          }
+        });
         }
       });
   }

@@ -32,6 +32,7 @@ export class SolicitudMovilidadComponent implements OnInit {
   seleccionados:string[]=[];
   lista1:string[]=["Desayuno", "Almuerzo", "Cena"];
   seleccionados1:string[]=[];
+  loading=false;
   constructor(private router: Router,private movilidadService: MovilidadService, private formBuilder: FormBuilder, private modalService: NgbModal) { }
 
 
@@ -175,13 +176,7 @@ export class SolicitudMovilidadComponent implements OnInit {
   }
 
   registrar() {
-    if (this.usuario == null) {
-    
-      const messageBox = this.modalService.open(AlertModalComponent)
-      messageBox.componentInstance.title = "Resultado Operación";
-      messageBox.componentInstance.message = 'Para poder hacer la solicitud de uno de nuestros servicios por favor inicia sesión o registrate';
-      return;
-    }
+    this.loading = true;
     this.cambiarRefrigerio();
     this.seleccionarPlanAlimentacion();
     this.movilidad = this.formGroup.value;
@@ -196,10 +191,18 @@ export class SolicitudMovilidadComponent implements OnInit {
     this.movilidad.correo = this.usuario.correo;
     this.movilidadService.post(this.movilidad).subscribe(m => {
       if (m != null) {
+        this.loading = false;
         const messageBox = this.modalService.open(AlertModalComponent)
         messageBox.componentInstance.title = "Resultado Operación";
         messageBox.componentInstance.message = 'Su solicitud de servicio ha sido registrada con exito!!!';
         this.movilidad = m;
+        this.contruirFormulario();
+        this.movilidadService.getCantidad(this.usuario.identificacion).subscribe(c => {
+          if(c!=null){
+            this.idMovilida = this.usuario.identificacion+(c+1);
+            this.control.idMovilidad.setValue(this.idMovilida);
+          }
+        });
       }
     })
   }

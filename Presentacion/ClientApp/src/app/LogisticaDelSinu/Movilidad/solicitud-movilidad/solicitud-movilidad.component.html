@@ -9,21 +9,12 @@
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
-              <label class="bmd-label-floating">Id Movilidad</label>
-              <input id="txtIdentificacion" type="text" class="form-control" formControlName="idMovilidad"
-                [ngClass]="{ 'is-invalid': control.idMovilidad.errors && control.idMovilidad.touched}"
-                placeholder="Escriba aquí el id del servicio">
-              <div *ngIf="control.idMovilidad.errors && control.idMovilidad.touched" class="invalid-feedback">
-                <div *ngIf="control.idMovilidad.errors.required">Se require el id del servicio</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="form-group">
               <label class="bmd-label-floating">Fecha del Evento</label>
               <input id="txtIdentificacion" type="date" class="form-control" formControlName="fechaEvento">
             </div>
           </div>
+        </div>
+        <div class="row"> 
           <div class="col-md-6">
             <div class="form-group">
               <label class="bmd-label-floating">Destino</label>
@@ -84,6 +75,7 @@
 
           </div>
           <div class="col-6">
+            <label class="bmd-label-floating">Pla de alimentacion </label>
             <select class="custom-select " formControlName="alimentacion"  [(ngModel)]="seleccionados1" multiple="multiple" >
             <option [value]="item" *ngFor="let item of lista1">{{item}}</option>
             </select>
@@ -93,6 +85,7 @@
           <hr>
 
           <div class="col-6" >
+            <label class="bmd-label-floating">Refrigerio </label>
             <select  class="custom-select "formControlName="refrigerio"  [(ngModel)]="seleccionados" multiple="multiple" >
             <option [value]="item" *ngFor="let item of lista">{{item}}</option>
             </select>
@@ -174,7 +167,9 @@
 
         </div>
         <button type="button" id="btn-registro" class="btn pull-right btn-primary" (click)="onSubmit()"
-          [disabled]="formGroup.invalid">Registrar</button>
+          [disabled]="formGroup.invalid">
+          <span *ngIf="loading" [disabled]="loading" class="spinner-border spinner-border-sm mr-1"></span>
+          Registrar</button>
         <button type="reset" id="btn-cancelar" class="btn  pull-right">Cancelar</button>
         <div class="clearfix"></div>
       </form>

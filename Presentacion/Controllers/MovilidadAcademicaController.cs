@@ -1,10 +1,13 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Datos;
 using Entity;
 using Logica.SMovilidadAcademica;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
+using Presentacion.Hubs;
 using Presentacion.Models.SMovilidadAcademica;
 using Presentacion.Models.SMovilidadAcademicaModels;
 
@@ -13,12 +16,14 @@ namespace Presentacion.Controllers {
     [ApiController]
     public class MovilidadAcademicaController : ControllerBase {
         private readonly MovilidadAcademicaService _movilidadService;
-        public MovilidadAcademicaController (LogisticaSinuContext context) {
+        private readonly IHubContext<SignalHub> _hubContext;
+        public MovilidadAcademicaController (LogisticaSinuContext context, IHubContext<SignalHub> hubContext) {
             _movilidadService = new MovilidadAcademicaService (context);
+            _hubContext = hubContext;
         }
 
         [HttpPost]
-        public ActionResult<MovilidadAcademicaViewModel> Post (MovilidadAcademicaInputModel movilidadInput) {
+        public async Task<ActionResult<MovilidadAcademicaViewModel>> Post (MovilidadAcademicaInputModel movilidadInput) {
             MovilidadAcademica movilidad = MapearUsuario (movilidadInput);
             var response = _movilidadService.Guardar (movilidad);
             if (response.Error) {
@@ -28,31 +33,33 @@ namespace Presentacion.Controllers {
                 };
                 return BadRequest (problemDetails);
             }
-            return Ok (response.Movilidad);
+            var movilidadView = new MovilidadAcademicaViewModel (response.Movilidad);
+            await _hubContext.Clients.All.SendAsync ("movilidadRegistrada", movilidadView);
+            return Ok (movilidadView);
         }
 
         private MovilidadAcademica MapearUsuario (MovilidadAcademicaInputModel movilidadInput) {
             var movilidad = new MovilidadAcademica {
                 IdMovilidad = movilidadInput.IdMovilidad,
-                    IdCliente = movilidadInput.IdCliente,
-                    NombreCliente = movilidadInput.NombreCliente,
-                    Correo = movilidadInput.Correo,
-                    FechaEvento = movilidadInput.FechaEvento,
-                    FechaSolicitud = movilidadInput.FechaSolicitud,
-                    Destino = movilidadInput.Destino,
-                    NocheAlojamiento = movilidadInput.NocheAlojamiento,
-                    TipoAcomodacion = movilidadInput.TipoAcomodacion,
-                    Transporte = movilidadInput.Transporte,
-                    Alimentacion = movilidadInput.Alimentacion,
-                    AcompanamientoGuia = movilidadInput.AcompanamientoGuia,
-                    SeguroViaje = movilidadInput.SeguroViaje,
-                    OrganizacionAjenda = movilidadInput.OrganizacionAjenda,
-                    VisitaTecnica = movilidadInput.VisitaTecnica,
-                    CostoEntrada = movilidadInput.CostoEntrada,
-                    Objervacion = movilidadInput.Objervacion,
-                    TipoHotel = movilidadInput.TipoHotel,
-                    Refrigerio = movilidadInput.Refrigerio,
-                    Estado = "Sin revisar"
+                IdCliente = movilidadInput.IdCliente,
+                NombreCliente = movilidadInput.NombreCliente,
+                Correo = movilidadInput.Correo,
+                FechaEvento = movilidadInput.FechaEvento,
+                FechaSolicitud = movilidadInput.FechaSolicitud,
+                Destino = movilidadInput.Destino,
+                NocheAlojamiento = movilidadInput.NocheAlojamiento,
+                TipoAcomodacion = movilidadInput.TipoAcomodacion,
+                Transporte = movilidadInput.Transporte,
+                Alimentacion = movilidadInput.Alimentacion,
+                AcompanamientoGuia = movilidadInput.AcompanamientoGuia,
+                SeguroViaje = movilidadInput.SeguroViaje,
+                OrganizacionAjenda = movilidadInput.OrganizacionAjenda,
+                VisitaTecnica = movilidadInput.VisitaTecnica,
+                CostoEntrada = movilidadInput.CostoEntrada,
+                Objervacion = movilidadInput.Objervacion,
+                TipoHotel = movilidadInput.TipoHotel,
+                Refrigerio = movilidadInput.Refrigerio,
+                Estado = "Sin revisar"
             };
             return movilidad;
         }
@@ -71,14 +78,14 @@ namespace Presentacion.Controllers {
             return usuarioViewModel;
         }
 
-         [HttpPut ("{identificacion}")]
+        [HttpPut ("{identificacion}")]
         public ActionResult<MovilidadAcademicaViewModel> Put (string identificacion, MovilidadAcademica movilidad) {
             var id = _movilidadService.BuscarxIdentificacion (movilidad.IdMovilidad);
             if (id == null) {
                 return BadRequest ("No encontrado");
             }
             var response = _movilidadService.Modificar (movilidad);
-            if(response.Error){
+            if (response.Error) {
                 ModelState.AddModelError ("Actualizar Usuario", response.Mensaje);
                 var problemDetails = new ValidationProblemDetails (ModelState) {
                     Status = StatusCodes.Status400BadRequest,

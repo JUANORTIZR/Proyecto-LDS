@@ -8,6 +8,10 @@ using Microsoft.AspNetCore.Mvc;
 using Presentacion.Models;
 using Presentacion.Models.Servicio;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.SignalR;
+using Presentacion.Hubs;
+using System.Threading.Tasks;
+
 namespace Presentacion.Controllers
 {
     [Route("api/[controller]")]
@@ -15,14 +19,16 @@ namespace Presentacion.Controllers
     public class ServicioController:ControllerBase
     {
         private readonly ServicioService _servicioService;
+        private readonly IHubContext<SignalHub> _hubContext;
 
-        public ServicioController(LogisticaSinuContext context)
+        public ServicioController(LogisticaSinuContext context, IHubContext<SignalHub> hubContext)
         {
             _servicioService = new ServicioService(context);
+            _hubContext = hubContext;
         }
 
         [HttpPost]
-        public ActionResult<ServcioViewModel> Post (ServicioInputModel servicioInput) {
+        public async Task<ActionResult<ServcioViewModel>> Post (ServicioInputModel servicioInput) {
             Servicio servicio = MapearUsuario (servicioInput);
             var response = _servicioService.Guardar (servicio);
             if (response.Error) {
@@ -32,7 +38,9 @@ namespace Presentacion.Controllers
                 };
                 return BadRequest (problemDetails);
             }
-            return Ok (response.Servicio);
+            var servicioView = new ServcioViewModel(response.Servicio);
+            await _hubContext.Clients.All.SendAsync("servicioRegistrado", servicioView);
+            return Ok (servicioView);
         }
 
         private Servicio MapearUsuario (ServicioInputModel servicioInput) {
@@ -84,6 +92,7 @@ namespace Presentacion.Controllers
                 };
                 return BadRequest (problemDetails);
             }
+            
             return Ok (response.Servicio);
         }
     }

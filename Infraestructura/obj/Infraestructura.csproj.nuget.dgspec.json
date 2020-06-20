@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\PROYECTO-LDS\\Infraestructura\\Infraestructura.csproj": {}
+    "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Infraestructura\\Infraestructura.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\PROYECTO-LDS\\Entity\\Entity.csproj": {
+    "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Entity\\Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\PROYECTO-LDS\\Entity\\Entity.csproj",
+        "projectUniqueName": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Entity\\Entity.csproj",
         "projectName": "Entity",
-        "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\PROYECTO-LDS\\Entity\\Entity.csproj",
+        "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Entity\\Entity.csproj",
         "packagesPath": "C:\\Users\\JUAN CARLOS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\PROYECTO-LDS\\Entity\\obj\\",
+        "outputPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Entity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\JUAN CARLOS\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -60,14 +60,14 @@
         }
       }
     },
-    "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\PROYECTO-LDS\\Infraestructura\\Infraestructura.csproj": {
+    "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Infraestructura\\Infraestructura.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\PROYECTO-LDS\\Infraestructura\\Infraestructura.csproj",
+        "projectUniqueName": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Infraestructura\\Infraestructura.csproj",
         "projectName": "Infraestructura",
-        "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\PROYECTO-LDS\\Infraestructura\\Infraestructura.csproj",
+        "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Infraestructura\\Infraestructura.csproj",
         "packagesPath": "C:\\Users\\JUAN CARLOS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\PROYECTO-LDS\\Infraestructura\\obj\\",
+        "outputPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Infraestructura\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\JUAN CARLOS\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -81,8 +81,8 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\PROYECTO-LDS\\Entity\\Entity.csproj": {
-                "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\PROYECTO-LDS\\Entity\\Entity.csproj"
+              "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Entity\\Entity.csproj": {
+                "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Entity\\Entity.csproj"
               }
             }
           }

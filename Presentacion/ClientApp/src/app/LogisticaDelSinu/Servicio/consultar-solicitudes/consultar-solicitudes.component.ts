@@ -6,6 +6,8 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
 import { User } from 'src/app/seguridad/user';
 import { Subscription } from 'rxjs';
+import { ModalInfoComponent } from 'src/app/@base/modal-info/modal-info.component';
+import { EnvioService } from 'src/app/services/envio.service';
 
 @Component({
   selector: 'app-consultar-solicitudes',
@@ -19,7 +21,7 @@ export class ConsultarSolicitudesComponent implements OnInit {
   usuario: User = (JSON.parse(localStorage.getItem('currentUser')));
   loading=false;
   suscripcion: Subscription;
-  constructor(private router: Router,private servicioService:ServicioService, private modalService: NgbModal) { }
+  constructor(private router: Router,private servicioService:ServicioService, private modalService: NgbModal, private envio:EnvioService) { }
 
   ngOnInit(): void {
     if(this.usuario.tipo!="admin"){
@@ -43,8 +45,12 @@ export class ConsultarSolicitudesComponent implements OnInit {
     });
     
   }
+  abrir(serivicio:Servicio){
+    this.envio.EnviarServicio(serivicio);
+    this.modalService.open(ModalInfoComponent,{ size: 'lg',centered: true });
+  }
 
-  cambiarEstado(estado:string){
+ /* cambiarEstado(estado:string){
     this.servicio.estado = estado;
     this.servicioService.put(this.servicio).subscribe(s => {
       if(s != null){
@@ -54,5 +60,5 @@ export class ConsultarSolicitudesComponent implements OnInit {
         messageBox.componentInstance.message = 'Estado de solicitud actualizada';
       }
     });
-  }
+  }*/
 }

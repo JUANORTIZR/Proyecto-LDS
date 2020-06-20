@@ -131,7 +131,7 @@ export class SolitudServicioComponent implements OnInit {
           this.loading = false;
           const messageBox = this.modalService.open(AlertModalComponent)
           messageBox.componentInstance.title = "Resultado Operación";
-          messageBox.componentInstance.message = 'Su solicitud de servicio ha sido registrada con exito!!!';
+          messageBox.componentInstance.message = `Su solicitud de servicio ha sido registrada con exito, pronto le notificaremos el estado de su solicitud`;
          this.servicio = s;
          this.buildForm();
          this.servicioService.getCantidad(this.usuario.identificacion).subscribe(c => {

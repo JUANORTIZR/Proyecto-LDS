@@ -1,18 +1,59 @@
 
+<div class="modal-header" id="encabezado">
 
-        <div class="modal-header">
-            <h5 class="modal-title">Informacion del servicio</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <div class="modal-body">
-            <span [innerHTML]="imagen"></span>
-            <h5 class="modal-title">{{titulo}}</h5>
-            <span [innerHTML]="mensaje"></span>
-        </div>
-        <div class="modal-footer">
+    <h4 class="modal-title">Informacion de servicio</h4>
 
-            <button type="button" class="btn btn-primary">Solicitar servicio</button>
-        </div>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
 
+        <span aria-hidden="true">&times;</span>
+
+    </button>
+
+</div>
+<div class="modal-body">
+        <h3 id="titulo" class="text-center">Solicitud de servicio:</h3><br>
+        <div class="container">
+          <div class="row">
+            <p class="col-4"><b>Identificacion del cliente:</b> {{servicio.idCliente}}</p>
+            <p class="col-sm-4"><b>Nombre del cliente:</b> {{servicio.nombreCliente}}</p>
+            <p class="col-sm-4"><b>Fecha del evento:</b> {{servicio.fechaEvento|date: 'dd/MM/yy'}}</p>      
+          </div>
+          <div class="row">
+            <p class="col-4"><b>Id servicio:</b> {{servicio.idServicio}}</p>
+            <p class="col-sm-4"><b>fecha de la solicitud:</b> {{servicio.fechaSolicitud|date: 'dd/MM/yy'}}</p>
+            <p class="col-4"><b>Estado:</b> {{servicio.estado}}</p>
+          </div>
+          <div class="row">
+            <p class="col-6"><b>Servicio solicitado:</b> {{servicio.tipoServicio}}</p>
+          </div>
+          <h5 id="titulo" class="text-center">Servicios adicionales</h5><br>
+          <div class="row">
+            <p class="col-4"><b>Refrigerio:</b>{{servicio.refrigerio}}</p>
+            <p class="col-4"><b>Ponentes: </b>{{servicio.ponentes}}</p>
+            <p class="col-4"><b>Logistica completa:</b> {{servicio.logisticaCompleta}}</p>
+          </div>
+          <div class="row">
+            <p class="col-10"><b>Observacion:</b></p>
+          </div>
+          <div class="row">
+            <p class="col-10"> {{servicio.observacion}}</p>
+          </div>
+          <div class="row">
+            <p class="col-10"><b>Descripcion:</b></p>
+          </div>
+          <div class="row">
+            <p class="col-12"> {{servicio.descripcion}}</p>
+            
+          </div>
+        </div>
+      </div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Cerrar</button>
+    <button type="button" *ngIf="usuario.tipo=='admin'" class="btn btn-primary" data-dismiss="modal"  (click)="cambiarEstado('Rechazada')" [disabled]="loading || loading1">
+        <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+        Rechazar</button>
+    <button type="button" *ngIf="usuario.tipo=='admin'" class="btn btn-primary" data-dismiss="modal"  (click)="cambiarEstado('Aceptada')" [disabled]="loading || loading1">
+        <span *ngIf="loading1" class="spinner-border spinner-border-sm mr-1"></span>
+        Aceptar</button>
+</div>

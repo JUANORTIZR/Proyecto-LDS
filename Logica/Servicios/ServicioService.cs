@@ -42,7 +42,7 @@ namespace Logica.Servicios {
                 "Gracias por preferirnos al momento de organizar y realizar sus eventos académicos. <br>"+
                 $"Tenemos el gusto de informarle que su solicitud de servicio número {numero} fue registrada con éxito.<br>"+
                 "También puede consultar el estado de su solicitud en nuestro aplicativo web a través del siguiente enlace.<br>"+
-                "<a href='https://logisticadelsinu.azurewebsites.net/usuarioServicioConsulta'>Mis servicios</a>";
+                "<a href='https://logisticaeducativadelsinu.azurewebsites.net/usuarioServicioConsulta'>Mis servicios</a>";
             }
             if(tipo == "Aceptada"){
                 return "<b>¡¡Bienvenido a logística educativa del Sinú¡¡</b><br>"+
@@ -50,14 +50,14 @@ namespace Logica.Servicios {
                 "Gracias por preferirnos al momento de organizar y realizar sus eventos académicos.<br>"+
                 $"Tenemos el gusto de informarle que su solicitud de servicio número {numero} fue <b>aceptada</b>."+
                 "Para mayor información visite nuestra aplicación web a través de siguiente enlace.<br>"+
-                "<a href='https://logisticadelsinu.azurewebsites.net/usuarioServicioConsulta'>Mis servicios</a>";
+                "<a href='https://logisticaeducativadelsinu.azurewebsites.net/usuarioServicioConsulta'>Mis servicios</a>";
             }
             return "<b>¡¡Bienvenido a logística educativa del Sinú¡¡</b><br>"+
             $"Hola {nombre}<br>"+
             "Gracias por preferirnos al momento de organizar y realizar sus eventos académicos.<br>"+
             $"Le informamos que su solicitud de servicio número {numero} fue rechazada por el momento no podemos ofrecerle nuestros servicios.<br>"+
             "Para mayor información o si desea agendar una nueva solicitud de servicio visite nuestra aplicación web a través de siguiente enlace.<br>"+
-            "<a href='https://logisticadelsinu.azurewebsites.net/usuarioServicioConsulta'>Mis servicios</a>";
+            "<a href='https://logisticaeducativadelsinu.azurewebsites.net/usuarioServicioConsulta'>Mis servicios</a>";
 
         }
 

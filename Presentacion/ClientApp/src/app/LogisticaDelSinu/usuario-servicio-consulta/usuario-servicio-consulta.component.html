@@ -1,5 +1,4 @@
 
-
 <div class="row">
   <div class="col-6">
     <input [(ngModel)]="searchText" type="text" class="form-control" placeholder="Buscar Restaurantes">
@@ -19,92 +18,28 @@
             <thead class=" text-primary">
               <th scope="row">#</th>
               <th>Id Servicio</th>
-              <th>Identificacion del Cliente</th>
               <th>Fecha del evento</th>
               <th>Fehca de la solicitud</th>
               <th>Servicio</th>
-              <th>Refrijerio</th>
-              <th>Ponentes</th>
-              <th>Logistica completa</th>
               <th>Estado</th>
               <th>Accion</th>
             </thead>
             <tbody>
-              <tr *ngFor='let serivicio of servicios|filtroServicioo:searchText; index as i'>
+              
+              <tr *ngFor='let servicio of servicios|filtroServicioo:searchText; index as i'>
                 <th scope="row">{{i+1}}</th>
-                <td>{{serivicio.idServicio}}</td>
-                <td>{{serivicio.idCliente}} </td>
-                <td>{{serivicio.fechaEvento|date:'dd-MM-yyyy'}} </td>
-                <td>{{serivicio.fechaSolicitud|date:'dd-MM-yyyy'}}</td>
-                <td>{{serivicio.tipoServicio}}</td>
-                <td>{{serivicio.refrigerio}}</td>
-                <td>{{serivicio.ponentes}}</td>
-                <td>{{serivicio.logisticaCompleta}}</td>
-                <td>{{serivicio.estado}}</td>
+                <td>{{servicio.idServicio}}</td>
+                <td>{{servicio.fechaEvento|date:'dd-MM-yyyy'}} </td>
+                <td>{{servicio.fechaSolicitud|date:'dd-MM-yyyy'}}</td>
+                <td>{{servicio.tipoServicio}}</td>
+                <td>{{servicio.estado}}</td>
                 <td><a href="#" data-toggle="modal" data-target="#infoSeminarios"
-                    (click)="consultarPorId(serivicio.idServicio)" type="button" class="btn btn-primary">Ver
+                    (click)="abrir(servicio)" type="button" class="btn btn-primary">Ver
                     solicitud</a></td>
               </tr>
             </tbody>
           </table>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-<!-- Modals Seminarios -->
-
-<div name="padre" class="modal fade" id="infoSeminarios" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header" id="encabezado">
-        <h5 class="modal-title" id="exampleModalLabel">Informacion del servicio</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h3 id="titulo" class="text-center">Solicitud de servicio</h3><br>
-        <div class="container">
-          <div class="row">
-            <p class="col-sm-5">Fecha del evento: {{servicio.fechaEvento|date:'dd-MM-yyyy'}}</p>
-            <p class="col-sm-5">fecha de la solicitud: {{servicio.fechaSolicitud|date:'dd-MM-yyyy'}}</p>
-          </div>
-          <div class="row">
-            <p class="col-4">Id servicio: {{servicio.idServicio}}</p>
-            <p class="col-4">Idcliente: {{servicio.idCliente}}</p>
-            <p class="col-4">Estado: {{servicio.estado}}</p>
-          </div>
-          <div class="row">
-            <p class="col-6">Servicio solicitado: {{servicio.tipoServicio}}</p>
-          </div>
-          <h5 id="titulo" class="text-center">Servicios adicionales</h5><br>
-          <div class="row">
-            <p class="col-3">Refrigerio:{{servicio.refrigerio}}</p>
-            <p class="col-3">Ponentes: {{servicio.ponentes}}</p>
-            <p class="col-3">Logistica completa: {{servicio.logisticaCompleta}}</p>
-          </div>
-          <div class="row">
-            <p class="col-10">Observacion:</p>
-          </div>
-          <div class="row">
-            <p class="col-10"> {{servicio.observacion}}</p>
-          </div>
-          <div class="row">
-            <p class="col-10">Descripcion:</p>
-          </div>
-          <div class="row">
-            <p class="col-12"> {{servicio.descripcion}}</p>
-            
-          </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
       </div>
     </div>
   </div>

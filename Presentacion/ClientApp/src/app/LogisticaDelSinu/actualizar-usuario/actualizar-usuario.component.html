@@ -116,7 +116,7 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label class="bmd-label-floating">Nombre de usuario</label>
-                                        <input type="text" class="form-control" formControlName="usuario"
+                                        <input type="text" class="form-control" formControlName="usuario" readonly
                                             [ngClass]="{ 'is-invalid': control.usuario.errors && control.usuario.touched}"
                                             placeholder="Nombre usuario para inicio de sesión">
                                         <div *ngIf="control.usuario.errors && control.usuario.touched"

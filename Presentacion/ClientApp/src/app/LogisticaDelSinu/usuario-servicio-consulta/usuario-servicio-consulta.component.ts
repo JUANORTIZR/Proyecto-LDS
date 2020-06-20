@@ -4,6 +4,8 @@ import { UsuarioService } from 'src/app/services/usuario.service';
 import { ServicioService } from 'src/app/services/servicio.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AlertModalComponent } from 'src/app/@base/alert-modal/alert-modal.component';
+import { ModalInfoComponent } from 'src/app/@base/modal-info/modal-info.component';
+import { EnvioService } from 'src/app/services/envio.service';
 
 @Component({
   selector: 'app-usuario-servicio-consulta',
@@ -14,8 +16,8 @@ export class UsuarioServicioConsultaComponent implements OnInit {
   servicios:Servicio[];
   searchText:string;
   servicio:Servicio;
-
-  constructor(private usuarioService:UsuarioService,private servicioService:ServicioService, private modalService: NgbModal) { }
+  
+  constructor(private envio:EnvioService,private usuarioService:UsuarioService,private servicioService:ServicioService, private modalService: NgbModal) { }
 
   ngOnInit(): void {
     var usuario = (JSON.parse(localStorage.getItem('currentUser')));
@@ -23,9 +25,22 @@ export class UsuarioServicioConsultaComponent implements OnInit {
       this.servicios = s.servicios;
     });
   }
-  consultarPorId(id:string){
-    this.servicioService.get(id).subscribe(s => {
-      this.servicio = s;
-    });
+
+  abrir(servicio:Servicio){
+    this.envio.EnviarServicio(servicio);
+    const messageBox = this.modalService.open(ModalInfoComponent, { size: 'lg',centered: true })
+    
+    /* messageBox.componentInstance.idServicio = idservicio;
+    messageBox.componentInstance.fechaEvento = "HOy";
+    messageBox.componentInstance.fechaSolicitud = "HOY";
+    messageBox.componentInstance.idCliente = "12312";
+    messageBox.componentInstance.estado = "asdfasdf";
+    messageBox.componentInstance.tipoServicio = "fadsfasdf";
+    messageBox.componentInstance.refrigerio = "afsldkjfñasd";
+    messageBox.componentInstance.ponentes = "asdñlfkjasdñf";
+    messageBox.componentInstance.logisticaCompleta = "asldkfjñalksdfj";
+    messageBox.componentInstance.observacion = "añsldkfjñas0";
+    messageBox.componentInstance.descripcion = "0asdasd";*/
   }
+  
 }

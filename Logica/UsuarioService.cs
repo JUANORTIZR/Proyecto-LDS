@@ -42,7 +42,7 @@ namespace Logica {
             return $"<b>¡¡Bienvenido a logística educativa del Sinú¡¡</b><br>"+
                 $"Le informamos que el usuario {nombre} se ha registrado satisfactoriamente.<br><br><br>"+
                 
-                "Acceso a tu cuenta<br><br> para realizar cambios en la cuenta en cualquier momento inicia sesión en nuestra aplicación web <a href='https://logisticadelsinu.azurewebsites.net' >Logistica educativa del sinú</a>"+
+                "Acceso a tu cuenta<br><br> para realizar cambios en la cuenta en cualquier momento inicia sesión en nuestra aplicación web <a href='https://logisticaeducativadelsinu.azurewebsites.net' >Logistica educativa del sinú</a>"+
                 "<br><br>Desde aquí podrás acceder a la aplicación, para actualizar la información<br> de tu cuenta y los ajustes de seguridad.";
         }
 
@@ -93,7 +93,6 @@ namespace Logica {
                     personaVieja.SegundoApellido = usuarioNuevo.SegundoApellido;
                     personaVieja.Telefono = usuarioNuevo.Telefono;
                     personaVieja.Correo = usuarioNuevo.Correo;
-                    personaVieja.Usuario = usuarioNuevo.Usuario;
                     personaVieja.Password = usuarioNuevo.Password;
                     _Context.Users.Update (personaVieja);
                     _Context.SaveChanges ();

@@ -121,11 +121,11 @@ export class SolitudServicioComponent implements OnInit {
     this.servicio = this.formGroup.value;
     this.servicio.fechaSolicitud = new Date();
     this.servicio.correo = this.usuario.correo;
-    this.servicio.nombreCliente = this.usuario.primerNombre;
+    this.servicio.nombreCliente = this.usuario.primerNombre +" "+ this.usuario.primerApellido;
     this.servicio.refrigerio = this.refrigerio;
     this.servicio.ponentes = this.ponente;
     this.servicio.logisticaCompleta = this.logistica;
-    this.servicio.idCliente = this.usuario.identificacion;
+    this.servicio.idCliente = this.usuario.identificacion ;
       this.servicioService.post(this.servicio).subscribe(s => {
         if (s != null) {
           this.loading = false;

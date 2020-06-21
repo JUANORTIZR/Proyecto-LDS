@@ -1,4 +1,3 @@
-<p>consultar-movilidades works!</p>
 <div class="row">
     <div class="col-6">
         <input [(ngModel)]="searchText" type="text" class="form-control" placeholder="Buscar Restaurantes">
@@ -18,12 +17,11 @@
                         <thead class=" text-primary">
                             <th scope="row">#</th>
                             <th>IdMovilidad</th>
-                            <th>IdCliente</th>
+                            <th>Identificacion del cliente</th>
+                            <th>Nombre del cliente</th>
                             <th>Fecha evento</th>
                             <th>Fecha solicitud</th>
                             <th>Destino</th>
-                            <th>Transporte</th>
-                            <th>Seguro Viaje</th>
                             <th>Estado</th>
                             <th>Accion</th>
                         </thead>
@@ -32,14 +30,13 @@
                                 <th scope="row">{{i+1}}</th>
                                 <td>{{movilidad.idMovilidad}}</td>
                                 <td>{{movilidad.idCliente}} </td>
+                                <td>{{movilidad.nombreCliente}}</td>
                                 <td>{{movilidad.fechaEvento|date:'dd-MM-yyyy'}} </td>
                                 <td>{{movilidad.fechaSolicitud|date:'dd-MM-yyyy'}}</td>
                                 <td>{{movilidad.destino}}</td>
-                                <td>{{movilidad.transporte}}</td>
-                                <td>{{movilidad.seguroViaje}}</td>
                                 <td>{{movilidad.estado}}</td>
                                 <td><a href="#" data-toggle="modal" data-target="#infoSeminarios"
-                                        (click)="consultarPorId(movilidad.idMovilidad)" type="button"
+                                        (click)="abrir(movilidad)" type="button"
                                         class="btn btn-primary">Ver
                                         solicitud</a></td>
                             </tr>
@@ -51,7 +48,7 @@
     </div>
 </div>
 
-<!-- Modals Seminarios -->
+<!-- Modals Seminarios 
 
 <div name="padre" class="modal fade" id="infoSeminarios" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
@@ -117,3 +114,4 @@
         </div>
     </div>
 </div>
+-->

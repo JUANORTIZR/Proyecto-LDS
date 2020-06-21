@@ -1,0 +1,68 @@
+<div class="modal-header" id="encabezado">
+
+    <h4 class="modal-title">Informacion de servicio</h4>
+
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+
+        <span aria-hidden="true">&times;</span>
+
+    </button>
+
+</div>
+
+<div class="modal-body">
+    <h3 id="titulo" class="text-center">Solicitud de Movilidad academica</h3><br>
+    <div class="container">
+        <div class="row">
+            <p class="col-4"><b>Identificacion del cliente:</b> {{movilidad.idCliente}}</p>
+            <p class="col-4"><b>Nombre de cliente:</b> {{movilidad.nombreCliente}}</p>
+            <p class="col-4"><b>Fecha de la solicitud:</b> {{movilidad.fechaSolicitud|date:'dd-MM-yyyy'}}</p>
+        </div>
+        <div class="row">
+            <p class="col-4"><b>Id servicio:</b> {{movilidad.idMovilidad}}</p>
+            <p class="col-4"><b>Fecha del evento:</b> {{movilidad.fechaEvento|date:'dd-MM-yyyy'}}</p>
+            <p class="col-4"><b>Estado:</b> {{movilidad.estado}}</p>
+        </div>
+        <div class="row">
+            <p class="col-6"><b>Destino:</b> {{movilidad.destino}}</p>
+            <p class="col-6"><b>Transporte:</b> {{movilidad.transporte}}</p>
+        </div>
+        <div class="row">
+            <p class="col-6"><b>Noches de alojamiento:</b> {{movilidad.nocheAlojamiento}}</p>
+            <p class="col-6"><b>Tipo acomodacion:</b> {{movilidad.tipoAcomodacion}}</p>
+        </div>
+        <div class="row">
+            <p class="col-6"><b>Tipo de hotel:</b> {{movilidad.tipoHotel}}</p>
+            <p class="col-6"><b>Seguro de viaje:</b> {{movilidad.seguroViaje}}</p>
+        </div>
+        <h5 id="titulo" class="text-center">Servicios adicionales</h5><br>
+        <div class="row">
+            <p class="col-4"><b>Refrigerio:</b> {{movilidad.refrigerio}}</p>
+            <p class="col-4"><b>Organizacion de agenda:</b> {{movilidad.organizacionAjenda}}</p>
+            <p class="col-4"><b>Visita tecnica:</b> {{movilidad.visitaTecnica}}</p>
+        </div>
+        <div class="row">
+            <p class="col-4"><b>Acompañamiento guia:</b> {{movilidad.acompanamientoGuia}}</p>
+            <p class="col-4"><b>Alimentacion:</b> {{movilidad.alimentacion}}</p>
+            <p class="col-4"><b>costo por entrada:</b> {{movilidad.costoEntrada}}</p>
+        </div>
+        <div class="row">
+            <p class="col-10"><b>Observacion:</b></p>
+        </div>
+        <div class="row">
+            <p class="col-10"> {{movilidad.objervacion}}</p>
+        </div>
+    </div>
+</div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Cerrar</button>
+    <button type="button" *ngIf="usuario.tipo=='admin'" class="btn btn-primary" data-dismiss="modal"
+        (click)="cambiarEstado('Rechazada')" [disabled]="loading || loading1">
+        <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+        Rechazar</button>
+    <button type="button" *ngIf="usuario.tipo=='admin'" class="btn btn-primary" data-dismiss="modal"
+        (click)="cambiarEstado('Aceptada')" [disabled]="loading || loading1">
+        <span *ngIf="loading1" class="spinner-border spinner-border-sm mr-1"></span>
+        Aceptar</button>
+</div>

@@ -104,7 +104,7 @@
                 <p>Solicitud Servicio</p>
               </a>
             </li>
-            <li class="nav-item " >
+            <li class="nav-item ">
               <a class="nav-link" *ngIf="currentUser" [routerLink]="['/usuarioServicioConsulta']">
                 <i class="material-icons">content_paste</i>
                 <p>Mis Solicitudes</p>
@@ -126,9 +126,6 @@
 
           </ul>
         </li>
-
-
-
         <li class="nav-item" *ngIf="currentUser && currentUser.tipo=='admin'">
           <a href="#SubTransporte" [routerLinkActive]="['link-active']" (click)="show4=!show4" data-toggle="collapse"
             aria-expanded="false" class="nav-link ">
@@ -218,7 +215,7 @@
             <p>Perfil</p>
           </a>
         </li>
-       
+
       </ul>
     </div>
   </div>
@@ -256,7 +253,7 @@
                 cerrar sesión
               </a>
             </li>
-            
+
           </ul>
         </div>
       </div>

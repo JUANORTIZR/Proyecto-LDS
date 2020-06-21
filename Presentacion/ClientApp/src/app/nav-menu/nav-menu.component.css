@@ -28,7 +28,7 @@ html {
     font-size: 16px;
   }
 }
-#SubHoteles, #SubUsuario, #SubRestaurantes, #SubTransporte {
+#SubHoteles, #SubUsuario, #SubRestaurantes, #SubTransporte,#SubUtilidades,#SubServicios,#SubSolicitudes {
   border-radius: 10px;
   padding-left: 15px;
 }

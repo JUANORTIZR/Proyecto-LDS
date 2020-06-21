@@ -49,16 +49,4 @@ export class ConsultarSolicitudesComponent implements OnInit {
     this.envio.EnviarServicio(serivicio);
     this.modalService.open(ModalInfoComponent,{ size: 'lg',centered: true });
   }
-
- /* cambiarEstado(estado:string){
-    this.servicio.estado = estado;
-    this.servicioService.put(this.servicio).subscribe(s => {
-      if(s != null){
-        this.servicio = s;
-        const messageBox = this.modalService.open(AlertModalComponent)
-        messageBox.componentInstance.title = "Resultado Operación";
-        messageBox.componentInstance.message = 'Estado de solicitud actualizada';
-      }
-    });
-  }*/
 }

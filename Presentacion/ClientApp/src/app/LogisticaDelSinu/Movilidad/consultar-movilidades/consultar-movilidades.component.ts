@@ -5,6 +5,8 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { AlertModalComponent } from 'src/app/@base/alert-modal/alert-modal.component';
 import { Router } from '@angular/router';
 import { User } from 'src/app/seguridad/user';
+import { EnvioService } from 'src/app/services/envio.service';
+import { ModalInfoMovilidadComponent } from 'src/app/@base/modal-info-movilidad/modal-info-movilidad.component';
 
 @Component({
   selector: 'app-consultar-movilidades',
@@ -16,7 +18,7 @@ export class ConsultarMovilidadesComponent implements OnInit {
   searchText:string;
   movilidad:Movilidad;
   usuario: User = (JSON.parse(localStorage.getItem('currentUser')));
-  constructor(private router: Router,private movilidadService:MovilidadService, private modalService: NgbModal) { }
+  constructor(private envio:EnvioService,private router: Router,private movilidadService:MovilidadService, private modalService: NgbModal) { }
 
   ngOnInit(): void {
     if(this.usuario.tipo!="admin"){
@@ -39,16 +41,9 @@ export class ConsultarMovilidadesComponent implements OnInit {
     });
   }
 
-  cambiarEstado(estado:string){
-    this.movilidad.estado = estado;
-    this.movilidadService.put(this.movilidad).subscribe(m => {
-      if(m != null){
-        this.movilidad = m;
-        const messageBox = this.modalService.open(AlertModalComponent)
-        messageBox.componentInstance.title = "Resultado Operación";
-        messageBox.componentInstance.message = 'Estado de solicitud actualizada';
-      }
-    });
+  abrir(movilidad:Movilidad){
+    this.envio.EnviarMovilidad(movilidad);
+    this.modalService.open(ModalInfoMovilidadComponent, {size: 'lg', centered:true});
   }
   
 

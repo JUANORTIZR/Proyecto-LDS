@@ -3,6 +3,8 @@ import { Movilidad } from '../Models/movilidad';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { MovilidadService } from 'src/app/services/movilidad.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { EnvioService } from 'src/app/services/envio.service';
+import { ModalInfoMovilidadComponent } from 'src/app/@base/modal-info-movilidad/modal-info-movilidad.component';
 
 @Component({
   selector: 'app-usuario-movilidad-consulta',
@@ -13,7 +15,7 @@ export class UsuarioMovilidadConsultaComponent implements OnInit {
   movilidades:Movilidad[];
   searchText:string;
   movilidad:Movilidad;
-  constructor(private usuarioService:UsuarioService,private movilidadService:MovilidadService, private modalService: NgbModal) { }
+  constructor(private envio:EnvioService,private usuarioService:UsuarioService,private movilidadService:MovilidadService, private modalService: NgbModal) { }
 
   ngOnInit(): void {
     var usuario = (JSON.parse(localStorage.getItem('currentUser')));
@@ -27,4 +29,8 @@ export class UsuarioMovilidadConsultaComponent implements OnInit {
     });
   }
 
+  abrir(movilidad:Movilidad){
+    this.envio.EnviarMovilidad(movilidad);
+    this.modalService.open(ModalInfoMovilidadComponent, {size: 'lg', centered:true});
+  }
 }

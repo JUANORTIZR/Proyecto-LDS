@@ -17,12 +17,10 @@
                         <thead class=" text-primary">
                             <th scope="row">#</th>
                             <th>IdMovilidad</th>
-                            <th>IdCliente</th>
+                            <th>Identificacion del cliente</th>
                             <th>Fecha evento</th>
                             <th>Fecha solicitud</th>
                             <th>Destino</th>
-                            <th>Transporte</th>
-                            <th>Seguro Viaje</th>
                             <th>Estado</th>
                             <th>Accion</th>
                         </thead>
@@ -34,11 +32,9 @@
                                 <td>{{movilidad.fechaEvento|date:'dd-MM-yyyy'}} </td>
                                 <td>{{movilidad.fechaSolicitud|date:'dd-MM-yyyy'}}</td>
                                 <td>{{movilidad.destino}}</td>
-                                <td>{{movilidad.transporte}}</td>
-                                <td>{{movilidad.seguroViaje}}</td>
                                 <td>{{movilidad.estado}}</td>
                                 <td><a href="#" data-toggle="modal" data-target="#infoSeminarios"
-                                        (click)="consultarPorId(movilidad.idMovilidad)" type="button"
+                                        (click)="abrir(movilidad)" type="button"
                                         class="btn btn-primary">Ver
                                      
                                         solicitud</a></td>
@@ -46,68 +42,6 @@
                         </tbody>
                     </table>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modals Seminarios -->
-
-<div name="padre" class="modal fade" id="infoSeminarios" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header" id="encabezado">
-                <h5 class="modal-title" id="exampleModalLabel">Informacion del servicio</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <h3 id="titulo" class="text-center">Solicitud de Movilidad academica</h3><br>
-                <div class="container">
-                    <div class="row">
-                        <p class="col-sm-5">Fecha del evento: {{movilidad.fechaEvento|date:'dd-MM-yyyy'}}</p>
-                        <p class="col-sm-5">fecha de la solicitud: {{movilidad.fechaSolicitud|date:'dd-MM-yyyy'}}</p>
-                    </div>
-                    <div class="row">
-                        <p class="col-5">Id servicio: {{movilidad.idMovilidad}}</p>
-                        <p class="col-5">Idcliente: {{movilidad.idCliente}}</p>
-                        <p class="col-4">Estado: {{movilidad.estado}}</p>
-                    </div>
-                    <div class="row">
-                        <p class="col-6">Destino: {{movilidad.destino}}</p>
-                        <p class="col-6">Transporte: {{movilidad.transporte}}</p>
-                    </div>
-                    <div class="row">
-                        <p class="col-6">Noches de alojamiento: {{movilidad.nocheAlojamiento}}</p>
-                        <p class="col-6">Tipo acomodacion: {{movilidad.tipoAcomodacion}}</p>
-                    </div>
-                    <div class="row">
-                        <p class="col-6">Tipo de hotel: {{movilidad.tipoHotel}}</p>
-                        <p class="col-6">Seguro de viaje: {{movilidad.seguroViaje}}</p>
-                    </div>
-                    <h5 id="titulo" class="text-center">Servicios adicionales</h5><br>
-                    <div class="row">
-                        <p class="col-3">Refrigerio: {{movilidad.refrigerio}}</p>
-                        <p class="col-3">Organizacion de agenda: {{movilidad.organizacionAjenda}}</p>
-                        <p class="col-3">Visita tecnica: {{movilidad.visitaTecnica}}</p>
-                    </div>
-                    <div class="row">
-                        <p class="col-3">Acompañamiento guia: {{movilidad.acompanamientoGuia}}</p>
-                        <p class="col-3">Alimentacion: {{movilidad.alimentacion}}</p>
-                        <p class="col-3">costo por entrada: {{movilidad.costoEntrada}}</p>
-                    </div>
-                    <div class="row">
-                        <p class="col-10">Observacion:</p>
-                    </div>
-                    <div class="row">
-                        <p class="col-10"> {{movilidad.objervacion}}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
             </div>
         </div>
     </div>

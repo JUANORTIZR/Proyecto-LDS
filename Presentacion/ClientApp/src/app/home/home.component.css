@@ -9,7 +9,17 @@
     background: none;
     color: blue;
     position: right;
-  }
+}
+
+.carousel-inner > .carousel-item > img {
+  object-fit: scale-down;
+  height: 50vh;
+  width: 100%;
+} 
+
+.float-left{
+  margin-left: 650px;
+}
 
 /*.subtitulo{
   font-family: Lato, sans-serif;

@@ -29,18 +29,6 @@ export class UsuarioServicioConsultaComponent implements OnInit {
   abrir(servicio:Servicio){
     this.envio.EnviarServicio(servicio);
     const messageBox = this.modalService.open(ModalInfoComponent, { size: 'lg',centered: true })
-    
-    /* messageBox.componentInstance.idServicio = idservicio;
-    messageBox.componentInstance.fechaEvento = "HOy";
-    messageBox.componentInstance.fechaSolicitud = "HOY";
-    messageBox.componentInstance.idCliente = "12312";
-    messageBox.componentInstance.estado = "asdfasdf";
-    messageBox.componentInstance.tipoServicio = "fadsfasdf";
-    messageBox.componentInstance.refrigerio = "afsldkjfñasd";
-    messageBox.componentInstance.ponentes = "asdñlfkjasdñf";
-    messageBox.componentInstance.logisticaCompleta = "asldkfjñalksdfj";
-    messageBox.componentInstance.observacion = "añsldkfjñas0";
-    messageBox.componentInstance.descripcion = "0asdasd";*/
   }
   
 }

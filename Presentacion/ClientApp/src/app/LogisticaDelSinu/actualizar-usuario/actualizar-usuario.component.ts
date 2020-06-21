@@ -42,7 +42,7 @@ export class ActualizarUsuarioComponent implements OnInit {
       correo: [this.usuario.correo, [Validators.required, Validators.email]],
       usuario: [this.usuario.usuario, [Validators.required]],
       password: [this.usuario.password, [Validators.required, Validators.minLength(6)]],
-      confirmacionClave: ["", [Validators.required, this.ClaveConfirmada('clave')]]
+      confirmacionClave: ["", [Validators.required, this.ClaveConfirmada('password')]]
     });
   }
 

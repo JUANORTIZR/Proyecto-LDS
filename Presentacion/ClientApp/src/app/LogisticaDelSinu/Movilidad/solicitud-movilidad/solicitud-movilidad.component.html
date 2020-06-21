@@ -5,7 +5,7 @@
       <p class="card-category">Movilidad Academica Nacional e Internacional</p>
     </div>
     <div class="card-body">
-      <form [formGroup]="formGroup" id="contenedor" >
+      <form [formGroup]="formGroup" id="contenedor">
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
@@ -14,7 +14,7 @@
             </div>
           </div>
         </div>
-        <div class="row"> 
+        <div class="row">
           <div class="col-md-6">
             <div class="form-group">
               <label class="bmd-label-floating">Destino</label>
@@ -38,7 +38,7 @@
           </div>
 
 
-         <div class="col-md-6">
+          <div class="col-md-6">
             <div class="form-group">
               <label class="bmd-label-floating">Tipo de Acomodacion</label>
               <select (change)="cambiarTipoAcomodacion($event)" class="custom-select" formControlName="tipoAcomodacion">
@@ -76,20 +76,21 @@
           </div>
           <div class="col-6">
             <label class="bmd-label-floating">Pla de alimentacion </label>
-            <select class="custom-select " formControlName="alimentacion"  [(ngModel)]="seleccionados1" multiple="multiple" >
-            <option [value]="item" *ngFor="let item of lista1">{{item}}</option>
+            <select class="custom-select " formControlName="alimentacion" [(ngModel)]="seleccionados1"
+              multiple="multiple">
+              <option [value]="item" *ngFor="let item of lista1">{{item}}</option>
             </select>
-                                    
+
           </div>
 
           <hr>
 
-          <div class="col-6" >
+          <div class="col-6">
             <label class="bmd-label-floating">Refrigerio </label>
-            <select  class="custom-select "formControlName="refrigerio"  [(ngModel)]="seleccionados" multiple="multiple" >
-            <option [value]="item" *ngFor="let item of lista">{{item}}</option>
+            <select class="custom-select " formControlName="refrigerio" [(ngModel)]="seleccionados" multiple="multiple">
+              <option [value]="item" *ngFor="let item of lista">{{item}}</option>
             </select>
-                                    
+
           </div>
           <hr>
           <hr>
@@ -176,3 +177,24 @@
     </div>
   </div>
 </div>
+<hr>
+<footer class="footer">
+  <div class="container-fluid">
+    <nav class="float-left">
+      <ul>
+        <li>
+          <a href="https://m.facebook.com/110112510465976">
+            <i class="fab fa-facebook"></i>
+            Facebook
+          </a>
+        </li>
+        <li>
+          <a href="mailto:logisticaeducativadel@gmail.com">
+            <i class="fas fa-envelope"></i>
+            Email
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>

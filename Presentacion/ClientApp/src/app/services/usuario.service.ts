@@ -48,7 +48,7 @@ export class UsuarioService {
   }
 
   put(usuario: User): Observable<User> {
-    const url = `${this.baseUrl + 'api/Usuario'}/${usuario.identificacion}`;
+    const url = `${this.baseUrl + 'api/Usuario'}/${usuario.usuario}`;
     return this.http.put<User>(url, usuario, httpOptions)
     .pipe(
       tap(_ => this.handleErrorService.log('datos enviados')),

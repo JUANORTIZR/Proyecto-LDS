@@ -1,39 +1,41 @@
 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <div id="home" class="container-fluid">
-
         <div class="container">
             <div class="row">
                 <div class="col-sm-4 login-box">
                     <div class="title-box">
                         <h2>Inicio de sesión</h2>
-                        <p>Por favor, introduzca sus datos de inicio de sesión !</p>
+                        <p>Por favor, ingrese sus datos de inicio de sesión !</p>
                     </div>
                     <div class="row">
-                        <input id="txtEmail" formControlName="usuario" [ngClass]="{ 'is-invalid': submitted && f.usuario.errors }" type="text" placeholder="Introduzca numero de identificacion"
-                            class="form-control inpt-sm">
-                            <div *ngIf="submitted && f.usuario.errors" class="invalid-feedback">
-                                <div *ngIf="f.usuario.errors.required">el usuario es requerido</div>
-                            </div>
+                        <input id="txtEmail" formControlName="usuario"
+                            [ngClass]="{ 'is-invalid': submitted && f.usuario.errors }" type="text"
+                            placeholder="Introduzca nombre de usuario" class="form-control inpt-sm">
+                        <div *ngIf="submitted && f.usuario.errors" class="invalid-feedback">
+                            <div *ngIf="f.usuario.errors.required">El usuario es requerido</div>
+                        </div>
                     </div>
                     <div class="row">
-                        <input id="txtpassword" type="password" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors}" placeholder="Introduzca la contraseña"
-                            class="form-control inpt-sm">
-                            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-                                <div *ngIf="f.password.errors.required">Password is required</div>
-                            </div>
+                        <input id="txtpassword" type="password" formControlName="password"
+                            [ngClass]="{ 'is-invalid': submitted && f.password.errors}"
+                            placeholder="Introduzca la contraseña" class="form-control inpt-sm">
+                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                            <div *ngIf="f.password.errors.required">La contraseña es requerida</div>
+                        </div>
                     </div>
                     <div class="row chk-lab">
-                        <div class="col-sm-6">
-                            <input type="checkbox"> <label>Recuérdame</label>
+                        <div class="col-sm-2">
                         </div>
-                        <div class="col-sm-6 colkd">
-                            <a>Contraseña olvidada ?</a>
+                        <div class="col-sm-10 colkd">
+                            <a href="#" [routerLink]="['/UsuarioRegistro']">¿No tienes cuenta? Regístrate ahora</a>
                         </div>
                     </div>
-                    <button [disabled]="loading" class="btn btn-primary" id="#btn-registro">
-                        <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
-                        Login
-                    </button>
+                    <div id="boton">
+                        <button [disabled]="loading" class="btn btn-primary" id="#btn-registro">
+                            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                            Login
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -41,25 +43,25 @@
     </div>
 </form>
 
-    <footer class="footer">
-        
-        <div class="container-fluid">
-          <nav class="float-left">
+<footer class="footer">
+
+    <div class="container-fluid">
+        <nav class="float-left">
             <hr>
-              <ul>
+            <ul>
                 <li>
-                  <a href="https://m.facebook.com/110112510465976">
-                    <i class="fab fa-facebook"></i>
-                    Facebook
-                  </a>
+                    <a href="https://m.facebook.com/110112510465976">
+                        <i class="fab fa-facebook"></i>
+                        Facebook
+                    </a>
                 </li>
                 <li>
-                  <a href="mailto:logisticaeducativadel@gmail.com">
-                    <i class="fas fa-envelope"></i>
-                    Email
-                  </a>
+                    <a href="mailto:logisticaeducativadel@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                        Email
+                    </a>
                 </li>
-              </ul>
-          </nav>
-        </div>
-      </footer>
+            </ul>
+        </nav>
+    </div>
+</footer>

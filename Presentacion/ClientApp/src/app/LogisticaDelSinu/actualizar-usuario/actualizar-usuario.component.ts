@@ -76,7 +76,7 @@ export class ActualizarUsuarioComponent implements OnInit {
         return { claveDiferente: true, messageError: "Las contraseñas no coinciden" };
       }
 
-      return null;
+      return null; 
     };
   }
 

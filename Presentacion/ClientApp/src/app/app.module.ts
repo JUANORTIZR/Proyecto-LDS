@@ -53,6 +53,7 @@ import { ConsultarMovilidadesComponent } from './LogisticaDelSinu/Movilidad/cons
 import { ModificarMovilidadComponent } from './LogisticaDelSinu/Movilidad/modificar-movilidad/modificar-movilidad.component';
 import { UsuarioMovilidadConsultaComponent } from './LogisticaDelSinu/usuario-movilidad-consulta/usuario-movilidad-consulta.component';
 import { ModalInfoMovilidadComponent } from './@base/modal-info-movilidad/modal-info-movilidad.component';
+import { FiltroMovilidadPipe } from './pipe/Movilidad/filtro-movilidad.pipe';
 
 
 
@@ -97,6 +98,7 @@ import { ModalInfoMovilidadComponent } from './@base/modal-info-movilidad/modal-
     ModificarMovilidadComponent,
     UsuarioMovilidadConsultaComponent,
     ModalInfoMovilidadComponent,
+    FiltroMovilidadPipe,
     
   ],
   imports: [

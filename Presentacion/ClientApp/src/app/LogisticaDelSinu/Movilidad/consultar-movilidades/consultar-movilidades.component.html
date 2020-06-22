@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-6">
-        <input [(ngModel)]="searchText" type="text" class="form-control" placeholder="Buscar Restaurantes">
+        <input [(ngModel)]="searchText" type="text" class="form-control" placeholder="Buscar movilidad">
     </div>
 </div>
 <hr>
@@ -26,7 +26,7 @@
                             <th>Accion</th>
                         </thead>
                         <tbody>
-                            <tr *ngFor='let movilidad of movilidades ; index as i'>
+                            <tr *ngFor='let movilidad of movilidades|filtroMovilidad:searchText ; index as i'>
                                 <th scope="row">{{i+1}}</th>
                                 <td>{{movilidad.idMovilidad}}</td>
                                 <td>{{movilidad.idCliente}} </td>
@@ -47,71 +47,3 @@
         </div>
     </div>
 </div>
-
-<!-- Modals Seminarios 
-
-<div name="padre" class="modal fade" id="infoSeminarios" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header" id="encabezado">
-                <h5 class="modal-title" id="exampleModalLabel">Informacion del servicio</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <h3 id="titulo" class="text-center">Solicitud de Movilidad academica</h3><br>
-                <div class="container">
-                    <div class="row">
-                        <p class="col-sm-5">Fecha del evento: {{movilidad.fechaEvento|date:'dd-MM-yyyy'}}</p>
-                        <p class="col-sm-5">fecha de la solicitud: {{movilidad.fechaSolicitud|date:'dd-MM-yyyy'}}</p>
-                    </div>
-                    <div class="row">
-                        <p class="col-5">Id servicio: {{movilidad.idMovilidad}}</p>
-                        <p class="col-5">Idcliente: {{movilidad.idCliente}}</p>
-                    </div>
-                    <div class="row">
-                        <p class="col-6">Destino: {{movilidad.destino}}</p>
-                        <p class="col-6">Transporte: {{movilidad.transporte}}</p>
-                    </div>
-                    <div class="row">
-                        <p class="col-6">Noches de alojamiento: {{movilidad.nocheAlojamiento}}</p>
-                        <p class="col-6">Tipo acomodacion: {{movilidad.tipoAcomodacion}}</p>
-                    </div>
-                    <div class="row">
-                        <p class="col-6">Tipo de hotel: {{movilidad.tipoHotel}}</p>
-                        <p class="col-6">Seguro de viaje: {{movilidad.seguroViaje}}</p>
-                    </div>
-                    <h5 id="titulo" class="text-center">Servicios adicionales</h5><br>
-                    <div class="row">
-                        <p class="col-3">Refrigerio: {{movilidad.refrigerio}}</p>
-                        <p class="col-3">Organizacion de agenda: {{movilidad.organizacionAjenda}}</p>
-                        <p class="col-3">Visita tecnica: {{movilidad.visitaTecnica}}</p>
-                    </div>
-                    <div class="row">
-                        <p class="col-3">Acompañamiento guia: {{movilidad.acompanamientoGuia}}</p>
-                        <p class="col-3">Alimentacion: {{movilidad.alimentacion}}</p>
-                        <p class="col-3">costo por entrada: {{movilidad.costoEntrada}}</p>
-                    </div>
-                    <div class="row">
-                        <p class="col-10">Observacion:</p>
-                    </div>
-                    <div class="row">
-                        <p class="col-10"> {{movilidad.objervacion}}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal"
-                    (click)="cambiarEstado('Rechazado')">Rechazar
-                </button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal"
-                    (click)="cambiarEstado('Aceptado')">Aceptar
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
--->

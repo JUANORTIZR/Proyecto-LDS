@@ -25,7 +25,7 @@
                             <th>Accion</th>
                         </thead>
                         <tbody>
-                            <tr *ngFor='let movilidad of movilidades ; index as i'>
+                            <tr *ngFor='let movilidad of movilidades|filtroMovilidad:searchText ; index as i'>
                                 <th scope="row">{{i+1}}</th>
                                 <td>{{movilidad.idMovilidad}}</td>
                                 <td>{{movilidad.idCliente}} </td>

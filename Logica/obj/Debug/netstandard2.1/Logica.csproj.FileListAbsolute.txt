@@ -148,3 +148,4 @@ A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Logica\obj\Debug\netstandard2.1\Logica.A
 A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Logica\obj\Debug\netstandard2.1\Logica.csproj.CopyComplete
 A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Logica\obj\Debug\netstandard2.1\Logica.dll
 A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Logica\obj\Debug\netstandard2.1\Logica.pdb
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Logica\obj\Debug\netstandard2.1\Logica.csproj.CoreCompileInputs.cache

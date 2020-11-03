@@ -108,3 +108,4 @@ A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Infraestructura\obj\Debug\netstandard2.1
 A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Infraestructura\obj\Debug\netstandard2.1\Infraestructura.csproj.CopyComplete
 A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Infraestructura\obj\Debug\netstandard2.1\Infraestructura.dll
 A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Infraestructura\obj\Debug\netstandard2.1\Infraestructura.pdb
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Infraestructura\obj\Debug\netstandard2.1\Infraestructura.csproj.CoreCompileInputs.cache

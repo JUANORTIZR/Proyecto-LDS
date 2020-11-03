@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-
+using System.ComponentModel.DataAnnotations;
 namespace Presentacion.Models.Loguin
 {
     public class LoginInputModel

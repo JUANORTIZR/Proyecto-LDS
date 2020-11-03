@@ -108,3 +108,4 @@ A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Datos\obj\Debug\netstandard2.1\Datos.Ass
 A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Datos\obj\Debug\netstandard2.1\Datos.csproj.CopyComplete
 A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Datos\obj\Debug\netstandard2.1\Datos.dll
 A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Datos\obj\Debug\netstandard2.1\Datos.pdb
+C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Datos\obj\Debug\netstandard2.1\Datos.csproj.CoreCompileInputs.cache

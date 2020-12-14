@@ -215,7 +215,14 @@
             <p>Perfil</p>
           </a>
         </li>
-
+        <li class="nav-item " *ngIf="currentUser && currentUser.tipo=='admin'">
+          <a class="nav-link" [routerLink]="['/Reportes']">
+            <i class="material-icons">
+              timeline
+            </i>
+            <p>Reporte</p>
+          </a>
+        </li>
       </ul>
     </div>
   </div>

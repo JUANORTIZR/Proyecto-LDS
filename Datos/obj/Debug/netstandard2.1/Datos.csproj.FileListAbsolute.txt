@@ -109,3 +109,15 @@ A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Datos\obj\Debug\netstandard2.1\Datos.csp
 A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Datos\obj\Debug\netstandard2.1\Datos.dll
 A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Datos\obj\Debug\netstandard2.1\Datos.pdb
 C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Datos\obj\Debug\netstandard2.1\Datos.csproj.CoreCompileInputs.cache
+F:\Documento\GitHub\Proyecto-LDS\Datos\bin\Debug\netstandard2.1\Datos.deps.json
+F:\Documento\GitHub\Proyecto-LDS\Datos\bin\Debug\netstandard2.1\Datos.dll
+F:\Documento\GitHub\Proyecto-LDS\Datos\bin\Debug\netstandard2.1\Datos.pdb
+F:\Documento\GitHub\Proyecto-LDS\Datos\bin\Debug\netstandard2.1\Entity.dll
+F:\Documento\GitHub\Proyecto-LDS\Datos\bin\Debug\netstandard2.1\Entity.pdb
+F:\Documento\GitHub\Proyecto-LDS\Datos\obj\Debug\netstandard2.1\Datos.csprojAssemblyReference.cache
+F:\Documento\GitHub\Proyecto-LDS\Datos\obj\Debug\netstandard2.1\Datos.AssemblyInfoInputs.cache
+F:\Documento\GitHub\Proyecto-LDS\Datos\obj\Debug\netstandard2.1\Datos.AssemblyInfo.cs
+F:\Documento\GitHub\Proyecto-LDS\Datos\obj\Debug\netstandard2.1\Datos.csproj.CoreCompileInputs.cache
+F:\Documento\GitHub\Proyecto-LDS\Datos\obj\Debug\netstandard2.1\Datos.csproj.CopyComplete
+F:\Documento\GitHub\Proyecto-LDS\Datos\obj\Debug\netstandard2.1\Datos.dll
+F:\Documento\GitHub\Proyecto-LDS\Datos\obj\Debug\netstandard2.1\Datos.pdb

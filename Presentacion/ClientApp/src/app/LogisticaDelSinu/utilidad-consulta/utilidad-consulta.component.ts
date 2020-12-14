@@ -14,6 +14,8 @@ export class UtilidadConsultaComponent implements OnInit {
   utilidades:Utilidad[];
   searchText:string;
   usuario: User = (JSON.parse(localStorage.getItem('currentUser')));
+  canvas: any;
+  gtx:any;
   constructor(private router: Router,private utilidadService:UtilidadService) { }
 
   ngOnInit():void{
@@ -24,6 +26,8 @@ export class UtilidadConsultaComponent implements OnInit {
     this.utilidadService.gets().subscribe(result=>{
       this.utilidades = result;
     });
+ 
   }
 
+ 
 }

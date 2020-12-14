@@ -149,3 +149,19 @@ A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Logica\obj\Debug\netstandard2.1\Logica.c
 A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Logica\obj\Debug\netstandard2.1\Logica.dll
 A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Logica\obj\Debug\netstandard2.1\Logica.pdb
 C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Logica\obj\Debug\netstandard2.1\Logica.csproj.CoreCompileInputs.cache
+F:\Documento\GitHub\Proyecto-LDS\Logica\bin\Debug\netstandard2.1\Logica.deps.json
+F:\Documento\GitHub\Proyecto-LDS\Logica\bin\Debug\netstandard2.1\Logica.dll
+F:\Documento\GitHub\Proyecto-LDS\Logica\bin\Debug\netstandard2.1\Logica.pdb
+F:\Documento\GitHub\Proyecto-LDS\Logica\bin\Debug\netstandard2.1\Datos.dll
+F:\Documento\GitHub\Proyecto-LDS\Logica\bin\Debug\netstandard2.1\Entity.dll
+F:\Documento\GitHub\Proyecto-LDS\Logica\bin\Debug\netstandard2.1\Infraestructura.dll
+F:\Documento\GitHub\Proyecto-LDS\Logica\bin\Debug\netstandard2.1\Datos.pdb
+F:\Documento\GitHub\Proyecto-LDS\Logica\bin\Debug\netstandard2.1\Entity.pdb
+F:\Documento\GitHub\Proyecto-LDS\Logica\bin\Debug\netstandard2.1\Infraestructura.pdb
+F:\Documento\GitHub\Proyecto-LDS\Logica\obj\Debug\netstandard2.1\Logica.csprojAssemblyReference.cache
+F:\Documento\GitHub\Proyecto-LDS\Logica\obj\Debug\netstandard2.1\Logica.AssemblyInfoInputs.cache
+F:\Documento\GitHub\Proyecto-LDS\Logica\obj\Debug\netstandard2.1\Logica.AssemblyInfo.cs
+F:\Documento\GitHub\Proyecto-LDS\Logica\obj\Debug\netstandard2.1\Logica.csproj.CoreCompileInputs.cache
+F:\Documento\GitHub\Proyecto-LDS\Logica\obj\Debug\netstandard2.1\Logica.csproj.CopyComplete
+F:\Documento\GitHub\Proyecto-LDS\Logica\obj\Debug\netstandard2.1\Logica.dll
+F:\Documento\GitHub\Proyecto-LDS\Logica\obj\Debug\netstandard2.1\Logica.pdb

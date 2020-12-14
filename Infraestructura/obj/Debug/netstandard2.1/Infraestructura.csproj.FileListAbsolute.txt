@@ -109,3 +109,15 @@ A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Infraestructura\obj\Debug\netstandard2.1
 A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Infraestructura\obj\Debug\netstandard2.1\Infraestructura.dll
 A:\Escritorio\Proyecto-LDS\Proyecto-LDS\Infraestructura\obj\Debug\netstandard2.1\Infraestructura.pdb
 C:\Users\JUAN CARLOS\Documents\GitHub\LDS-Proyecto\OtroMas\Proyecto-LDS\Infraestructura\obj\Debug\netstandard2.1\Infraestructura.csproj.CoreCompileInputs.cache
+F:\Documento\GitHub\Proyecto-LDS\Infraestructura\bin\Debug\netstandard2.1\Infraestructura.deps.json
+F:\Documento\GitHub\Proyecto-LDS\Infraestructura\bin\Debug\netstandard2.1\Infraestructura.dll
+F:\Documento\GitHub\Proyecto-LDS\Infraestructura\bin\Debug\netstandard2.1\Infraestructura.pdb
+F:\Documento\GitHub\Proyecto-LDS\Infraestructura\bin\Debug\netstandard2.1\Entity.dll
+F:\Documento\GitHub\Proyecto-LDS\Infraestructura\bin\Debug\netstandard2.1\Entity.pdb
+F:\Documento\GitHub\Proyecto-LDS\Infraestructura\obj\Debug\netstandard2.1\Infraestructura.csprojAssemblyReference.cache
+F:\Documento\GitHub\Proyecto-LDS\Infraestructura\obj\Debug\netstandard2.1\Infraestructura.AssemblyInfoInputs.cache
+F:\Documento\GitHub\Proyecto-LDS\Infraestructura\obj\Debug\netstandard2.1\Infraestructura.AssemblyInfo.cs
+F:\Documento\GitHub\Proyecto-LDS\Infraestructura\obj\Debug\netstandard2.1\Infraestructura.csproj.CoreCompileInputs.cache
+F:\Documento\GitHub\Proyecto-LDS\Infraestructura\obj\Debug\netstandard2.1\Infraestructura.csproj.CopyComplete
+F:\Documento\GitHub\Proyecto-LDS\Infraestructura\obj\Debug\netstandard2.1\Infraestructura.dll
+F:\Documento\GitHub\Proyecto-LDS\Infraestructura\obj\Debug\netstandard2.1\Infraestructura.pdb

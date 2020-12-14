@@ -1,0 +1,138 @@
+F:\Documento\GitHub\Proyecto-LDS\Logica\ActualizarUsuarioResponse.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Logica\ConsultarHotelesResponse.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Logica\ConsultarUsuarioResponse.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Logica\ConsultarUtilidadesResponse.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Logica\GuardarHotelResponse.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Logica\GuardarUsuarioRespose.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Logica\GuardarUtilidadesResponse.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Logica\HotelService.cs
+Guardar 2
+Guardar -1
+EscribirEncabezado 5
+EscribirEncabezado -1
+EscribirCuerpo 4
+EscribirCuerpo -1
+Consultar 3
+Consultar -1
+BuscarxNit 8
+BuscarxNit -1
+Modificar 2
+Modificar -1
+
+F:\Documento\GitHub\Proyecto-LDS\Logica\Restaurantes\ActualizarRestauranteResponse.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Logica\Restaurantes\ConsultarNitRestauranteResponse.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Logica\Restaurantes\ConsultarRestauranteResponse.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Logica\Restaurantes\GuardarRestauranteResponse.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Logica\Restaurantes\RestauranteService.cs
+Guardar 2
+Guardar -1
+EscribirEncabezado 2
+EscribirEncabezado -1
+EscribirCuerpo 2
+EscribirCuerpo -1
+Consultar 2
+Consultar -1
+BuscarxNit 3
+BuscarxNit -1
+Modificar 2
+Modificar -1
+
+F:\Documento\GitHub\Proyecto-LDS\Logica\Servicios\ActualizarServicioResponse.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Logica\Servicios\ConsultarServicioResponse.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Logica\Servicios\GuardarServicioResponse.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Logica\Servicios\ServicioService.cs
+Guardar 2
+Guardar -1
+EscribirEncabezado 4
+EscribirEncabezado -1
+EscribirCuerpo 5
+EscribirCuerpo -1
+Consultar 2
+Consultar -1
+ConsultarCantidad 2
+ConsultarCantidad -1
+BuscarxIdentificacion 3
+BuscarxIdentificacion -1
+Modificar 4
+Modificar -1
+
+F:\Documento\GitHub\Proyecto-LDS\Logica\SMovilidadAcademica\ActualizarMovilidadAcademicaResponse.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Logica\SMovilidadAcademica\ConsultarMovilidadAcademicaResponse.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Logica\SMovilidadAcademica\GuardarMovilidadAcademicaResponse.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Logica\SMovilidadAcademica\MovilidadAcademicaService.cs
+Guardar 3
+Guardar -1
+EscribirEncabezado 3
+EscribirEncabezado -1
+EscribirCuerpo 4
+EscribirCuerpo -1
+Consultar 1
+Consultar -1
+BuscarxIdentificacion 2
+BuscarxIdentificacion -1
+Modificar 2
+Modificar -1
+
+F:\Documento\GitHub\Proyecto-LDS\Logica\Transportes\ConsultarTransporteResponse.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Logica\Transportes\GuardarTransporteResponse.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Logica\Transportes\TransporteService.cs
+Guardar 2
+Guardar -1
+EscribirEncabezado 3
+EscribirEncabezado -1
+EscribirCuerpo 3
+EscribirCuerpo -1
+Consultar 2
+Consultar -1
+BuscarxNit 3
+BuscarxNit -1
+Modificar 2
+Modificar -1
+
+F:\Documento\GitHub\Proyecto-LDS\Logica\UserService.cs
+ValidarUser 2
+ValidarUser -1
+
+F:\Documento\GitHub\Proyecto-LDS\Logica\UsuarioService.cs
+Guardar 2
+Guardar -1
+EscribirEncabezado 2
+EscribirEncabezado -1
+EscribirCuerpo 4
+EscribirCuerpo -1
+Consultar 2
+Consultar -1
+BuscarxIdentificacion 2
+BuscarxIdentificacion -1
+Modificar 2
+Modificar -1
+
+F:\Documento\GitHub\Proyecto-LDS\Logica\UtilidadService.cs
+Guardar 3
+Guardar -1
+Consultar 3
+Consultar -1
+
+F:\Documento\GitHub\Proyecto-LDS\Logica\obj\Debug\netstandard2.1\.NETStandard,Version=v2.1.AssemblyAttributes.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Logica\obj\Debug\netstandard2.1\Logica.AssemblyInfo.cs
+

@@ -1,0 +1,11 @@
+9
+0F:\Documento\GitHub\Proyecto-LDS\Entity\Hotel.csutf-8F
+=F:\Documento\GitHub\Proyecto-LDS\Entity\MovilidadAcademica.csutf-8?
+6F:\Documento\GitHub\Proyecto-LDS\Entity\Restaurante.csutf-8<
+3F:\Documento\GitHub\Proyecto-LDS\Entity\Servicio.csutf-8>
+5F:\Documento\GitHub\Proyecto-LDS\Entity\Transporte.csutf-88
+/F:\Documento\GitHub\Proyecto-LDS\Entity\User.csutf-8;
+2F:\Documento\GitHub\Proyecto-LDS\Entity\Usuario.csutf-8<
+3F:\Documento\GitHub\Proyecto-LDS\Entity\Utilidad.csutf-8{
+pF:\Documento\GitHub\Proyecto-LDS\Entity\obj\Debug\netstandard2.1\.NETStandard,Version=v2.1.AssemblyAttributes.csutf-8b
+WF:\Documento\GitHub\Proyecto-LDS\Entity\obj\Debug\netstandard2.1\Entity.AssemblyInfo.csutf-8

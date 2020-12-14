@@ -1,0 +1,158 @@
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\Configuraciones\AppSetting.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\Controllers\HotelController.cs
+Post 74
+Post -1
+MapearHotel 7
+MapearHotel -1
+Gets 7
+Gets -1
+Get 5
+Get -1
+Put 5
+Put -1
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\Controllers\LoginController.cs
+Login 6
+Login -1
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\Controllers\MovilidadAcademicaController.cs
+Post 2
+Post -1
+MapearUsuario 8
+MapearUsuario -1
+Gets 2
+Gets -1
+Get 4
+Get -1
+Put 6
+Put -1
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\Controllers\ObtenerSumaController.cs
+GetCantidad 4
+GetCantidad -1
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\Controllers\RestauranteController.cs
+Post 5
+Post -1
+MapearRestaurante 5
+MapearRestaurante -1
+Gets 2
+Gets -1
+Get 4
+Get -1
+Put 6
+Put -1
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\Controllers\ServicioController.cs
+Post 2
+Post -1
+MapearUsuario 5
+MapearUsuario -1
+Gets 2
+Gets -1
+Get 3
+Get -1
+Put 6
+Put -1
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\Controllers\TransporteController.cs
+Post 6
+Post -1
+MapearTransporte 5
+MapearTransporte -1
+Gets 2
+Gets -1
+Get 10
+Get -1
+Put 11
+Put -1
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\Controllers\UsuarioController.cs
+Post 6
+Post -1
+MapearUsuario 6
+MapearUsuario -1
+Get 6
+Get -1
+Gets 3
+Gets -1
+Put 6
+Put -1
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\Controllers\UtilidadController.cs
+Post 6
+Post -1
+MapearUtilidad 4
+MapearUtilidad -1
+Gets 3
+Gets -1
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\Controllers\WeatherForecastController.cs
+Get 2
+Get -1
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\Hubs\SignalHub.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\Models\HotelInputModel.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\Models\HotelViewModel.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\Models\Loguin\LoginInputModel.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\Models\Loguin\LoginViewModel.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\Models\RestauranteModels\RestauranteInputModel.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\Models\RestauranteModels\RestauranteViewModel.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\Models\Servicio\ServcioViewModel.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\Models\Servicio\ServicioInputModel.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\Models\SMovilidadAcademicaModels\MovilidadAcademicaInputModel.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\Models\SMovilidadAcademicaModels\MovilidadAcademicaViewModel.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\Models\TransporteModels\TransporteViewModel.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\Models\TransporteModels\TrasnporteInputModel.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\Models\UsuarioInputModel.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\Models\UsuarioViewModel.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\Models\UtilidadModels\UtilidadInputModel.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\Models\UtilidadModels\UtilidadViewModel.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\Pages\Error.cshtml.cs
+OnGet 2
+OnGet -1
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\Program.cs
+Main 5
+Main -1
+CreateHostBuilder 2
+CreateHostBuilder -1
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\Service\JwtService.cs
+GenerarToken 10
+GenerarToken -1
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\Startup.cs
+ConfigureServices 2
+ConfigureServices -1
+Configure 3
+Configure -1
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\WeatherForecast.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\obj\Debug\netcoreapp3.1\.NETCoreApp,Version=v3.1.AssemblyAttributes.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.AssemblyInfo.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.MvcApplicationPartsAssemblyInfo.cs
+
+F:\Documento\GitHub\Proyecto-LDS\Presentacion\obj\Debug\netcoreapp3.1\Presentacion.RazorAssemblyInfo.cs
+

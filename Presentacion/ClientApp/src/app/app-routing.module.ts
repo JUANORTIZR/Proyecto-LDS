@@ -25,6 +25,7 @@ import { SolicitudMovilidadComponent } from './LogisticaDelSinu/Movilidad/solici
 import { ModificarMovilidadComponent } from './LogisticaDelSinu/Movilidad/modificar-movilidad/modificar-movilidad.component';
 import { ConsultarMovilidadesComponent } from './LogisticaDelSinu/Movilidad/consultar-movilidades/consultar-movilidades.component';
 import { AuthGuard } from './services/auth.guard';
+import { ReportesComponent } from './LogisticaDelSinu/reportes/reportes.component';
 
 
 
@@ -130,6 +131,11 @@ const routes: Routes = [
   {
     path: 'consultarMovilidad',
     component: ConsultarMovilidadesComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'Reportes',
+    component: ReportesComponent,
     canActivate: [AuthGuard]
   }
 

@@ -1,0 +1,19 @@
+File name	Line	Function	Duration[ms]	Explored nodes
+F:\Documento\GitHub\Proyecto-LDS\Logica\HotelService.cs	31	_Logica.HotelService.EscribirEncabezado$$	0	2
+F:\Documento\GitHub\Proyecto-LDS\Logica\HotelService.cs	34	_Logica.HotelService.EscribirCuerpo$string$	0	2
+F:\Documento\GitHub\Proyecto-LDS\Logica\HotelService.cs	48	_Logica.HotelService.BuscarxNit$string$	0	2
+F:\Documento\GitHub\Proyecto-LDS\Logica\SMovilidadAcademica\MovilidadAcademicaService.cs	31	_Logica.SMovilidadAcademica.MovilidadAcademicaService.EscribirEncabezado$string$	0	4
+F:\Documento\GitHub\Proyecto-LDS\Logica\SMovilidadAcademica\MovilidadAcademicaService.cs	37	_Logica.SMovilidadAcademica.MovilidadAcademicaService.EscribirCuerpo$string.string.string$	0	6
+F:\Documento\GitHub\Proyecto-LDS\Logica\SMovilidadAcademica\MovilidadAcademicaService.cs	70	_Logica.SMovilidadAcademica.MovilidadAcademicaService.BuscarxIdentificacion$string$	0	2
+F:\Documento\GitHub\Proyecto-LDS\Logica\Restaurantes\RestauranteService.cs	31	_Logica.Restaurantes.RestauranteService.EscribirEncabezado$$	0	2
+F:\Documento\GitHub\Proyecto-LDS\Logica\Restaurantes\RestauranteService.cs	34	_Logica.Restaurantes.RestauranteService.EscribirCuerpo$string$	0	2
+F:\Documento\GitHub\Proyecto-LDS\Logica\Restaurantes\RestauranteService.cs	47	_Logica.Restaurantes.RestauranteService.BuscarxNit$string$	0	2
+F:\Documento\GitHub\Proyecto-LDS\Logica\Servicios\ServicioService.cs	31	_Logica.Servicios.ServicioService.EscribirEncabezado$string$	0	4
+F:\Documento\GitHub\Proyecto-LDS\Logica\Servicios\ServicioService.cs	37	_Logica.Servicios.ServicioService.EscribirCuerpo$string.string.string$	0	6
+F:\Documento\GitHub\Proyecto-LDS\Logica\Servicios\ServicioService.cs	78	_Logica.Servicios.ServicioService.BuscarxIdentificacion$string$	0	2
+F:\Documento\GitHub\Proyecto-LDS\Logica\Servicios\ServicioService.cs	83	_Logica.Servicios.ServicioService.Modificar$Entity.Servicio$	0	4
+F:\Documento\GitHub\Proyecto-LDS\Logica\Transportes\TransporteService.cs	31	_Logica.Transportes.TransporteService.EscribirEncabezado$$	0	2
+F:\Documento\GitHub\Proyecto-LDS\Logica\Transportes\TransporteService.cs	34	_Logica.Transportes.TransporteService.EscribirCuerpo$string$	0	2
+F:\Documento\GitHub\Proyecto-LDS\Logica\Transportes\TransporteService.cs	47	_Logica.Transportes.TransporteService.BuscarxNit$string$	0	2
+F:\Documento\GitHub\Proyecto-LDS\Logica\UsuarioService.cs	37	_Logica.UsuarioService.EscribirEncabezado$$	0	2
+F:\Documento\GitHub\Proyecto-LDS\Logica\UsuarioService.cs	40	_Logica.UsuarioService.EscribirCuerpo$string$	0	2

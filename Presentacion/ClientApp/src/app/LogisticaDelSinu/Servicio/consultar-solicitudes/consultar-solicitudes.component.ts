@@ -28,7 +28,9 @@ export class ConsultarSolicitudesComponent implements OnInit {
       alert("Acceso denegado");
       this.router.navigate(['/Login']);
     }
+    
     this.servicioService.gets().subscribe(s=> {
+      
       this.loading = false;
       this.servicios = s;
     })

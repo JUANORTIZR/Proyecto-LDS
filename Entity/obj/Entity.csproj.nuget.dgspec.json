@@ -1,29 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Entity\\Entity.csproj": {}
+    "F:\\Documento\\GitHub\\Proyecto-LDS\\Entity\\Entity.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Entity\\Entity.csproj": {
+    "F:\\Documento\\GitHub\\Proyecto-LDS\\Entity\\Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Entity\\Entity.csproj",
+        "projectUniqueName": "F:\\Documento\\GitHub\\Proyecto-LDS\\Entity\\Entity.csproj",
         "projectName": "Entity",
-        "projectPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Entity\\Entity.csproj",
-        "packagesPath": "C:\\Users\\JUAN CARLOS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JUAN CARLOS\\Documents\\GitHub\\LDS-Proyecto\\OtroMas\\Proyecto-LDS\\Entity\\obj\\",
+        "projectPath": "F:\\Documento\\GitHub\\Proyecto-LDS\\Entity\\Entity.csproj",
+        "packagesPath": "C:\\Users\\juank\\.nuget\\packages\\",
+        "outputPath": "F:\\Documento\\GitHub\\Proyecto-LDS\\Entity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\JUAN CARLOS\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\juank\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
             "projectReferences": {}
           }
         },
@@ -35,6 +38,7 @@
       },
       "frameworks": {
         "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
           "dependencies": {
             "System.ComponentModel.Annotations": {
               "target": "Package",
@@ -56,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

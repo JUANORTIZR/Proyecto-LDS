@@ -36,6 +36,9 @@ export class ConsultarSolicitudesComponent implements OnInit {
     })
     this.actualizarListaSignal();
   }
+  filtro(estado:string){
+    this.searchText=estado;
+  }
   private actualizarListaSignal(){
     this.servicioService.signalRecived.subscribe((servicio: Servicio) => {
       this.servicios.push(servicio);

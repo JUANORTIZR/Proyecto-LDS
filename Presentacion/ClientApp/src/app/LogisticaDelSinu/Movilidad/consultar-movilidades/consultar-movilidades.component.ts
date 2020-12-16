@@ -35,6 +35,9 @@ export class ConsultarMovilidadesComponent implements OnInit {
       this.movilidades.push(movilidad);
     });
   }
+  filtro(estado:string){
+    this.searchText=estado;
+  }
   consultarPorId(id:string){
     this.movilidadService.get(id).subscribe(s => {
       this.movilidad = s;

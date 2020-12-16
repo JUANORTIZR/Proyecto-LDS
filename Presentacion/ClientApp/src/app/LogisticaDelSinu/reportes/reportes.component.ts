@@ -39,19 +39,7 @@ export class ReportesComponent implements OnInit {
   }
 
   grafica() {
-    var color = [];
-    var r = new Array("00", "33", "66", "99", "CC", "FF");
-    var g = new Array("00", "33", "66", "99", "CC", "FF");
-    var b = new Array("00", "33", "66", "99", "CC", "FF");
-
-    for (var i = 0; i < r.length; i++) {
-      for (var j = 0; j < g.length; j++) {
-        for (var k = 0; k < b.length; k++) {
-          var nuevoc = "#" + r[i] + g[j] + b[k];
-          color.push(nuevoc);
-        }
-      }
-    }
+    
     this.servicioService.gets().subscribe(s => {
       console.log(s);
       if (s != null) {
@@ -59,18 +47,27 @@ export class ReportesComponent implements OnInit {
         this.ctx = this.canvas.getContext('2d');
         var listaLabels = [];
         var listaDatos = [];
-        var listaColors = [];
         this.serviciosAux = [];
+        var nombreServicio;
         for (let index = 0; index < s.length; index++) {
           var respuesta = this.serviciosAux.find(p => p.tipoServicio == s[index].tipoServicio);
           if (respuesta != null) {
             var numero = this.serviciosAux.findIndex(p => p.tipoServicio == s[index].tipoServicio);
             listaDatos[numero] += 1;
           } else {
-            listaLabels.push(s[index].tipoServicio);
+            if(s[index].tipoServicio=="2: Taller"){
+              nombreServicio = "Taller"
+            }
+            if(s[index].tipoServicio=="3: Congreso"){
+              nombreServicio = "Congreso"
+            }
+            if(s[index].tipoServicio=="1: Seminario"){
+              nombreServicio = "Seminario"
+            }
+            listaLabels.push(nombreServicio);
             listaDatos.push(1);
             this.serviciosAux.push(s[index]);
-            listaColors.push(this.randomColor(color));
+            
           }
         }
         this.movilidadService.gets().subscribe(m => {
@@ -79,7 +76,6 @@ export class ReportesComponent implements OnInit {
             if (index == 0) {
               listaLabels.push("Movilidad");
               listaDatos.push(1);
-              listaColors.push(this.randomColor(color));
 
             } else {
               posicion = listaLabels.findIndex(p => p == "Movilidad");
@@ -96,7 +92,7 @@ export class ReportesComponent implements OnInit {
             datasets: [{
               label: 'Total cases.',
               data: listaDatos,
-              backgroundColor: listaColors,
+              backgroundColor: ["#375E97","#FB6542","#FFBB00","#3F681C"],
               borderWidth: 1
             }]
           },

@@ -73,7 +73,7 @@ export class SolitudServicioComponent implements OnInit {
 
  cambiarTipoServicio(e){
     this.control.tipoServicio.setValue(e.target.value, {
-      onlySelf: true,  
+      onlySelf: false,  
     })
   }
 

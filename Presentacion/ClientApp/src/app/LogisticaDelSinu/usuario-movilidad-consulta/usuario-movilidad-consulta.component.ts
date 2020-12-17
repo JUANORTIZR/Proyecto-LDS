@@ -33,4 +33,8 @@ export class UsuarioMovilidadConsultaComponent implements OnInit {
     this.envio.EnviarMovilidad(movilidad);
     this.modalService.open(ModalInfoMovilidadComponent, {size: 'lg', centered:true});
   }
+
+  filtro(estado: string){
+    this.searchText = estado;
+  }
 }

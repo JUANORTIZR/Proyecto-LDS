@@ -1,8 +1,16 @@
 <div class="row">
-    <div class="col-6">
-        <input [(ngModel)]="searchText" type="text" class="form-control" placeholder="Buscar Movilidades">
+    <div class="col-5">
+      Buscar servicio <br>
+      <input [(ngModel)]="searchText" type="text" class="form-control" placeholder="Por Identificacion, id servicio, etc">
     </div>
-</div>
+    <div class="col-7">
+      Sugerencias <br>
+      <button id="btn-cancelar" (click)="filtro('Sin revisar')" class="btn ">Sin revisar</button>
+      <button id="btn-cancelar" (click)="filtro('Aceptada')" class="btn">Aceptada</button>
+      <button id="btn-cancelar" (click)="filtro('Rechazada')" class="btn">Rechazada</button>
+      <button id="btn-cancelar" (click)="filtro('')" class="btn">Todas</button>
+    </div>
+  </div>
 <hr>
 <div class="row">
     <div class="col-md-12">

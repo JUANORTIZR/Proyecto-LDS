@@ -12,6 +12,9 @@ namespace Presentacion.Models.Loguin
         public string SegundoNombre { get; set; }
         public string  PrimerApellido { get; set; }
         public string SegundoApellido { get; set; }
+        [Required(ErrorMessage = "El correo electronico es requerido")]
+        [StringLength(50,ErrorMessage="No se permiten mas de 50 caracteres en el correo")]
+        [EmailAddress(ErrorMessage="Correo Electronico no valido")]
         public string  Correo { get; set; }
         public string  Telefono { get; set; }
         public string Tipo { get; set; }

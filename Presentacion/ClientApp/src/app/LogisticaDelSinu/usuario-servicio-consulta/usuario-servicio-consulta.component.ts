@@ -30,5 +30,8 @@ export class UsuarioServicioConsultaComponent implements OnInit {
     this.envio.EnviarServicio(servicio);
     const messageBox = this.modalService.open(ModalInfoComponent, { size: 'lg',centered: true })
   }
+  filtro(estado:string){
+    this.searchText = estado
+  }
   
 }
